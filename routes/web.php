@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,17 +26,23 @@ use App\Http\Controllers\AuthController;
 //     return view('admin.index');
 // });
 
+Route::get('', [HomeController::class, 'home']);
+
 
 // Authentication//
-Route::get('', [AuthController::class, 'getHome']);
-Route::get('/login',[AuthController::class,'index']);
-Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::get('logout', [AuthController::class, 'getLogout']);
+Route::get('login', [LoginController::class, 'getLogin'])->name('login');
+Route::post('login', [LoginController::class, 'postLogin']);
 
-// Admin Dashboard
-Route::middleware(['auth'])->group(function () {
-Route::get('dashboard', [DashboardController::class,'index']);
+Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
+    Route::get('logout', [LoginController::class, 'logout']);
+
+    Route::get('', [HomeController::class, 'index']);
+
+
+
 });
+
+
 
 
 

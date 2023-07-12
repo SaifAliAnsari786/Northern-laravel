@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
@@ -19,7 +20,8 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('admin'),
+            'password' => Hash::make('admin'),
+            'status' => 1,
             'remember_token' => Str::random(60),
             'created_at' => Carbon::now(),
             'updated_at' => null
