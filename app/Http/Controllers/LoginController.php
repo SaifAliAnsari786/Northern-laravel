@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    
     public function getLogin()
     {
         if (Auth::user()) {
@@ -36,6 +37,6 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('');
+        return redirect('login');
     }
 }

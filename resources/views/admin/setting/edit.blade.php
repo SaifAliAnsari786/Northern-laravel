@@ -60,7 +60,7 @@
                                                             </div>
                                                             <div class="col-md-9">
                                                                 <div class="input-group">
-                                                                    <input type="text" class="form-control"  id="inputPassword3" name="key" required value="{{$setting->key}}">
+                                                                    <input type="text" class="form-control"  name="key" required value="{{$setting->key}}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -117,8 +117,8 @@
                                                                     </div>
                                                                     <br>
                                                                     <span style="margin-left: 100px;">
-                                                                            <a href="{{url($setting->value)}}" target="_blank">
-                                                                                <img src="{{url($setting->value)}}" alt="" style="width: 100px;">
+                                                                            <a href="{{url($setting->image)}}" target="_blank">
+                                                                                <img src="{{url($setting->image)}}" alt="" style="width: 100px;">
                                                                             </a>
                                                                     </span>
                                                                 </div>
@@ -264,7 +264,7 @@
                             '</div>'+
                             '<div class="col-md-9">'+
                             '<div class="input-group">'+
-                            '<input type="file" class="form-control"   name="value" required>'+
+                            '<input type="file" class="form-control"   name="image" required>'+
                             '</div>'+
                             '</div>'+
                             '</div>'+

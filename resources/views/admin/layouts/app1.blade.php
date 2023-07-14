@@ -36,8 +36,8 @@
 </head>
 <body>
 @if(Auth::user())
-    @include('admin.layouts.menubar')
-    @include('admin.layouts.sidebar')
+    <!-- @include('admin.layouts.menubar')
+    @include('admin.layouts.sidebar') -->
 @endif
 @yield('content')
 {!! Html::script('js/jquery-3.6.4.min.js') !!}
