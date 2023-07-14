@@ -89,4 +89,14 @@ class SettingController extends Controller
         Session::flash('success', 'Setting has been updated!');
         return redirect($this->redirect);
     }
+
+    public function destroy($id)
+    {
+        $setting = Setting::findOrFail($id);
+        $path = public_path() . '/' . $setting->image;
+        // SettingService::deleteImage($path); //unlink Image
+        $setting->delete();
+        Session::flash('success', 'Setting has been deleted!');
+        return redirect($this->redirect);
+    }
 }

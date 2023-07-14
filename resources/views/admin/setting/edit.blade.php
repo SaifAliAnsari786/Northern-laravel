@@ -117,8 +117,8 @@
                                                                     </div>
                                                                     <br>
                                                                     <span style="margin-left: 100px;">
-                                                                            <a href="{{url($setting->image)}}" target="_blank">
-                                                                                <img src="{{url($setting->image)}}" alt="" style="width: 100px;">
+                                                                            <a href="{{url($setting->value)}}" target="_blank">
+                                                                                <img src="{{url($setting->value)}}" alt="" style="width: 100px;">
                                                                             </a>
                                                                     </span>
                                                                 </div>

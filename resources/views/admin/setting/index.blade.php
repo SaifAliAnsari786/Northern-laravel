@@ -76,7 +76,6 @@
                                                             <th class="text-center">Title</th>
                                                             <th class="text-center">Type</th>
                                                             <th class="text-center">Value</th>
-                                                            <th class="text-center">Image</th>
                                                             <th class="text-center">Image Alt</th>
                                                             <th class="text-center">Status</th>
                                                             <th class="text-center">Action</th>
@@ -87,11 +86,11 @@
                                                         <tr>
                                                             <td>{{$settings->firstItem() + $loop->index}}</td>
                                                             <td class="text-center">{{$setting->key}}</td>
-
+                                         
                                                             <td class="text-center">{{config('custom.setting_types')[$setting->type]}}</td>
                                                             @if($setting->type == array_search('Image',config('custom.setting_types')))
                                                                     <td>
-
+                                                                    <a href="{{url($setting->value)}}" target="_blank">
                                                                     <img src="{{ url($setting->value) }}" alt="" style="width: 100px;">
                                                                     </a>
                                                                     </td>
@@ -112,6 +111,15 @@
                                                                     </li>
                                                                     <li>
                                                                         <a class="dropdown-item" href="{{url('super-admin/settings/'.$setting->id.'/edit')}}" role="button"><i class="fa-solid fa-pen" data-bs-toggle="tooltip" data-bs-title="Edit"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item"
+                                                                            href="{{ url('super-admin/settings/delete/' . $setting->id) }}"
+                                                                            role="button"><i
+                                                                            class="fa-solid fa-trash"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-title="Delete"></i>
+                                                                        </a>
                                                                     </li>
                                                                 </ul>
                                                             </td>
