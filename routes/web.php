@@ -7,7 +7,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +45,7 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::get('settings/{id}', [SettingController::class, 'show']);
     Route::get('settings/{id}/edit', [SettingController::class, 'edit']);
     Route::post('settings/{id}', [SettingController::class, 'update']);
+    Route::get('settings/delete/{id}', [SettingController::class, 'destroy']);
 
 
     Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload'); //upload image in CkEditor
