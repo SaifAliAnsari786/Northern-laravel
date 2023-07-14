@@ -28,13 +28,13 @@ class SettingController extends Controller
 
     public function create()
     {
-        
+
         return view($this->view . 'create');
     }
 
     public function store(Request $request)
     {
-        
+
         $this->validate(\request(), [
             'type' => 'required',
             'key' => 'required',
@@ -42,12 +42,12 @@ class SettingController extends Controller
         ]);
         if (request('type') == array_search('Image', config('custom.setting_types'))) {
             $this->validate(request(), [
-                    'image' => 'required|file|mimes:jpeg,png,jpg,pdf,webp,svg|max:2048'
+                    'value' => 'required|file|mimes:jpeg,png,jpg,pdf,webp,svg|max:2048'
                 ]
             );
         }
         $this->settingService->storeData();
-        
+
         Session::flash('success', 'Setting has been created!');
         return redirect($this->redirect);
     }

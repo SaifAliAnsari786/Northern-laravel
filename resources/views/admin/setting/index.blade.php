@@ -87,12 +87,12 @@
                                                         <tr>
                                                             <td>{{$settings->firstItem() + $loop->index}}</td>
                                                             <td class="text-center">{{$setting->key}}</td>
-                                         
+
                                                             <td class="text-center">{{config('custom.setting_types')[$setting->type]}}</td>
                                                             @if($setting->type == array_search('Image',config('custom.setting_types')))
                                                                     <td>
-                                                                    
-                                                                    <img src="{{ url($setting->image) }}" alt="" style="width: 100px;">
+
+                                                                    <img src="{{ url($setting->value) }}" alt="" style="width: 100px;">
                                                                     </a>
                                                                     </td>
                                                                 @else

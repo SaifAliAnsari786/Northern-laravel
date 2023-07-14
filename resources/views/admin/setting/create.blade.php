@@ -188,7 +188,7 @@
                     '</div>'+
                     '<div class="col-md-9">'+
                     '<div class="input-group">'+
-                    '<input type="file" class="form-control"   name="image" >'+
+                    '<input type="file" class="form-control"   name="value" >'+
                     '</div>'+
                     '</div>'+
                     '</div>'+
