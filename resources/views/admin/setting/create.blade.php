@@ -56,11 +56,11 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-3">
-                                                                <label>Name<span style="color: red;">*</span></label>
+                                                                <label>Title<span style="color: red;">*</span></label>
                                                             </div>
                                                             <div class="col-md-9">
                                                                 <div class="input-group">
-                                                                    <input type="text" class="form-control"  id="inputPassword3" name="key" required>
+                                                                <input type="text" name="key" class="form-control" required/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -139,7 +139,7 @@
                                         '</div>'+
                                         '<div class="col-md-9">'+
                                             '<div class="input-group">'+
-                                                '<input type="text" class="form-control"   name="value" required>'+
+                                                '<input type="text" class="form-control"   name="value" >'+
                                             '</div>' +
                                         '</div>'+
                                     '</div>'+
@@ -166,7 +166,7 @@
                     '</div>'+
                     '</div>'+
                     '</div>'
-                // $('#value_section').append(html);
+                $('#value_section').append(html);
 
                 $( "#my-name" ).after(html);
                 ClassicEditor
@@ -188,7 +188,7 @@
                     '</div>'+
                     '<div class="col-md-9">'+
                     '<div class="input-group">'+
-                    '<input type="file" class="form-control"   name="value" required>'+
+                    '<input type="file" class="form-control"   name="image" >'+
                     '</div>'+
                     '</div>'+
                     '</div>'+

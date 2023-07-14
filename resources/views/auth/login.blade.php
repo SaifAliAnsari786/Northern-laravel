@@ -37,7 +37,7 @@
                                 required
                             />
                         </label>
-{{--                        <div class="row mb-4">--}}
+<!-- {{--                        <div class="row mb-4">--}}
 {{--                            <div class="col-10">--}}
 {{--                                <div class="captcha">--}}
 {{--                                    <span>{!! captcha_img('flat') !!}</span>--}}
@@ -56,7 +56,7 @@
 {{--                                    &#x21bb;--}}
 {{--                                </button>--}}
 {{--                            </div>--}}
-{{--                        </div>--}}
+{{--                        </div>--}} -->
                         <button class="form-btn primary-default-btn transparent-btn">
                             Sign in
                         </button>

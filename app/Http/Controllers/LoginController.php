@@ -15,6 +15,7 @@ class LoginController extends Controller
             return view('auth.login');
         }
     }
+
     public function getLogin()
     {
         // if (Auth::user()) {
