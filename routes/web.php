@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\admin\SliderController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LoginController;
@@ -26,21 +26,27 @@ use App\Http\Controllers\HomeController;
 //     return view('admin.index');
 // });
 
-Route::get('', [HomeController::class, 'home']);
+// Route::get('', [HomeController::class, 'home']);
 
 
 // Authentication//
+Route::get('', [LoginController::class, 'gethome']);
 Route::get('login', [LoginController::class, 'getLogin'])->name('login');
 Route::post('login', [LoginController::class, 'postLogin']);
+Route::get('logout', [LoginController::class, 'logout']);
 
 Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
-    Route::get('logout', [LoginController::class, 'logout']);
-
     Route::get('', [HomeController::class, 'index']);
 
-
+    // Route::get('sliders', [SliderController::class, 'index']);
+    Route::resource('sliders', SliderController::class);
+    Route::get('sliders/delete/{id}', [SliderController::class, 'destroy']);
+    Route::post('sliders/change-order', [SliderController::class, 'changeOrder']);
+    Route::get('image-dom', [SliderController::class, 'getImageDom']);
 
 });
+
+
 
 
 

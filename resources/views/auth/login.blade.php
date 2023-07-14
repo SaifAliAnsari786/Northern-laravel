@@ -1,6 +1,6 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.app1')
 @section('title')
-    <title>Ruby Homes</title>
+    <title>Northern</title>
 @endsection
 @section('content')
     <main class="page-center">

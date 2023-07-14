@@ -5,9 +5,9 @@
 @section('main-panel')
     <div class="main-panel">
         <div class="content-wrapper">
-            {{--start loader--}}
+            {{-- start loader --}}
             <div class="loader loader-default" id="loader"></div>
-            {{--end loader--}}
+            {{-- end loader --}}
             <div class="row">
                 <div class="col-sm-12 col-md-12 stretch-card">
                     <div class="card-wrap form-block p-0">
@@ -17,8 +17,8 @@
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
-                                        <a href="{{url('super-admin/sliders')}}"><img
-                                                src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
+                                        <a href="{{ url('super-admin/sliders') }}"><img
+                                                src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
                                     </li>
                                 </ul>
                             </div>
@@ -27,7 +27,7 @@
                         @include('errors.error')
                         <div class="row p-4">
                             <div class="col-sm-12 col-md-12 stretch-card sl-stretch-card">
-                                {!! Form::open(['url' => 'super-admin/sliders','method' => 'POST', 'files' => true]) !!}
+                                {!! Form::open(['url' => 'super-admin/sliders', 'method' => 'POST', 'files' => true]) !!}
                                 <div class="row">
                                     <div class="col-12 table-responsive">
                                         <div class="row">
@@ -41,14 +41,17 @@
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="input-group">
-                                                                    <select id="type" name="type" class="form-control"
-                                                                            required onchange="getDom()">
-                                                                        <option value="" selected disabled>Please select
-                                                                            type
-                                                                        </option>
-                                                                        @foreach(config('custom.slider_types') as $in1 => $val1)
-                                                                            <option value="{{$in1}}"
-                                                                                    @if(old('type') == $in1) selected @endif>{{$val1}}</option>
+                                                                    <select id="type" name="type"
+                                                                        class="form-control" required onchange="getDom()">
+                                                                        <option value="" selected disabled>Please
+                                                                            select type</option>
+                                                                        @php
+                                                                            $sliderTypes = config('custom.slider_types', []);
+                                                                        @endphp
+                                                                        @foreach ($sliderTypes as $in1 => $val1)
+                                                                            <option value="{{ $in1 }}"
+                                                                                @if (old('type') == $in1) selected @endif>
+                                                                                {{ $val1 }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
@@ -71,14 +74,21 @@
                                                             <div class="col-md-8">
                                                                 <div class="input-group">
                                                                     <select id="status" name="status"
-                                                                            class="form-control" required>
-                                                                        <option value="" selected disabled>Please select
+                                                                        class="form-control" required>
+                                                                        <option value="" selected disabled>Please
+                                                                            select
                                                                             Status
                                                                         </option>
-                                                                        @foreach(config('custom.status') as $in => $val)
-                                                                            <option value="{{$in}}"
-                                                                                    @if(old('status') == $in) selected @endif>{{$val}}</option>
-                                                                        @endforeach
+                                                                        @php
+                                                                            $statusArray = config('custom.status', []);
+                                                                        @endphp
+
+                                                                        @foreach ($statusArray as $in => $val)
+                                                                            <option value="{{ $in }}"
+                                                                                @if (old('status') == $in) selected @endif>
+                                                                                {{ $val }}
+                                                                            </option>
+                                                                            @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -92,7 +102,7 @@
                                         <div class="button-section d-flex justify-content-end mt-2 mb-4">
                                             <div class="row">
                                                 <div class="button-section d-flex justify-content-end mt-2 mb-4">
-                                                    <a href="{{url('super-admin/sliders')}}">
+                                                    <a href="{{ url('super-admin/sliders') }}">
                                                         <button type="button">
                                                             Skip
                                                             <i class="fa-solid fa-angles-right"></i>
@@ -124,11 +134,11 @@
                 $.ajax({
                     type: 'GET',
                     url: Laravel.url + '/super-admin/image-dom',
-                    success: function (data) {
+                    success: function(data) {
                         $('#my-dom').remove();
                         $('#section-dom').append(data['html']);
                     },
-                    error: function (error) {
+                    error: function(error) {
                         // errorDisplay(error["responseJSON"]["message"]);
                     }
                 });
@@ -136,13 +146,12 @@
                 $.ajax({
                     type: 'GET',
                     url: Laravel.url + '/super-admin/video-dom',
-                    success: function (data) {
+                    success: function(data) {
                         // end_loader();
                         $('#my-dom').remove();
                         $('#section-dom').append(data['html']);
-                    }
-                    ,
-                    error: function (error) {
+                    },
+                    error: function(error) {
                         // errorDisplay(error["responseJSON"]["message"]);
                     }
                 });

@@ -20,7 +20,7 @@
                         </div>
                         <div class="nav-profile-text">
                             <p class="mb-1">{{Auth::user()->name}}</p>
-                        
+
                         </div>
                         <div class="">
                             <button>

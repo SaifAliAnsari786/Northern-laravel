@@ -20,7 +20,17 @@ class HomeController extends Controller
             //for admin
             return view('admin.welcome');
 
+        }else{
+
+            return view('login');
         }
-        return view('auth.login');
     }
+    // public function gethome()
+    // {
+    //     if (Auth::check()) {
+    //         return view('admin.dashboard');
+    //     } else {
+    //         return view('auth.login');
+    //     }
+    // }
 }
