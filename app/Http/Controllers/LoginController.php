@@ -18,14 +18,6 @@ class LoginController extends Controller
 
     public function getLogin()
     {
-        // if (Auth::user()) {
-        //     if (Auth::user()->user_type == 1) {
-        //         return redirect('super-admin');
-        //     } elseif (Auth::user()->user_type == 2) {
-        //         return redirect('login');
-        //     }
-        // }
-        // return view('auth.login');
         if (Auth::check()) {
             return redirect('');
         } else {
