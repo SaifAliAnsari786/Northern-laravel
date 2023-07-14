@@ -31,6 +31,7 @@ use App\Http\Controllers\Admin\SettingController;
 
 
 // Authentication//
+Route::get('', [LoginController::class, 'gethome']);
 Route::get('login', [LoginController::class, 'getLogin'])->name('login');
 Route::post('login', [LoginController::class, 'postLogin']);
 Route::get('logout', [LoginController::class, 'logout']);
