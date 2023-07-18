@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\SeoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -56,6 +57,14 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::get('sliders/delete/{id}', [SliderController::class, 'destroy']);
     Route::post('sliders/change-order', [SliderController::class, 'changeOrder']);
     Route::get('image-dom', [SliderController::class, 'getImageDom']);
+
+    Route::get('seo', [SeoController::class, 'index']);
+    Route::get('seo/create', [SeoController::class, 'create']);
+    Route::post('seo', [SeoController::class, 'store']);
+    Route::get('seo/{id}', [SeoController::class, 'show']);
+    Route::get('seo/{id}/edit', [SeoController::class, 'edit']);
+    Route::post('seo/{id}', [SeoController::class, 'update']);
+    Route::post('seo-delete', [SeoController::class, 'postDelete']);
 
 });
 

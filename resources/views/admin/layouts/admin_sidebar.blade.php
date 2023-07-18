@@ -23,6 +23,14 @@
             </div>
         </a>
     </li>
+    <li class="nav-item @if(Request::segment(2) == 'seo') active @endif">
+        <a class="nav-link" href="{{url('super-admin/seo')}}" aria-expanded="false" aria-controls="ui-basic">
+            <div class="sidebar-icon">
+                <i class="bi bi-download"></i>
+                <span class="menu-title">Seo</span>
+            </div>
+        </a>
+    </li>
 
 
 
