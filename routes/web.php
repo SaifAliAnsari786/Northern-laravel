@@ -28,7 +28,7 @@ use App\Http\Controllers\Admin\SettingController;
 //     return view('admin.index');
 // });
 
-// Route::get('', [HomeController::class, 'home']);
+Route::get('home', [HomeController::class, 'home']);
 
 
 // Authentication//

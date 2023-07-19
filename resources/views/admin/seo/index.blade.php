@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="card-heading d-flex justify-content-between">
                             <div>
-                                <h4>Soe Lists</h4>
+                                <h4>Seo Lists</h4>
                             </div>
                             <ul class="admin-breadcrumb">
                                 <li><a href="{{url('super-admin')}}" class="card-heading-link">Home</a></li>

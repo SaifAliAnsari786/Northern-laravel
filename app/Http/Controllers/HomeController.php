@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,7 +11,8 @@ class HomeController extends Controller
 
     public function home()
     {
-        return view('welcome');
+        $settings = Setting::orderBy('created_at','desc')->get();
+        return view('welcome', compact('settings'));
     }
 
 

@@ -72,9 +72,9 @@ class SettingController extends Controller
             'status' => 'required'
         ]);
         if (request('type') == array_search('Image', config('custom.setting_types'))) {
-            if (\request('image')) {
+            if (\request('value')) {
                 $this->validate($request, [
-                        'image' => 'required|file|mimes:jpeg,png,jpg,pdf,webp,svg|max:2048'
+                        'value' => 'required|file|mimes:jpeg,png,jpg,pdf,webp,svg|max:2048'
                     ]
                 );
             }
