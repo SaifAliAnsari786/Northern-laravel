@@ -46,22 +46,20 @@
         <section class="process-section">
             <div class="container">
                  <button onclick="responsiveVoice.speak('We Support NDIS logos');responsiveVoice.speak('How can we help you?');responsiveVoice.speak('Our innovative support services enable and celebrate the achievements of the amazing people we work with. We are committed to maximise the quality of life of our participants and support them achieve their full potential. Our commitment is to provide choice and flexibility.');" type="button" value="Play"><i class="icofont-listening"></i>Listen</button>
-                @foreach($settings as $setting)
                     <div class="two-columns">
                         <div class="col nds-hblock-wrap">
                             <div class="nds-hblock">
-                                <img src="{{ ('frontend/images/nds-provider.png') }}" alt="I love NDIS. Registered NDIS Provider">
-                                <h6 class="ndsub-heading">{{$setting->key}}</h6>
-                                <p>Our innovative support services enable and celebrate the achievements of the amazing people we work with. As registered NDIS service providers, we are committed to maximise the quality of life of our participants and supporting them achieve their full potential. We are committed to providing the best choice and flexibility in our disability care services.</p>
+                                <img src="{{url($authorization_top_image->value)}}" alt="I love NDIS. Registered NDIS Provider">
+                                <h6 class="ndsub-heading">{{$authorization_right_image->key}}</h6>
+                                <p>{!! $authorization_description->value !!}</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="nds-himg">
-                                <img src="{{ (($setting->value)) }}" alt="NDS Art" class="img-fluid">
+                                <img src="{{url($authorization_right_image->value)}}" alt="{{$authorization_right_image->image_alt}}" class="img-fluid">
                             </div>
                         </div>
                     </div>
-                @endforeach
             </div>
         </section>
 
@@ -151,53 +149,15 @@
             </div>
         </section>
 
-        <section class="mission-section">
-            <div class="container">
-                <div class="two-columns d-flex">
-                    <div class="col">
-                        <div class="mission-img">
-                            <img src="images/mission-img.jpg" alt="disable person">
-                        </div>
-                    </div>
-                    <div class="col">
-                        
-                        <div class="mission-wrap">
-                            <h3>Northern Disability Services</h3>
-                            <button onclick="responsiveVoice.speak('Northern Disability Services');responsiveVoice.speak('NDS is a leading disability support organisation.');responsiveVoice.speak('Our innovative support services enable and celebrate the achievements of the amazing people we work with. We are committed to maximise the quality of life of our participants and support them achieve their full potential.Our commitment is to provide choice and flexibility. We are committed to offer services that are person centered and responsive to your personal goals.');" type="button" value="Play"><i class="icofont-listening" class="listen"></i></button>
-                            <p class="sub-heading">NDS is a leading disability support organisation.</p>
-                            <p>Our innovative support services facilitate and celebrate the accomplishments of the remarkable people we work with. We are NDIS registered service providers in Australia, Melbourne, offering several support services to individuals living with a disability.
-                            </p>
-                            <p>Our commitment is to provide the best NDIS disability care services. We are dedicated to delivering the best disability care services in Melbourne that are person-centered and meet your personal goals.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- start section for northern disability service-->
+            @include('homepage.northern_disabillty_service')
+        <!-- end section for northern disability service-->
         
-        <section class="help-section">
-            <div class="container">
-                <div class="two-columns">
-                    <div class="col payment-block" style="padding: 0; background:#fce7d6;">
-                        <div class="pricing">
-                            
-                            <h3>NDIS Pricing</h3>
-                            <button onclick="responsiveVoice.speak('NDIS Pricing');responsiveVoice.speak('NDS’s costing for NDIS funded supports are identical to the Temporary Transformation Payment (TTP) prices set and regulated by the National Disability Insurance Agency (NDIA.)');" type="button" value="Play"><i class="icofont-listening" class="listen"></i></button>
-                            <p>NDS's costing for NDIS funded supports are identical to the Temporary Transformation Payment (TTP) prices set and regulated by the National Disability Insurance Agency (NDIA.)</p>
-                            <p>For details on the prices of services provided by NDS please see the following link:</p>
-                            
-                            <ul>
-                                <li><a class="btn" href="https://www.ndis.gov.au/providers/pricing-arrangements" target="_blank">Price Guide</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col" style="padding:0;">
-                        <div class="image-help">
-                            <img src="images/payment.jpg" alt="NDS Payment">
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </section>
+        <!-- start section for ndis pricing-->
+        @include('homepage.ndis_pricing')
+         <!-- end section for ndis pricing-->
+
+      
         
         <section class="banner-section testi-banner" style="position: relative;">
             <div class="container">

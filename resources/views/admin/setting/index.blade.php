@@ -74,6 +74,7 @@
                                                         <tr>
                                                             <th style="width: 10px">S.N.</th>
                                                             <th class="text-center">Title</th>
+                                                            <th class="text-center">Slug</th>
                                                             <th class="text-center">Type</th>
                                                             <th class="text-center">Value</th>
                                                             <th class="text-center">Image Alt</th>
@@ -86,6 +87,7 @@
                                                         <tr>
                                                             <td>{{$settings->firstItem() + $loop->index}}</td>
                                                             <td class="text-center">{{$setting->key}}</td>
+                                                            <td class="text-center">{{$setting->slug}}</td>
                                          
                                                             <td class="text-center">{{config('custom.setting_types')[$setting->type]}}</td>
                                                             @if($setting->type == array_search('Image',config('custom.setting_types')))
@@ -98,7 +100,7 @@
                                                                     <td>{!! Str::limit($setting->value,100,'......') !!}</td>
                                                                 @endif
 
-
+                                                                
                                                             <td class="text-center">{{$setting->image_alt}}</td>
 
                                                             <td class="text-center">
