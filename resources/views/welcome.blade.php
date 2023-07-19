@@ -50,7 +50,7 @@
                         <div class="col nds-hblock-wrap">
                             <div class="nds-hblock">
                                 <img src="{{url($authorization_top_image->value)}}" alt="I love NDIS. Registered NDIS Provider">
-                                <h6 class="ndsub-heading">{{$authorization_right_image->key}}</h6>
+                                <h6 class="ndsub-heading">{{$authorization_description->key}}</h6>
                                 <p>{!! $authorization_description->value !!}</p>
                             </div>
                         </div>
