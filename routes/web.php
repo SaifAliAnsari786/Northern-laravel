@@ -20,18 +20,19 @@ use App\Http\Controllers\Admin\SettingController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/fornted', function () {
+    return view('forntend');
+});
 
 // Route::get('admin', function () {
 //     return view('admin.index');
 // });
 
-Route::get('home', [HomeController::class, 'home']);
+Route::get('', [HomeController::class, 'home']);
 
 
 // Authentication//
+Route::get('gethome', [LoginController::class, 'gethome']);
 Route::get('login', [LoginController::class, 'getLogin'])->name('login');
 Route::post('login', [LoginController::class, 'postLogin']);
 Route::get('logout', [LoginController::class, 'logout']);

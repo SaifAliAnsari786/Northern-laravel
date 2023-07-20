@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Setting;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,6 +12,7 @@ class HomeController extends Controller
 
     public function home()
     {
+        $sliders = Slider::all();
         $settings  = Setting::all();
         $authorization_top_image = $settings->where('slug', 'authorization-top-image')->first();
         $authorization_right_image = $settings->where('slug', 'authorization')->first();
@@ -19,9 +21,9 @@ class HomeController extends Controller
         $northern_disability_service_image = $settings->where('slug', 'northern-disability-services-image')->first();
         $ndis_pricing_image = $settings->where('slug', 'ndis-pricing-image')->first();
         $ndis_pricing = $settings->where('slug', 'ndis-pricing')->first();
-        
+
         return view('welcome', compact('authorization_top_image', 'authorization_right_image', 'authorization_description',
-                                'northern_disability_service', 'northern_disability_service_image','ndis_pricing_image','ndis_pricing'));
+                                'northern_disability_service', 'northern_disability_service_image','ndis_pricing_image','ndis_pricing','sliders'));
     }
 
 
