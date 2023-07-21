@@ -116,6 +116,86 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div><div class="col-md-12">
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <label for="design_title">Design Name<span
+                                                    style="color: red;">*</span></label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-lg" name="name"
+                                                       id="design_title" value="{{old('name')}}" required
+                                                       onchange="validateSlug()">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="design_type">Design Type<span
+                                                    style="color: red;">*</span></label>
+                                            <select id="design_type" name="design_type" class="form-select"
+                                                    aria-label="Select the design type">
+                                                <option value="" selected disabled>Please select design type</option>
+                                                @foreach(config('custom.design_types') as $in1 => $val1)
+                                                    <option value="{{$in1}}"
+                                                            @if(old('design_type') == $in1) selected @endif>{{$val1}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-2">
+                                        <div class="col-md-6">
+                                            <label for="design_description">Design Description<span style="color: red;">*</span></label>
+                                            <textarea name="design_description" id="design_description" cols="30"
+                                                      rows="5" class="form-control form-control-lg"
+                                                      placeholder=""></textarea>
+                                        </div>
+
+                                    </div>
+                                    <div class="image-upload_item form-grp mt-4">
+                                        <div id="imageDomAll">
+                                            <div class="row gy-2 gx-4 py-2 control-group image_input_group"
+                                                 id="imageDom1">
+                                                <div class="col-sm-6 col-md-4">
+                                                    <label for="image[]" class="form-label">Image (916x500)<span
+                                                            style="color: red;">*</span></label>
+                                                    <input class="form-control form-control-lg my-image" type="file"
+                                                           id="image1" name="image[]" placeholder="916x500" required>
+                                                </div>
+                                                <div class="col-sm-6 col-md-4">
+                                                    <label for="image_alt[]">Image Alt</label>
+                                                    <div class="input-group">
+                                                        <input type="text"
+                                                               class="form-control form-control-lg my-image-alt"
+                                                               name="image_alt[]" id="image_alt1" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-sm-6 col-md-2">
+                                                    <label for="image_order_by[]">Order By<span
+                                                            style="color: red;">*</span></label>
+                                                    <div class="input-group">
+                                                        <input type="number"
+                                                               class="form-control form-control-lg my-order-by"
+                                                               name="image_order_by[]" id="order_by1" min="1" step="1"
+                                                               value="1" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1 col-md-2 d-flex align-self-end">
+                                                    <div class="me-2">
+                                                        <button class="btn btn-danger remove_item_btn1 " type="button"
+                                                                onclick="removeImageDom(1)">Remove
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-1">
+                                            <div class="add-button-section">
+                                                <button type="button" class="btn btn-primary add-more-btn1"
+                                                        onclick="getMoreImageDom(1)">Add More
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="features-upload_item form-grp mt-4 mb-2">
                                     <div id="featureDomAll">

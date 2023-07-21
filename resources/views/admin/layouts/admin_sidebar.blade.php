@@ -35,10 +35,10 @@
 
 
     <li class="nav-item @if(Request::segment(2) == 'testimonials') active @endif">
-        <a class="nav-link" href="{{url('super-admin/testimonials')}}" aria-expanded="false" aria-controls="ui-basic">
+        <a class="nav-link" href="{{url('super-admin/service')}}" aria-expanded="false" aria-controls="ui-basic">
             <div class="sidebar-icon">
                 <i class="bi bi-bell"></i>
-                <span class="menu-title">Testimonials</span>
+                <span class="menu-title">Service</span>
             </div>
         </a>
     </li>
