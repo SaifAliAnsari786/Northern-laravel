@@ -19,8 +19,8 @@
                 <div class="col-sm-12 col-md-12 stretch-card">
                     <div class="card-wrap form-block p-0">
                         <div class="block-header p-4">
-                            <h3>Add New Home Designs</h3>
-                            <p class="ms-4 mb-0">Fill the following fields to add new home designs.</p>
+                            <h3>Add New Service</h3>
+                            <p class="ms-4 mb-0">Fill the following fields to add new Service.</p>
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
@@ -42,112 +42,62 @@
                             ]) !!}
                             <div class="form-group batch-form">
                                 <div class="col-md-12">
-                                    <div class="image-upload_item form-grp mt-4">
-                                        <div id="imageDomAll">
-                                            <div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom1">
-                                                <div class="col-sm-6 col-md-4">
-                                                    <label for="image[]" class="form-label">Logo Image (916x500)<span
-                                                            style="color: red;">*</span></label>
-                                                    <input class="form-control form-control-lg my-image" type="file"
-                                                        id="image1" name="image[]" placeholder="916x500" required>
-                                                </div>
-                                                <div class="col-sm-6 col-md-4">
-                                                    <label for="image_alt[]">Image Alt</label>
-                                                    <div class="input-group">
-                                                        <input type="text"
-                                                            class="form-control form-control-lg my-image-alt"
-                                                            name="image_alt[]" id="image_alt1" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 col-sm-6 col-md-2">
-                                                    <label for="image_order_by[]">Order By<span
-                                                            style="color: red;">*</span></label>
-                                                    <div class="input-group">
-                                                        <input type="number"
-                                                            class="form-control form-control-lg my-order-by"
-                                                            name="image_order_by[]" id="order_by1" min="1"
-                                                            step="1" value="1" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-1 col-md-2 d-flex align-self-end">
-                                                    <div class="me-2">
-                                                        <button class="btn btn-danger remove_item_btn1 " type="button"
-                                                            onclick="removeImageDom(1)">Remove
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row mt-1">
-                                            <div class="add-button-section">
-                                                <button type="button" class="btn btn-primary add-more-btn1"
-                                                    onclick="getMoreImageDom(1)">Add More
-                                                </button>
-                                            </div>
+                                    <div class="row pt-2">
+                                        <div class="col-md-6">
+                                            <label for="Logo">Logo<span
+                                                    style="color: red;">*</span></label>
+                                            <input class="form-control form-control-lg my-image" type="file"
+                                            id="" name="logo" placeholder="logo image" required>
                                         </div>
                                     </div>
                                     <div class="row pt-2">
                                         <div class="col-md-6">
-                                            <label for="design_description">Design Description<span
+                                            <label for="Logo">Background Image<span
                                                     style="color: red;">*</span></label>
-                                            <textarea name="design_description" id="design_description" cols="30" rows="5"
-                                                class="form-control form-control-lg" placeholder=""></textarea>
+                                            <input class="form-control form-control-lg my-image" type="file"
+                                            id="" name="logo" placeholder="image" required>
                                         </div>
                                     </div>
-                                    <div class="image-upload_item form-grp mt-4">
-                                        <div id="imageDomAll">
-                                            <div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom1">
-                                                <div class="col-sm-6 col-md-4">
-                                                    <label for="image[]" class="form-label">Image (916x500)<span
-                                                            style="color: red;">*</span></label>
-                                                    <input class="form-control form-control-lg my-image" type="file"
-                                                        id="image1" name="image[]" placeholder="916x500" required>
-                                                </div>
-                                                <div class="col-sm-6 col-md-4">
-                                                    <label for="image_alt[]">Image Alt</label>
-                                                    <div class="input-group">
-                                                        <input type="text"
-                                                            class="form-control form-control-lg my-image-alt"
-                                                            name="image_alt[]" id="image_alt1" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 col-sm-6 col-md-2">
-                                                    <label for="image_order_by[]">Order By<span
-                                                            style="color: red;">*</span></label>
-                                                    <div class="input-group">
-                                                        <input type="number"
-                                                            class="form-control form-control-lg my-order-by"
-                                                            name="image_order_by[]" id="order_by1" min="1"
-                                                            step="1" value="1" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-1 col-md-2 d-flex align-self-end">
-                                                    <div class="me-2">
-                                                        <button class="btn btn-danger remove_item_btn1 " type="button"
-                                                            onclick="removeImageDom(1)">Remove
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row mt-1">
-                                            <div class="add-button-section">
-                                                <button type="button" class="btn btn-primary add-more-btn1"
-                                                    onclick="getMoreImageDom(1)">Add More
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-12 col-md-6 pt-3 pt-md-0">
-                                        <label for="over_view_description">Overview Header<span
+                                        <label for="over_view_description">Background Image description<span
                                                 style="color: red;">*</span></label>
-                                        <textarea name="over_view_description" id="body1" rows="15">{{ old('over_view_description') }}
+                                        <textarea name="over_view_description" id="body1" rows="15">{{ old('background_image_description') }}
                                             </textarea>
                                     </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-6">
+                                        <label for="seo_title" class="form-label">Title</label>
+                                        <input class="form-control form-control-lg" type="text" id="title"
+                                            name="title">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="seo_title" class="form-label">Description</label>
+                                        <input class="form-control form-control-lg" type="text" id="description"
+                                            name="description">
+                                    </div>
+                                    <div class="row mt-3">
+                                    <div class="col-sm-6">
+                                        <label for="seo_title" class="form-label">Description Image Position</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">Right</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">Left</label>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="seo_title" class="form-label">From</label>
+                                        <input class="form-control form-control-lg" type="text" id="from"
+                                            name="form">
+                                    </div>
+                                </div>
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-sm-12">
@@ -163,18 +113,19 @@
                                             name="seo_description">
                                     </div>
                                 </div>
+
                                 <div class="row mt-3">
                                     <div class="col-sm-12">
-                                        <label for="seo_keyword" class="form-label">Seo Keyword</label>
-                                        <input class="form-control form-control-lg" type="text" id="seo_keyword"
-                                            name="seo_keyword">
+                                        <label for="seo_keyword" class="form-label">Meta Keyword</label>
+                                        <input class="form-control form-control-lg" type="text" id="meta_keyword"
+                                            name="seo_meta_keyword">
                                     </div>
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-sm-12">
-                                        <label for="seo_keyword" class="form-label">Meta Keyword</label>
-                                        <input class="form-control form-control-lg" type="text" id="seo_meta_keyword"
-                                            name="seo_meta_keyword">
+                                        <label for="seo_keyword" class="form-label">Meta Keyword Description</label>
+                                        <input class="form-control form-control-lg" type="text" id="meta_keyword_description"
+                                            name="meta_keyword_description">
                                     </div>
                                 </div>
                                 <div class="row mt-3">
