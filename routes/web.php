@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,14 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::get('seo/{id}/edit', [SeoController::class, 'edit']);
     Route::post('seo/{id}', [SeoController::class, 'update']);
     Route::post('seo-delete', [SeoController::class, 'postDelete']);
+
+    Route::get('service', [ServiceController::class,'index']);
+    Route::get('service/create', [ServiceController::class, 'create']);
+    Route::post('service', [ServiceController::class, 'store']);
+    Route::get('service/{id}', [ServiceController::class, 'show']);
+    Route::get('service/{id}/edit', [ServiceController::class, 'edit']);
+    Route::post('service/{id}', [ServiceController::class, 'update']);
+    Route::post('service-delete', [ServiceController::class, 'postDelete']);
 
 });
 
