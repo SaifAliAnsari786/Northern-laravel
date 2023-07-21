@@ -20,9 +20,9 @@ use App\Http\Controllers\Admin\SettingController;
 |
 */
 
-Route::get('/fornted', function () {
-    return view('forntend');
-});
+// Route::get('/fornted', function () {
+//     return view('forntend');
+// });
 
 // Route::get('admin', function () {
 //     return view('admin.index');
