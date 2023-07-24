@@ -10,6 +10,7 @@ class Service extends Model
     use HasFactory;
     protected $fillable=[
         'logo',
+        'background_image',
         'background_image_description',
         'title',
         'description',
@@ -21,6 +22,7 @@ class Service extends Model
         'meta_keyword_description',
         'order_by',
         'service_description_title',
+        'status',
       
     ];
 }

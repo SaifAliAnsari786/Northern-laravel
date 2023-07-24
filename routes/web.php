@@ -51,8 +51,6 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::get('settings/delete/{id}', [SettingController::class, 'destroy']);
 
 
-    Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload'); //upload image in CkEditor
-    Route::post('post-upload-image', [ImageUploadController::class, 'storeImageQuill'])->name('image.store');
 
     // Route::get('sliders', [SliderController::class, 'index']);
     Route::resource('sliders', SliderController::class);
@@ -74,7 +72,10 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::get('service/{id}', [ServiceController::class, 'show']);
     Route::get('service/{id}/edit', [ServiceController::class, 'edit']);
     Route::post('service/{id}', [ServiceController::class, 'update']);
-    Route::post('service-delete', [ServiceController::class, 'postDelete']);
+    Route::get('service/delete/{id}', [ServiceController::class, 'destroy']);
+
+    Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(' image.upload'); //upload image in CkEditor
+    Route::post('post-upload-image', [ImageUploadController::class, 'storeImageQuill'])->name('image.store');
 
 });
 
