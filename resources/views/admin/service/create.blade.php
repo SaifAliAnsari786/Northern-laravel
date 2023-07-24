@@ -215,6 +215,7 @@
                     break;
                 }
             }
+
             if (check_image) {
                 imageDomCount = imageDomCount + 1;
                 var html = '<div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom' + imageDomCount +
