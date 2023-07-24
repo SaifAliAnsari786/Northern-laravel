@@ -74,7 +74,8 @@ return [
         '7' => 'blog',
         '8' => 'gallery',
         '9' => 'testimonial',
-        '11' => 'page'
+        '11' => 'page',
+        
 
     ],
     'organization_types' => [
