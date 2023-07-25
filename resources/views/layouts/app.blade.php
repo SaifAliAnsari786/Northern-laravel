@@ -22,6 +22,7 @@
         <meta name="description" content="We are NDIS Registered Service Providers In Australia, Melbourne, offering several support services to individuals living with a disability." />
         <meta name="subject" content="Northern Disability Services">
         <meta name="publisher" content="Northern Disability Services">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4KL0HF1KX"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Q4KL0HF1KX'); </script>
 

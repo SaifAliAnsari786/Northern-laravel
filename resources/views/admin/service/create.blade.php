@@ -157,6 +157,8 @@
 @endsection
 @section('script')
 <script>
+
+    
     function removeImageDom(id) {
         if ($('.my-image').length > 1) {
             $('#imageDom' + id).remove();
