@@ -99,7 +99,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">S.N.</th>
-                                                            <th scope="col">background_image</th>
+                                                            <th scope="col">Logo Image</th>
                                                             <th scope="col">Background Image</th>
                                                             <th scope="col">Background Image description</th>
                                                             <th scope="col">Title</th>
@@ -124,7 +124,7 @@
                                                                 </a>
                                                             </td>
                                                             <td>{{$service->background_image_description}}</td>
-                                                           
+
                                                             <td>{{$service->title}}</td>
                                                             <td>{{$service->description}}</td>
 

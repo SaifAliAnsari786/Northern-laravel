@@ -9,6 +9,7 @@ use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +26,19 @@ use App\Http\Controllers\Admin\ServiceController;
 //     return view('forntend');
 // });
 
-// Route::get('admin', function () {
-//     return view('admin.index');
-// });
+Route::get('test', function () {
+    return view('homepage.test');
+});
 
 Route::get('', [HomeController::class, 'home']);
+
+//  Frontend serivce
+Route::get('daily-living-support', [ServicesController::class,'daily_living_support']);
+Route::get('support-coordination', [ServicesController::class,'support_coordination']);
+Route::get('community-participation', [ServicesController::class,'community_participation']);
+Route::get('plan-management', [ServicesController::class,'plan_management']);
+Route::get('household-tasks', [ServicesController::class,'household_task_support']);
+Route::get('respite-care', [ServicesController::class,'respite_care']);
 
 
 // Authentication//

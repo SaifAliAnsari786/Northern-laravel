@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="logo">
                     <a href="./"><img src="{{ ('frontend/images/logo.png') }}" alt="Northern Disability"></a>
-                </div> 
+                </div>
                 <nav id="nav">
                     <a href="#" class="nav-opener"><span>Menu</span></a>
                     <div class="nav-drop" style="margin-top:20px;">

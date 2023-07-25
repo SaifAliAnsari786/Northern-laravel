@@ -1,9 +1,10 @@
 
 
+
 <!DOCTYPE html>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
-        <title>Northern Disability Services | Best NDIS Registered Providers</title>
+        <title>Daily Living Support | Improved Daily Living Support NDIS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="images/favicon.ico">
@@ -11,17 +12,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
         <!-- Open Graph meta tags -->
-        <meta property="og:title" content="Northern Disability Services | Best NDIS Registered Providers" />
-        <meta property="og:url" content="https://northds.org/" />
-        <meta property="og:description" content="We are NDIS Registered Service Providers In Australia, Melbourne, offering several support services to individuals living with a disability." />
-        <meta property="og:image" content="https://northds.org/images/banner-slider2.jpg" />
-        <meta property="og:image:alt" content="ndis registered providers">
+        <meta property="og:title" content="Daily Living Support | Improved Daily Living Support NDIS" />
+        <meta property="og:url" content="https://northds.org/daily-living-support" />
+        <meta property="og:description" content="We provide the best improved daily living support ndis in melbourne that will support you with your daily living needs. With our NDIS assistance with daily life and personal activities, you can start living independently." />
+        <meta property="og:image" content="https://northds.org/images/daily-living-bg.jpg" />
+        <meta property="og:image:alt" content="improved daily living ndis">
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Northern Disability Services" />
-        <meta name="keywords" content="ndis registered providers" />
-        <meta name="meta keywords" content="ndis provider, ndis approved providers, ndis registered service providers, registered providers ndis, ndis provider, ndis provider services, ndis provider melbourne, ndis service provider melbourne, ndis registered providers melbourne, best ndis registered service providers, top ndis registered service providers" data-rh="true"/>
+        <meta name="keywords" content="improved daily living ndis" />
+        <meta name="meta keywords" content="daily living support, ndis daily living support, assistance with daily life ndis, ndis assistance with daily life, ndis improved daily living, assistance with daily personal activities ndis, assistance with daily living ndis, improved daily living, improved daily living ndis melbourne" data-rh="true"/>
         <meta name="author" content="Northern Disability Services" />
-        <meta name="description" content="We are NDIS Registered Service Providers In Australia, Melbourne, offering several support services to individuals living with a disability." />
+        <meta name="description" content="We provide the best improved daily living support ndis in melbourne that will support you with your daily living needs. With our NDIS assistance with daily life and personal activities, you can start living independently." />
         <meta name="subject" content="Northern Disability Services">
         <meta name="publisher" content="Northern Disability Services">
 
@@ -82,247 +83,143 @@
                 </nav>
             </div>
         </div>
-    </header><main>
-
-        <section class="banner">
-            <div class="slider image-slider">
-                <div>
-                    <div class="image-wrap" style="background-image: url(images/banner-slider2.jpg);">
-                        <div class="container">
-                            <div class="banner-text">
-                                <h1>NDS is a Leading Disability Support Organisation</h1>
-                                <p>Our commitment is to provide choice and flexibility. We are committed to offer services that are person centered and responsive to your personal goals.</p>
-                                <a href="#" class="btn"> Get in Touch</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrap" style="background-image: url(images/Slider2.jpg);">
-                        <div class="container">
-                            <div class="banner-text">
-                                <h1>We Provide Respite Care</h1>
-                                <p>We can provide respite care on an occasional or as needed basis , and in all kinds of situations – wether your usual carer will be at home with your or not.</p>
-                                <a href="#" class="btn"> Get in Touch</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrap" style="background-image: url(images/banner-slider1.jpg);">
-                        <div class="container">
-                            <div class="banner-text">
-                                <h1>We make it Simple</h1>
-                                <p>As a registered NDIS service provider, we offer the best disability services tailored to your needs.</p>
-                                <a href="#" class="btn"> Get in Touch</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="process-section">
+    </header>
+     <main>
+        <section class="banner-section dailyliving-banner">
             <div class="container">
-                 <button onclick="responsiveVoice.speak('We Support NDIS logos');responsiveVoice.speak('How can we help you?');responsiveVoice.speak('Our innovative support services enable and celebrate the achievements of the amazing people we work with. We are committed to maximise the quality of life of our participants and support them achieve their full potential. Our commitment is to provide choice and flexibility.');" type="button" value="Play"><i class="icofont-listening"></i>Listen</button>
-                <div class="two-columns">
-                    <div class="col nds-hblock-wrap">
-                        <div class="nds-hblock">
-                            <img src="images/nds-provider.png" alt="I love NDIS. Registered NDIS Provider">
-                            <h6 class="ndsub-heading">How can we help you?</h6>
-                            <p>Our innovative support services enable and celebrate the achievements of the amazing people we work with. As registered NDIS service providers, we are committed to maximise the quality of life of our participants and supporting them achieve their full potential. We are committed to providing the best choice and flexibility in our disability care services.</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="nds-himg">
-                            <img src="images/nds-art.png" alt="NDS Art" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
+               <div class="banner-content">
+                <h1>Daily Living Support</h1>
+                <ul class="breadcrumb">
+                    <li><a href="index.php">Home</a></li>
+                    <li><i class="icofont-long-arrow-right"></i></li>
+                    <li>Services</li>
+                </ul>
+               </div>
             </div>
         </section>
-
-        <section class="service-section">
-            <div class="container">
-                <div class="three-columns">
-                    <div class="col">
-                        <a href="daily-living-support">
-                            <div class="service-detail">
-                            <div class="icon-section">
-                                <img src="images/daily-living-support.svg" alt="">
-                            </div>
-                            <div class="service-content">
-                                <h3>Daily Living Support</h4>
-                                <p>We will support you with your daily living needs.</p>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="support-coordination">
-                            <div class="service-detail">
-                                <div class="icon-section">
-                                    <img src="images/support-coordination.svg" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3>Support Coordination</h3>
-                                    <p>Our support coordinators will assist you get the best out of your NDS Plan.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="community-participation">
-                            <div class="service-detail">
-                                <div class="icon-section">
-                                    <img src="images/community-participation.svg" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3>Community Participation</h3>
-                                    <p>We will assist you get involved in community and social activities.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="plan-management">
-                            <div class="service-detail">
-                                <div class="icon-section">
-                                    <img src="images/plan-management.svg" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3>Plan Management</h3>
-                                    <p>Choosing us as your plan manager saves you hours of time and the headache of endless admin.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="household-tasks">
-                            <div class="service-detail">
-                                <div class="icon-section">
-                                    <img src="images/household-tasks.svg" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3>Household Tasks</h3>
-                                    <p>We can support you with the household task if you are having challenges in keeping your home clean and well-maintained.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="respite-care">
-                            <div class="service-detail">
-                                <div class="icon-section">
-                                    <img src="images/respite-care.svg" alt="">
-                                </div>
-                                <div class="service-content">
-                                    <h3>Respite Care</h3>
-                                    <p>We can provide respite care on an occasional or as needed basis.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--<a href="service.php" class="btn">View all Services</a>-->
-            </div>
-        </section>
-
-        <section class="mission-section">
-            <div class="container">
-                <div class="two-columns d-flex">
-                    <div class="col">
-                        <div class="mission-img">
-                            <img src="images/mission-img.jpg" alt="disable person">
-                        </div>
-                    </div>
-                    <div class="col">
-
-                        <div class="mission-wrap">
-                            <h3>Northern Disability Services</h3>
-                            <button onclick="responsiveVoice.speak('Northern Disability Services');responsiveVoice.speak('NDS is a leading disability support organisation.');responsiveVoice.speak('Our innovative support services enable and celebrate the achievements of the amazing people we work with. We are committed to maximise the quality of life of our participants and support them achieve their full potential.Our commitment is to provide choice and flexibility. We are committed to offer services that are person centered and responsive to your personal goals.');" type="button" value="Play"><i class="icofont-listening" class="listen"></i></button>
-                            <p class="sub-heading">NDS is a leading disability support organisation.</p>
-                            <p>Our innovative support services facilitate and celebrate the accomplishments of the remarkable people we work with. We are NDIS registered service providers in Australia, Melbourne, offering several support services to individuals living with a disability.
-                            </p>
-                            <p>Our commitment is to provide the best NDIS disability care services. We are dedicated to delivering the best disability care services in Melbourne that are person-centered and meet your personal goals.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="help-section">
+        <section class="support-one">
             <div class="container">
                 <div class="two-columns">
-                    <div class="col payment-block" style="padding: 0; background:#fce7d6;">
-                        <div class="pricing">
-
-                            <h3>NDIS Pricing</h3>
-                            <button onclick="responsiveVoice.speak('NDIS Pricing');responsiveVoice.speak('NDS’s costing for NDIS funded supports are identical to the Temporary Transformation Payment (TTP) prices set and regulated by the National Disability Insurance Agency (NDIA.)');" type="button" value="Play"><i class="icofont-listening" class="listen"></i></button>
-                            <p>NDS's costing for NDIS funded supports are identical to the Temporary Transformation Payment (TTP) prices set and regulated by the National Disability Insurance Agency (NDIA.)</p>
-                            <p>For details on the prices of services provided by NDS please see the following link:</p>
-
-                            <ul>
-                                <li><a class="btn" href="https://www.ndis.gov.au/providers/pricing-arrangements" target="_blank">Price Guide</a></li>
+                    <div class="col">
+                        <div class="image-wrapper">
+                            <img src="images/daily-living-support.jpg" alt="Daily Living Support">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="support-one-section">
+                            <h2>Daily Living Support</h2>
+                            <p>We provide the best improved daily living support NDIS in Melbourne that will support you with your daily living needs. With our NDIS assistance with daily life and personal activities, you can start living independently and improve your daily living. </p>
+                            <p>Some of the NDIS assistance with daily life services we can assist you with include:</p>
+                            <ul class="support-list">
+                                <li>Individualised supports in the home and in the community</li>
+                                <li>Capacity building</li>
+                                <li>Community inclusion services</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col" style="padding:0;">
-                        <div class="image-help">
-                            <img src="images/payment.jpg" alt="NDS Payment">
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="banner-section testi-banner" style="position: relative;">
+        <section class="support-three-dls">
             <div class="container">
-                <div class="destination-slider">
-                    <div>
-                        <div class="banner-content testimonial">
-                            <p class="quote">I don't think that I will ever be able to find the words to express my deep gratitude to you for all that you have done for me and continue to do. You are, quite literally, my lifesaver.</p>
-                            <h4>Linda Roberts, Wood Worker</h4>
+                <div class="four-columns">
+                    <div class="col">
+                        <div class="support-three-images-dls">
+                            <img src="images/bathroom.svg">
+                        </div>
+                        <div class="support-three-content-dls">
+                            <p>Bathroom/Showering</p>
                         </div>
                     </div>
-                    <div>
-                        <div class="banner-content testimonial">
-                            <p class="quote">You have been a great help to me. I’m grateful for the amazing employees you have provided. Thank you.</p>
-                            <h4>Thomas Wells</h4>
+                    <div class="col">
+                        <div class="support-three-images-dls">
+                            <img src="images/meal-preparations.svg">
+                        </div>
+                        <div class="support-three-content-dls">
+                            <p>Meal Preparations</p>
                         </div>
                     </div>
-                    <div>
-                        <div class="banner-content testimonial">
-                            <p class="quote">Thank you for your great service. One of the Best NDIS registered service providers in Melbourne.</p>
-                            <h4>Anna Jones</h4>
+                    <div class="col">
+                        <div class="support-three-images-dls">
+                            <img src="images/grooming.svg">
+                        </div>
+                        <div class="support-three-content-dls">
+                            <p>Grooming</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="support-three-images-dls">
+                            <img src="images/domestic-support.svg">
+                        </div>
+                        <div class="support-three-content-dls">
+                            <p>Domestic Support</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="community-section">
+        <section class="banner-form">
             <div class="container">
                 <div class="two-columns">
-                    <div class="col">
-                        <div class="community-head">
-                            <h4>Join Our Community</h4>
-                            <p>Getting quality Home Care with NDS is easier than ever. Let us treat your loved ones like family!</p>
+                    <div class="col request-left-text">
+                        <div class="left-side">
+                            <h1>Start Your Journey</h1>
+                            <p>Start Living Independently Today. Our Door is always open for you, share your interest with us.</p>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-section">
-                            <input type="text" name="name" class="text" placeholder="Email Address">
-                            <a href="#" class="btns">Submit</a>
-                            <p><input type="checkbox" class="form-control">&nbsp;&nbsp;I have read and agree to the terms & conditions</p>
+                        <div class="right-side">
+                            <h3>Request a Callback</h3>
+                            <p>We'll give you a call to discuss how we can support you.</p>
+                            <form  method="post" action="" >
+                            <div class="form-section-side">
+                                <div class="two-columns">
+                                    <div class="col">
+                                        <input type="text" placeholder="Your Name" name="name" id="name" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" placeholder="Your phone number" name="phone" id="phone" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" placeholder="Your email" name="email" id="email" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" placeholder="Postcode" name="postcode" id="postcode">
+                                    </div>
+                                </div>
+                                <div class="one-columns">
+                                    <div class="cols">
+                                        <select name="state" id="state">
+                                            <option>Select your state</option>
+                                            <option>QLD</option>
+                                            <option>NSW</option>
+                                            <option>SA</option>
+                                            <option>ACT</option>
+                                            <option>VIC</option>
+                                        </select>
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" name="fund" id="fund" placeholder="Do you have access to funded supports?">
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" name="service" id="service" placeholder="What services or supports are you interested in?">
+                                    </div>
+                                    <div class="cols">
+                                        <textarea rows="2" name="message" id="message" placeholder="Is there anything else you would like to share with us?"></textarea>
+                                    </div>
+                                    <div class="cols">
+                                        <button class="request-btn">Request a Callback</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
-    <footer id="footer">
+<footer id="footer">
         <div class="container">
             <div class="top-footer">
                 <div class="four-columns">
