@@ -42,6 +42,7 @@
         <link href="{{ ('frontend/css/footer.css') }}" rel="stylesheet">
         <link href="{{ ('frontend/css/top.css') }}" rel="stylesheet">
         <link href="{{ ('frontend/css/home.css') }}" rel="stylesheet">
+
     </head>
     <body>
 

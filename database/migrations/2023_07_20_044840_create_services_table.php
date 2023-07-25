@@ -14,18 +14,22 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('logo');
-            $table->string('background_image')->nullable();
-            $table->longText('background_image_description')->nullable();
+            $table->string('logo_image_alt')->nullable();
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
+            $table->string('background_image')->nullable();
+            $table->string('background_image_alt')->nullable();
+            $table->longText('background_image_description')->nullable();
+            $table->longText('service_image')->nullable();
+            $table->longText('service_image_description')->nullable();
+            $table->longText('service_image_alt')->nullable();
             $table->enum('description_image_position',['1','2'])->default('1');
             $table->enum('form',['1','2'])->default('2');
             $table->longText('seo_title')->nullable();
             $table->longText('seo_description')->nullable();
             $table->longText('meta_keyword')->nullable();
             $table->longText('meta_keyword_description')->nullable();
-            $table->integer('order_by')->nullable();
-            $table->string('service_description_title')->nullable();
+            $table->string('slug')->unique();
             $table->enum('status', ['1','2'])->default(1);
             $table->timestamps();
         });
