@@ -99,12 +99,12 @@
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">S.N.</th>
-                                                            <th scope="col">Logo Image</th>
-                                                            <th scope="col">Background Image</th>
-                                                            <th scope="col">Background Image description</th>
                                                             <th scope="col">Title</th>
                                                             <th scope="col">Description</th>
-                                                            <th scope="col">Order By</th>
+                                                            <th scope="col">Logo Image</th>
+                                                            <th scope="col">Background Image</th>
+                                                            <th scope="col">Service Image</th>
+                                                            <th scope="col">Slug</th>
                                                             <th scope="col">Status</th>
                                                             <th scope="col">Action</th>
                                                         </tr>
@@ -113,6 +113,9 @@
                                                         @foreach($services as $service)
                                                         <tr id="my-table-tr-{{$service->id}}">
                                                             <td>{{ $loop->iteration }}</td>
+                                                            <td>{{$service->title}}</td>
+                                                            <td>{!! Illuminate\Support\Str::limit($service->description, 50) !!}</td>
+                                                            
                                                             <td>
                                                                 <a href="{{asset('images/services/' . $service->logo)}}" target="_blank">
                                                                     <img src="{{asset('images/services/' . $service->logo)}}" alt="" style="width: 100px;">
@@ -123,22 +126,15 @@
                                                                     <img src="{{asset('images/services/' . $service->background_image)}}" alt="" style="width: 100px;">
                                                                 </a>
                                                             </td>
-                                                            <td>{{$service->background_image_description}}</td>
-
-                                                            <td>{{$service->title}}</td>
-                                                            <td>{{$service->description}}</td>
-
-                                                                    <td>
-                                                                        <select name="order_by" class="form-control"
-                                                                            id="slider{{ $service->id }}"
-                                                                            onchange="updateOrder({{ $service->id }})">
-                                                                            @for ($i = 1; $i <= $orderBys; $i++)
-                                                                                <option value="{{ $i }}"
-                                                                                    @if ($i == $service->order_by) selected @endif>
-                                                                                    {{ $i }}</option>
-                                                                            @endfor
-                                                                        </select>
-                                                                    </td>
+                                                            
+                                                            <td>
+                                                                <a href="{{asset('images/services/' . $service->service_image)}}" target="_blank">
+                                                                    <img src="{{asset('images/services/' . $service->service_image)}}" alt="" style="width: 100px;">
+                                                                </a>
+                                                            </td>
+                                                           
+                                                            <td>{{$service->slug}}</td>
+                                                                    
                                                             <td class="text-center">{{config('custom.status')[$service->status]}}</td>
                                                             <td class="action-icons">
                                                                 <ul class="icon-button d-flex">
@@ -150,6 +146,9 @@
                                                                     </li>
                                                                     <li>
                                                                         <a class="dropdown-item" href="{{ url('super-admin/service/delete/' . $service->id) }}"><i class="fa-solid fa-trash" data-bs-toggle="tooltip" data-bs-title="Delete"></i></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#" ><i class="fa fa-plus"></i></a></h3>
                                                                     </li>
                                                                 </ul>
                                                             </td>

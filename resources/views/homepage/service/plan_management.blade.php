@@ -4,8 +4,8 @@
         <section class="banner-section plan-banner">
             <div class="container">
                <div class="banner-content inner-banner">
-                <h1>NDS as Your Plan Manager</h1>
-                <p>Northern Disability Services as your plan manager saves you hours of time</p>
+                <h1>{{$plan_management->background_title}}</h1>
+                <p>{!! $plan_management->background_image_description !!}</p>
                 <ul class="breadcrumb">
                     <li><a href="./">Home</a></li>
                     <li><i class="icofont-long-arrow-right"></i></li>
@@ -19,14 +19,14 @@
                 <div class="two-columns">
                     <div class="col">
                         <div class="image-wrapper">
-                            <img src="frontend/images/plan-manager.jpg" alt="NDS Plan Management">
+                            <img src="{{ asset('images/services/' . $plan_management->service_image) }}" alt="{{ $plan_management->service_image_alt }}">
                         </div>
                     </div>
                     <div class="col">
                         <div class="support-one-section">
-                            <h2>Plan Management</h2>
-                            <p>NDS, as one of the best NDIS plan management providers in Melbourne, helps you manage funding in your NDIS plan. Choosing Northern Disability Service as your own "my planmanager" saves you time and the headache of endless admin, such as keeping track of payments, filling records, and managing NDIS funding claims.</p>
-                            <p>Our team of expert NDIS plan Managers have extensive personal and professional experience in the disability and community care sectors and are dedicated to providing a better more personalised service.</p>
+                            <h2>{{$plan_management->title}}</h2>
+                            <p>{!!  $plan_management->service_image_description !!}</p>
+                           
                             <!-- <p>We support individuals who have a disability or face mental health challenges and need tailored NDIS support coordination in managing a complex range of needs including:</p>
                             <ul class="support-list">
                                 <li>Individualised supports in the home and in the community</li>
