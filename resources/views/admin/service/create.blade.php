@@ -36,53 +36,9 @@
                             {!! Form::open(['url' => 'super-admin/service', 'method' => 'POST', 'files' => true]) !!}
                             <div class="form-group batch-form">
                                 <div class="col-md-12">
-                                    {{-- <div class="image-upload_item form-grp mt-4">
-                                        <div id="imageDomAll">
-                                            <div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom1">
-                                                <div class="col-sm-6 col-md-4">
-                                                    <label for="image[]" class="form-label">Image</label>
-                                                    <input class="form-control form-control-lg my-image" type="file"
-                                                        id="image1" name="image[]">
-                                                </div>
-                                                <div class="col-sm-6 col-md-4">
-                                                    <label for="image_alt[]">Image Alt</label>
-                                                    <div class="input-group">
-                                                        <input type="text"
-                                                            class="form-control form-control-lg my-image-alt"
-                                                            name="image_alt[]" id="image_alt1" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 col-sm-6 col-md-2">
-                                                    <label for="image_order_by[]">Order By<span
-                                                            style="color: red;">*</span></label>
-                                                    <div class="input-group">
-                                                        <input type="number"
-                                                            class="form-control form-control-lg my-order-by"
-                                                            name="image_order_by[]" id="order_by1" min="1"
-                                                            step="1" value="1" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-1 col-md-2 d-flex align-self-end">
-                                                    <div class="me-2">
-                                                        <button class="btn btn-danger remove_item_btn1 " type="button"
-                                                            onclick="removeImageDom(1)">Remove
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row mt-1">
-                                            <div class="add-button-section">
-                                                <button type="button" class="btn btn-primary add-more-btn1"
-                                                    onclick="getMoreImageDom(1)">Add More
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                     <div class="row pt-2">
                                         <div class="col-md-4">
-                                            <label >Ttile<span style="color: red;">*</span></label>
+                                            <label >Title<span style="color: red;">*</span></label>
                                             <input class="form-control form-control-lg my-image" type="text"
                                                 id="" name="title" placeholder="Title" >
                                         </div>

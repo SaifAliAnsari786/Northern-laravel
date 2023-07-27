@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\Admin\SeoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
 use App\Http\Controllers\LoginController;
+
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\SliderController;
-use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\ServiceDescriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,7 @@ use App\Http\Controllers\ServicesController;
 //     return view('forntend');
 // });
 
-Route::get('test', function () {
-    return view('homepage.test');
-});
+
 
 Route::get('', [HomeController::class, 'home']);
 
@@ -85,6 +84,17 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
 
     Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(' image.upload'); //upload image in CkEditor
     Route::post('post-upload-image', [ImageUploadController::class, 'storeImageQuill'])->name('image.store');
+
+
+    Route::get('service-description', [ServiceDescriptionController::class,'index']);
+    Route::get('service-description/create', [ServiceDescriptionController::class, 'create']);
+    Route::post('service-description', [ServiceDescriptionController::class, 'store']);
+    Route::get('service-description/{id}', [ServiceDescriptionController::class, 'show']);
+    Route::get('service-description/{id}/edit', [ServiceDescriptionController::class, 'edit']);
+    Route::post('service-description/{id}', [ServiceDescriptionController::class, 'update']);
+    Route::get('service-description/delete/{id}', [ServiceDescriptionController::class, 'destroy']);
+    Route::post('service-description/change-order', [ServiceDescriptionController::class, 'changeOrder']);
+    Route::get('image-dom', [ServiceDescriptionController::class, 'getImageDom']);
 
 });
 
