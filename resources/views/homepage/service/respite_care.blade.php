@@ -4,8 +4,8 @@
         <section class="banner-section respite-banner">
             <div class="container">
                <div class="banner-content inner-banner">
-                <h1>We Provide Respite Care</h1>
-                <P>We can provide respite care on an occasional or as needed basis , and in all kinds of situations - wether your usual carer will be at home with your or not.</P>
+                <h1>{{$respite_cares->background_title}}</h1>
+                <P>{!! $respite_cares->background_image_description !!}</P>
                 <ul class="breadcrumb">
                     <li><a href="./">Home</a></li>
                     <li><i class="icofont-long-arrow-right"></i></li>
@@ -19,15 +19,14 @@
                 <div class="two-columns">
                     <div class="col">
                         <div class="image-wrapper imgheight-auto">
-                            <img src="frontend/images/rc.jpg" alt="Respite Care">
+                            <img src="{{ asset('images/services/' . $respite_cares->service_image) }}" alt="{{ $respite_cares->service_image_alt }}">
                         </div>
                     </div>
                     <div class="col">
                         <div class="support-one-section">
-                            <h2>Respite Care</h2>
-                            <p>Our short-term respite care for the elderly supports you and your carer by giving you both a break for a short period. We provide you with the best and most comfortable NDIS respite care services in Melbourne.</p>
-                            <p>Respite, also known as short-term accommodation, enables people with disabilities to be independent and achieve their goals in a supported environment.</p>
-                            <p>Our homes are purpose-built, fully accessible and fitted with appropriate assistive technologies, and supported by highly trained and qualified staff. You can access our respite care for a few hours, days, or extended time - depending on your needs, eligibility, and required services available in the area.</p>
+                            <h2>{{$respite_cares->title}}</h2>
+                            <p>{!!  $respite_cares->service_image_description !!}</p>
+                            
                         </div>
                     </div>
                 </div>

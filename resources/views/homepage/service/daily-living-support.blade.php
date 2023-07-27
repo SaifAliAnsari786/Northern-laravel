@@ -5,7 +5,7 @@
     <section class="banner-section dailyliving-banner">
         <div class="container">
            <div class="banner-content">
-            <h1>Daily Living Support</h1>
+            <h1>{{$service_image_description->title}}</h1>
             <ul class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li><i class="icofont-long-arrow-right"></i></li>
@@ -19,19 +19,14 @@
             <div class="two-columns">
                 <div class="col">
                     <div class="image-wrapper">
-                        <img src="frontend/images/daily-living-support.jpg" alt="Daily Living Support">
+                        <img src="{{ asset('images/services/' . $service_image->service_image) }}" alt="{{ $service_image->service_image_alt }}">
                     </div>
                 </div>
                 <div class="col">
                     <div class="support-one-section">
-                        <h2>Daily Living Support</h2>
-                        <p>We provide the best improved daily living support NDIS in Melbourne that will support you with your daily living needs. With our NDIS assistance with daily life and personal activities, you can start living independently and improve your daily living. </p>
-                        <p>Some of the NDIS assistance with daily life services we can assist you with include:</p>
-                        <ul class="support-list">
-                            <li>Individualised supports in the home and in the community</li>
-                            <li>Capacity building</li>
-                            <li>Community inclusion services</li>
-                        </ul>
+                        <h2>{{$service_image_description->title}}</h2>
+                        <p> {!!  $service_image_description->service_image_description !!}</p>
+                        
                     </div>
                 </div>
             </div>

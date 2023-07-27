@@ -4,8 +4,8 @@
         <section class="banner-section household-banner">
             <div class="container">
                <div class="banner-content inner-banner">
-                <h1>Household Task Support</h1>
-                <p>We focus on good health and wellbeing.</p>
+                <h1>{{$household_tasks->background_title}}</h1>
+                <p>{!! $household_tasks->background_image_description !!}</p>
                 <ul class="breadcrumb">
                     <li><a href="./">Home</a></li>
                     <li><i class="icofont-long-arrow-right"></i></li>
@@ -19,14 +19,14 @@
                 <div class="two-columns">
                     <div class="col">
                         <div class="image-wrapper">
-                            <img src="frontend/images/house-hold-task.jpg" alt="Disable household task">
+                            <img src="{{ asset('images/services/' . $household_tasks->service_image) }}" alt="{{ $household_tasks->service_image_alt }}">
                         </div>
                     </div>
                     <div class="col">
                         <div class="support-one-section">
-                            <h2>Household Tasks</h2>
-                            <p>To maintain good health and well-being, you need to live in a clean and well-organized house. NDS provides you with the best NDIS household tasks support services in Melbourne.</p>
-                            <p>We can support you with the household task if you are having challenges in keeping your home clean and well-maintained. Some of the NDIS household tasks support services we can assist you with include:</p>
+                            <h2>{{$household_tasks->title}}</h2>
+                            <p>{!!  $household_tasks->service_image_description !!}</p>
+                            
                         </div>
                     </div>
                 </div>

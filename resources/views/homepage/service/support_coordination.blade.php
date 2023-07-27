@@ -4,8 +4,8 @@
     <section class="banner-section support-banner">
         <div class="container">
            <div class="banner-content inner-banner">
-            <h1>Support Coordination</h1>
-            <p>Our support coordinators will assist you get the best out of your NDIS Plan</p>
+            <h1>{{$support_coordinations->title}}</h1>
+            <p>{!! $support_coordinations->background_image_description !!}</p>
             <ul class="breadcrumb">
                 <li><a href="./">Home</a></li>
                 <li><i class="icofont-long-arrow-right"></i></li>
@@ -19,14 +19,13 @@
             <div class="two-columns">
                 <div class="col">
                     <div class="support-one-section">
-                        <h2>Support Coordination</h2>
-                        <p>We will support you with your daily living needs so that you can start living independently. NDS provides you with one of the most trusted NDIS support coordination provider services in Melbourne. </p>
-                        <p>Our professional NDIS coordinator in Melbourne will support you with your daily living needs. Some of the NDIS support coordination services we can assist you with include:</p>
+                        <h2>{{$support_coordinations->title}}</h2>
+                        <p>{!! $support_coordinations->service_image_description !!}</p>
                     </div>
                 </div>
                 <div class="col">
                     <div class="image-wrapper">
-                        <img src="frontend/images/support-coordination.jpg" alt="Support Coordination">
+                        <img src="{{ asset('images/services/' . $support_coordinations->service_image) }}" alt="{{ $support_coordinations->service_image_alt }}">
                     </div>
                 </div>
             </div>

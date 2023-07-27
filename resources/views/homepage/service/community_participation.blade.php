@@ -4,8 +4,8 @@
     <section class="banner-section community-banner">
         <div class="container">
            <div class="banner-content inner-banner">
-            <h1>Community Participation</h1>
-            <p>We will assist you get involved in community and social activities.</p>
+            <h1>{{$support_communities->title}}</h1>
+            <p>{!! $support_communities->background_image_description !!}</p>
             <ul class="breadcrumb">
                 <li><a href="./">Home</a></li>
                 <li><i class="icofont-long-arrow-right"></i></li>
@@ -19,14 +19,14 @@
             <div class="two-columns">
                 <div class="col">
                     <div class="image-wrapper">
-                        <img src="frontend/images/community-participation.jpg" alt="Community Participation">
+                        <img src="{{ asset('images/services/' . $support_communities->service_image) }}" alt="{{ $support_communities->service_image_alt }}">
                     </div>
                 </div>
                 <div class="col">
                     <div class="support-one-section">
-                        <h2>Community Participation</h2>
-                        <p>We will help you get involved in community and social activities and continuously work towards establishing an environment that engages people and enables them to interact better freely.</p>
-                        <p>NDS will assist you get involved in NDIS social and community participation. We provide assistance to increase NDIS social and community participation activities in Melbourne and learn new skills to help you achieve your goals. Some of the services we can assist you with include:</p>
+                        <h2>{{$support_communities->title}}</h2>
+                        <p>{!! $support_communities->service_image_description !!}</p>
+                        
                     </div>
                 </div>
             </div>

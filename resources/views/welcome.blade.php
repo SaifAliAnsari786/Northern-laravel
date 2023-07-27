@@ -29,6 +29,11 @@
         </div>
     </section>
 
+    <!-- start section for services -->
+    @include('homepage.service')
+    <!-- end section for services -->
+
+
     <!-- start section for northern disability service-->
     @include('homepage.northern_disabillty_service')
     <!-- end section for northern disability service-->

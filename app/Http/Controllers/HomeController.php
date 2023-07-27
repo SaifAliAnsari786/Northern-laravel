@@ -14,8 +14,8 @@ class HomeController extends Controller
     public function home()
     {
         $sliders = Slider::all();
-        $services = Service::all();
         $settings  = Setting::all();
+        $services = Service::where('status', 1)->orderBy('id', 'ASC')->get();
         $authorization_top_image = $settings->where('slug', 'authorization-top-image')->first();
         $authorization_right_image = $settings->where('slug', 'authorization')->first();
         $authorization_description = $settings->where('slug', 'authorization-description')->first();
@@ -23,9 +23,9 @@ class HomeController extends Controller
         $northern_disability_service_image = $settings->where('slug', 'northern-disability-services-image')->first();
         $ndis_pricing_image = $settings->where('slug', 'ndis-pricing-image')->first();
         $ndis_pricing = $settings->where('slug', 'ndis-pricing')->first();
-
+        
         return view('welcome', compact('authorization_top_image', 'authorization_right_image', 'authorization_description',
-                                'northern_disability_service', 'northern_disability_service_image','ndis_pricing_image','ndis_pricing','sliders'));
+                                'northern_disability_service', 'northern_disability_service_image','ndis_pricing_image','ndis_pricing','sliders', 'services'));
     }
 
     public function index()

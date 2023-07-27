@@ -494,7 +494,7 @@
         ClassicEditor
             .create(document.querySelector('#body3'), {
                 ckfinder: {
-                    uploadUrl: '{{route('image.upload').'?_token='.csrf_token()}}',
+                    uploadUrl: '{{route('image.upload')'?_token='.csrf_token()}}',
                 }
             })
             .catch(error => {

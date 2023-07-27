@@ -9,6 +9,7 @@ use App\Models\Service;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 
 class ServiceController extends Controller
@@ -20,13 +21,8 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::orderBy('created_at','desc')->get();
-        $orderBys = Service::orderBy('order_by', 'desc');
-        if ($orderBys->count() > 0) {
-            $orderBys = $orderBys->first()->order_by + 1;
-        } else {
-            $orderBys = 0;
-        }
-        return view($this->view .'index',compact('services','orderBys'));
+      
+        return view($this->view .'index',compact('services'));
     }
 
     public function create()
@@ -37,6 +33,8 @@ class ServiceController extends Controller
     public function store(ServiceStoreRequest $request)
     {
         $data = $request->except('_token');
+        $slug = Str::slug($request->input('title'));
+        $data['slug'] = $slug;
 
         if ($request->hasFile('logo')) {
             $logoFile = $request->file('logo');
@@ -51,13 +49,24 @@ class ServiceController extends Controller
             $bgImageFile->move('images/services/', $bgImageFileName);
             $data['background_image'] = $bgImageFileName;
         }
+
+        if ($request->hasFile('service_image')) {
+            $bgImageFile = $request->file('service_image');
+            $bgImageFileName = "service_img_" . time() . '.' . $bgImageFile->getClientOriginalExtension();
+            $bgImageFile->move('images/services/', $bgImageFileName);
+            $data['service_image'] = $bgImageFileName;
+        }
     
         $service = Service::create($data);
         if ($service) {
             Session::flash('success', 'Service has been created!');
             return redirect($this->redirect);
         }
+    
     }
+    
+   
+
 
     public function edit($id)
     {
@@ -93,6 +102,17 @@ class ServiceController extends Controller
             $bgImageFile->move(public_path('images/services/'), $bgImageFileName);
             $data['background_image'] = $bgImageFileName;
         }
+
+        if ($request->hasFile('service_image')) {
+            if ($service->service_image) {
+                File::delete(public_path('images/services/' . $service->service_image));
+            }
+    
+            $bgImageFile = $request->file('service_image');
+            $bgImageFileName = "service_img_" . time() . '.' . $bgImageFile->getClientOriginalExtension();
+            $bgImageFile->move(public_path('images/services/'), $bgImageFileName);
+            $data['service_image'] = $bgImageFileName;
+        }
     
             $service->update($data);
             Session::flash('success', 'Service has been updated!');
@@ -117,6 +137,10 @@ class ServiceController extends Controller
     
         if ($service->background_image) {
             File::delete(public_path('images/services/' . $service->background_image));
+        }
+
+        if ($service->service_image) {
+            File::delete(public_path('images/services/' . $service->service_image));
         }
     
         $service->delete();
