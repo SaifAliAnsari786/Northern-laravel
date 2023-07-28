@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\ImageUploadController;
@@ -38,6 +39,11 @@ Route::get('community-participation', [ServicesController::class,'community_part
 Route::get('plan-management', [ServicesController::class,'plan_management']);
 Route::get('household-tasks', [ServicesController::class,'household_task_support']);
 Route::get('respite-care', [ServicesController::class,'respite_care']);
+
+// contact
+Route::get('contact', [ContactController::class,'index']);
+Route::post('contact', [ContactController::class,'store']);
+
 
 
 // Authentication//
@@ -86,12 +92,12 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::post('post-upload-image', [ImageUploadController::class, 'storeImageQuill'])->name('image.store');
 
 
-    Route::get('service-description', [ServiceDescriptionController::class,'index']);
-    Route::get('service-description/create', [ServiceDescriptionController::class, 'create']);
-    Route::post('service-description', [ServiceDescriptionController::class, 'store']);
-    Route::get('service-description/{id}', [ServiceDescriptionController::class, 'show']);
-    Route::get('service-description/{id}/edit', [ServiceDescriptionController::class, 'edit']);
-    Route::post('service-description/{id}', [ServiceDescriptionController::class, 'update']);
+    Route::get('service-description/{service_id}', [ServiceDescriptionController::class,'index']);
+    Route::get('service-description/create/{service_id}', [ServiceDescriptionController::class, 'create']);
+    Route::post('service-description/{service_id}', [ServiceDescriptionController::class, 'store']);
+    Route::get('service-description-show/{id}', [ServiceDescriptionController::class, 'show']);
+    Route::get('service-description-edit/{id}/edit', [ServiceDescriptionController::class, 'edit']);
+    Route::post('service-description-update/{id}', [ServiceDescriptionController::class, 'update']);
     Route::get('service-description/delete/{id}', [ServiceDescriptionController::class, 'destroy']);
     Route::post('service-description/change-order', [ServiceDescriptionController::class, 'changeOrder']);
     Route::get('image-dom', [ServiceDescriptionController::class, 'getImageDom']);

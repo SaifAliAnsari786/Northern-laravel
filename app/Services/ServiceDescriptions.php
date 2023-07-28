@@ -24,9 +24,10 @@ class ServiceDescriptions
         return $settings->paginate(config('custom.per_page'));
     }
 
-    public function storeData($validatedData)
+    public function storeData($validatedData, $service)
     {
         $setting = new ServiceDescription();
+        $setting->service_id = $service->id;
         $setting->title = $validatedData['title'];
         $setting->description = $validatedData['description'];
         $setting->image_alt = $validatedData['image_alt'];

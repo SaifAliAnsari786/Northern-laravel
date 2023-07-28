@@ -23,7 +23,6 @@ class HomeController extends Controller
         $northern_disability_service_image = $settings->where('slug', 'northern-disability-services-image')->first();
         $ndis_pricing_image = $settings->where('slug', 'ndis-pricing-image')->first();
         $ndis_pricing = $settings->where('slug', 'ndis-pricing')->first();
-        
         return view('welcome', compact('authorization_top_image', 'authorization_right_image', 'authorization_description',
                                 'northern_disability_service', 'northern_disability_service_image','ndis_pricing_image','ndis_pricing','sliders', 'services'));
     }

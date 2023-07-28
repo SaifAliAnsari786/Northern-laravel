@@ -26,7 +26,6 @@
                     <div class="support-one-section">
                         <h2>{{$service_image_description->title}}</h2>
                         <p> {!!  $service_image_description->service_image_description !!}</p>
-                        
                     </div>
                 </div>
             </div>
@@ -35,38 +34,16 @@
     <section class="support-three-dls">
         <div class="container">
             <div class="four-columns">
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/bathroom.svg">
+                @foreach ( $serviceDescriptions as $serviceDescription )
+                    <div class="col">
+                        <div class="support-three-images-dls">
+                            <img src="{{ url($serviceDescription->image) }}">
+                        </div>
+                        <div class="support-three-content-dls">
+                            <p>{{ $serviceDescription->title }}</p>
+                        </div>
                     </div>
-                    <div class="support-three-content-dls">
-                        <p>Bathroom/Showering</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/meal-preparations.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Meal Preparations</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/grooming.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Grooming</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/domestic-support.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Domestic Support</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -27,26 +27,22 @@
                         @include('errors.error')
                         <div class="row p-4">
                             <div class="col-sm-12 col-md-12 stretch-card sl-stretch-card">
-                                {!! Form::open(['url' => 'super-admin/service-description','method' => 'POST', 'files' => true]) !!}
+                                {!! Form::open(['url' => 'super-admin/service-description/'.$service->id,'method' => 'POST', 'files' => true]) !!}
                                 <div class="row">
                                     <div class="col-12 table-responsive">
                                         <div class="row">
-
-
-
                                             <div class="col-sm-12 col-md-12 mt-2" id="my-name">
                                                 <div class="form-group batch-form">
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-2">
-                                                                <label>Title <span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Title </label>
                                                             </div>
                                                             <div class="col-md-10">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control"
                                                                            name="title"
-                                                                           value="{{old('title')}}" required>
+                                                                           value="{{old('title')}}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -58,14 +54,13 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-2">
-                                                                <label>Description<span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Description</label>
                                                             </div>
                                                             <div class="col-md-10">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control"
                                                                            name="description"
-                                                                           value="{{old('description')}}" required>
+                                                                           value="{{old('description')}}" >
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -77,12 +72,12 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label>Image <span style="color: red;">*</span></label>
+                                                                <label>Image</span></label>
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="input-group">
                                                                     <input type="file" class="form-control" name="image"
-                                                                           required>
+                                                                           >
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -94,8 +89,7 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label>Image Alt<span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Image Alt</label>
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="input-group">

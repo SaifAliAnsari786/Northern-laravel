@@ -115,7 +115,7 @@
                                                             <td>{{ $loop->iteration }}</td>
                                                             <td>{{$service->title}}</td>
                                                             <td>{!! Illuminate\Support\Str::limit($service->description, 50) !!}</td>
-                                                            
+
                                                             <td>
                                                                 <a href="{{asset('images/services/' . $service->logo)}}" target="_blank">
                                                                     <img src="{{asset('images/services/' . $service->logo)}}" alt="" style="width: 100px;">
@@ -126,15 +126,15 @@
                                                                     <img src="{{asset('images/services/' . $service->background_image)}}" alt="" style="width: 100px;">
                                                                 </a>
                                                             </td>
-                                                            
+
                                                             <td>
                                                                 <a href="{{asset('images/services/' . $service->service_image)}}" target="_blank">
                                                                     <img src="{{asset('images/services/' . $service->service_image)}}" alt="" style="width: 100px;">
                                                                 </a>
                                                             </td>
-                                                           
+
                                                             <td>{{$service->slug}}</td>
-                                                                    
+
                                                             <td class="text-center">{{config('custom.status')[$service->status]}}</td>
                                                             <td class="action-icons">
                                                                 <ul class="icon-button d-flex">
@@ -148,7 +148,7 @@
                                                                         <a class="dropdown-item" href="{{ url('super-admin/service/delete/' . $service->id) }}"><i class="fa-solid fa-trash" data-bs-toggle="tooltip" data-bs-title="Delete"></i></a>
                                                                     </li>
                                                                     <li>
-                                                                        <a class="dropdown-item" href="#" ><i class="fa fa-plus"></i></a></h3>
+                                                                        <a class="dropdown-item" href="{{ url('super-admin/service-description')}}/{{ $service->id }}" ><i class="fa fa-plus"></i></a></h3>
                                                                     </li>
                                                                 </ul>
                                                             </td>

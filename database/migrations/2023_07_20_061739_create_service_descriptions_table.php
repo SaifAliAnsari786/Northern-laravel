@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('service_descriptions', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('service_id')->unsigned();
+            $table->foreign('service_id')->references('id')->on('services');
             $table->string('image')->nullable();
             $table->string('image_name')->nullable();
             $table->string('image_alt')->nullable();

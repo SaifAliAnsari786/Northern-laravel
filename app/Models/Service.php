@@ -28,6 +28,11 @@ class Service extends Model
         'meta_keyword_description',
         'slug',
         'status',
-      
+
     ];
+
+    public function serviceDescriptions()
+    {
+        return $this->hasMany(ServiceDescription::class);
+    }
 }

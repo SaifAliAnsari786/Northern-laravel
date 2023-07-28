@@ -23,12 +23,12 @@ class ServiceDescriptionRequest extends FormRequest
     {
         return [
 
-            'title' => 'required',
-            'description' => 'required',
-            // 'image' => 'required|mimes:jpeg,png,jpg,gif|max:2048',
+            'title' => 'sometimes',
+            'description' => 'sometimes',
+            'image' => 'required|mimes:jpeg,png,svg,jpg,gif|max:2048',
             'image' => 'required',
 
-            'image_alt' => 'required'
+            'image_alt' => 'sometimes'
         ];
     }
 }

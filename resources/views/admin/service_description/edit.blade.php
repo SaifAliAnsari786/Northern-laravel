@@ -5,9 +5,9 @@
 @section('main-panel')
     <div class="main-panel">
         <div class="content-wrapper">
-            {{--start loader--}}
+            {{-- start loader --}}
             <div class="loader loader-default" id="loader"></div>
-            {{--end loader--}}
+            {{-- end loader --}}
             <div class="row">
                 <div class="col-sm-12 col-md-12 stretch-card">
                     <div class="card-wrap form-block p-0">
@@ -17,8 +17,8 @@
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
-                                        <a href="{{url('super-admin/sliders')}}"><img
-                                                src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
+                                        <a href="{{ url('super-admin/sliders') }}"><img
+                                                src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
                                     </li>
                                 </ul>
                             </div>
@@ -27,7 +27,11 @@
                         @include('errors.error')
                         <div class="row p-4">
                             <div class="col-sm-12 col-md-12 stretch-card sl-stretch-card">
-                                {!! Form::open(['url' => 'super-admin/service-description/'.$setting->id,'method' => 'POST', 'files' => true]) !!}
+                                {!! Form::open([
+                                    'url' => 'super-admin/service-description-update/' . $setting->id,
+                                    'method' => 'POST',
+                                    'files' => true,
+                                ]) !!}
                                 <div class="row">
                                     <div class="col-12 table-responsive">
                                         <div class="row">
@@ -39,14 +43,12 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-2">
-                                                                <label>Title <span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Title</label>
                                                             </div>
                                                             <div class="col-md-10">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control"
-                                                                           name="title"
-                                                                           value="{{ $setting->title }}" required>
+                                                                        name="title" value="{{ $setting->title }}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -58,14 +60,13 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-2">
-                                                                <label>Description<span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Description</span></label>
                                                             </div>
                                                             <div class="col-md-10">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control"
-                                                                           name="description"
-                                                                           value="{{ $setting->description }}" required>
+                                                                        name="description"
+                                                                        value="{{ $setting->description }}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -77,22 +78,21 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label>Image <span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Image </label>
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="input-group">
                                                                     <input type="file" class="form-control"
-                                                                           name="image">
+                                                                        name="image">
                                                                 </div>
                                                             </div>
                                                             <br>
                                                             <span style="margin-left: 100px;">
-                                                        <a href="{{url($setting->image)}}" target="_blank">
-                                                            <img src="{{url($setting->image)}}" alt=""
-                                                                 style="width: 100px;">
-                                                        </a>
-                                                    </span>
+                                                                <a href="{{ url($setting->image) }}" target="_blank">
+                                                                    <img src="{{ url($setting->image) }}" alt=""
+                                                                        style="width: 100px;">
+                                                                </a>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -102,14 +102,12 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label>Image Alt<span
-                                                                        style="color: red;">*</span></label>
+                                                                <label>Image Alt<span style="color: red;">*</span></label>
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="input-group">
                                                                     <input type="text" class="form-control"
-                                                                           name="image_alt"
-                                                                           value="{{ $setting->image_alt }}">
+                                                                        name="image_alt" value="{{ $setting->image_alt }}">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -123,7 +121,7 @@
                                         <div class="button-section d-flex justify-content-end mt-2 mb-4">
                                             <div class="row">
                                                 <div class="button-section d-flex justify-content-end mt-2 mb-4">
-                                                    <a href="{{url('super-admin/service-description')}}">
+                                                    <a href="{{ url('super-admin/service-description') }}">
                                                         <button type="button">
                                                             Skip
                                                             <i class="fa-solid fa-angles-right"></i>
@@ -155,12 +153,11 @@
                 $.ajax({
                     type: 'GET',
                     url: Laravel.url + '/image-dom',
-                    success: function (data) {
+                    success: function(data) {
                         // end_loader();
                         $(".captcha span").html(data.captcha);
-                    }
-                    ,
-                    error: function (error) {
+                    },
+                    error: function(error) {
                         // errorDisplay(error["responseJSON"]["message"]);
                     }
                 });
@@ -168,17 +165,15 @@
                 $.ajax({
                     type: 'GET',
                     url: Laravel.url + '/video-dom',
-                    success: function (data) {
+                    success: function(data) {
                         // end_loader();
                         $(".captcha span").html(data.captcha);
-                    }
-                    ,
-                    error: function (error) {
+                    },
+                    error: function(error) {
                         // errorDisplay(error["responseJSON"]["message"]);
                     }
                 });
             }
         }
     </script>
-
 @endsection

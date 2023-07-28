@@ -35,7 +35,7 @@
                                         <h3>Slider's Table</h3>
                                     </div>
                                     <div class="add-button">
-                                        <a class="nav-link" href="{{ url('super-admin/service-description/create') }}"><i
+                                        <a class="nav-link" href="{{ url('super-admin/service-description/create/'.$service->id) }}"><i
                                                 class="fa-solid fa-book-open"></i>&nbsp;&nbsp Add Service Description</a>
                                     </div>
                                 </div>
@@ -51,45 +51,35 @@
                                                                 <th scope="col">Image</th>
                                                                 <th scope="col">Title</th>
                                                                 <th scope="col">Description</th>
-                                                                <th scope="col">Order By</th>
                                                                 <th scope="col">Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody id="student_list">
-                                                            @foreach ($settings as $setting)
+                                                            @foreach ($service->serviceDescriptions as $setting)
                                                                 <tr>
-                                                                    <td>{{ $settings->firstItem() + $loop->index }}</td>
-                                                                    <td>
-                                                                            <a href="{{ url($setting->image) }}"
-                                                                                target="_blank">
-                                                                                <img src="{{ url($setting->image) }}"
-                                                                                    alt="" style="width: 100px;">
-                                                                            </a>
+                                                                    <td>{{$loop->iteration }}</td>
+                                                                    @if($setting->image)
+                                                                        <td>
+                                                                                <a href="{{ url($setting->image) }}"
+                                                                                    target="_blank">
+                                                                                    <img src="{{ url($setting->image) }}"
+                                                                                        alt="" style="width: 100px;">
+                                                                                </a>
 
-                                                                    </td>
+                                                                        </td>
+                                                                    @endif
                                                                     <td class="text-center">
                                                                         {{ $setting->title }}
                                                                     </td>
                                                                     <td class="text-center">
                                                                         {{ $setting->description }}
                                                                     </td>
-                                                                    <td>
-                                                                        <select name="order_by" class="form-control"
-                                                                            id="serviceDescription{{ $setting->id }}"
-                                                                            onchange="updateOrder({{ $setting->id }})">
-                                                                            @for ($i = 1; $i <= $orderBys; $i++)
-                                                                                <option value="{{ $i }}"
-                                                                                    @if ($i == $setting->order_by) selected @endif>
-                                                                                    {{ $i }}</option>
-                                                                            @endfor
-                                                                        </select>
-                                                                    </td>
 
                                                                     <td class="action-icons">
                                                                         <ul class="icon-button d-flex">
                                                                             <li>
                                                                                 <a class="dropdown-item"
-                                                                                    href="{{ url('super-admin/service-description/' . $setting->id . '/edit') }}"
+                                                                                    href="{{ url('super-admin/service-description-edit/' . $setting->id . '/edit') }}"
                                                                                     role="button"><i
                                                                                         class="fa-solid fa-pen"
                                                                                         data-bs-toggle="tooltip"
@@ -111,11 +101,7 @@
                                                             @endforeach
                                                         </tbody>
                                                     </table>
-                                                    <div class="row">
-                                                        <div class="pagination-section">
-                                                            {{ $settings->links() }}
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>

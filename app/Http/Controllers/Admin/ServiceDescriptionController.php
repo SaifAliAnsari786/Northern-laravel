@@ -10,6 +10,7 @@ use App\Models\ServiceDescription;
 use App\Services\ServiceDescriptions;
 use App\Services\SliderService;
 use Illuminate\Support\Facades\Session;
+use App\Models\Service;
 
 
 class ServiceDescriptionController extends Controller
@@ -24,37 +25,39 @@ class ServiceDescriptionController extends Controller
         $this->serviceDescriptions = $service;
     }
 
-    public function index()
+    public function index($serviceId)
     {
-        $settings = $this->serviceDescriptions->search();
+        $service = Service::findOrFail($serviceId);
         $orderBys = ServiceDescription::orderBy('order_by', 'desc');
         if ($orderBys->count() > 0) {
             $orderBys = $orderBys->first()->order_by + 1;
         } else {
             $orderBys = 0;
         }
-        return view($this->view . 'index', compact('settings', 'orderBys'));
+        return view($this->view . 'index',compact('service', 'orderBys'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($serviceId)
     {
-        return view($this->view . 'create');
+        $service = Service::findOrFail($serviceId);
+        return view($this->view . 'create', compact('service'));
 
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ServiceDescriptionRequest $request)
+    public function store(ServiceDescriptionRequest $request, $serviceId)
     {
+        $service = Service::findOrFail($serviceId);
         $validatedData = $request->validated();
-        $this->serviceDescriptions->storeData($validatedData);
+        $this->serviceDescriptions->storeData($validatedData, $service);
         Session::flash('success', 'Service description  has been created!');
         // dd(request()->all());
-        return redirect($this->redirect);
+        return redirect($this->redirect.'/'.$service->id);
     }
 
     /**
@@ -68,7 +71,7 @@ class ServiceDescriptionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         $setting = ServiceDescription::findOrFail($id);
         return view($this->view . 'edit', compact('setting'));
@@ -83,7 +86,9 @@ class ServiceDescriptionController extends Controller
         $validatedData = $request->validated();
         $this->serviceDescriptions->updateData($setting, $validatedData);
         Session::flash('success', 'Service description  has been updated!');
+        // return redirect($this->redirect);
         return redirect($this->redirect);
+
     }
 
     /**
@@ -96,7 +101,9 @@ class ServiceDescriptionController extends Controller
         // SettingService::deleteImage($path); //unlink Image
         $setting->delete();
         Session::flash('success', 'Service description has been deleted!');
-        return redirect($this->redirect);
+        // return redirect($this->redirect.'/'.$service->id);
+        return redirect($this->redirect.'/'.$setting->id);
+
     }
 
     public function changeOrder()
