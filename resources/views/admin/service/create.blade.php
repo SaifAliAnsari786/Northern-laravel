@@ -15,6 +15,7 @@
     <div class="loader loader-default" id="loader"></div>
     {{-- end loader --}}
 
+<<<<<<< HEAD
             <div class="row">
                 <div class="col-sm-12 col-md-12 stretch-card">
                     <div class="card-wrap form-block p-0">
@@ -37,6 +38,29 @@
                             <div class="form-group batch-form">
                                 <div class="col-md-12">
                                     {{-- <div class="image-upload_item form-grp mt-4">
+=======
+    <div class="row">
+        <div class="col-sm-12 col-md-12 stretch-card">
+            <div class="card-wrap form-block p-0">
+                <div class="block-header p-4">
+                    <h3>Add New Service</h3>
+                    <p class="ms-4 mb-0">Fill the following fields to add new Service.</p>
+                    <div class="tbl-buttons">
+                        <ul>
+                            <li>
+                                <a href="{{ url('super-admin/service') }}"><img src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                @include('success.success')
+                @include('errors.error')
+                <div class="row p-4 form-wrap">
+                    {!! Form::open(['url' => 'super-admin/service', 'method' => 'POST', 'files' => true]) !!}
+                    <div class="form-group batch-form">
+                        <div class="col-md-12">
+                            {{-- <div class="image-upload_item form-grp mt-4">
+>>>>>>> 78a2842f6d93e23ee67c93d82bba8678ccfebf54
                                         <div id="imageDomAll">
                                             <div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom1">
                                                 <div class="col-sm-6 col-md-4">

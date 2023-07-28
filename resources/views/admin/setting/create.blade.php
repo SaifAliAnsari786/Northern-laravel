@@ -17,7 +17,7 @@
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
-                                        <a href="{{url('super-admin/settings')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
+                                        <a href="{{url('super-admin/settings')}}"><img src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon"/></a>
                                     </li>
                                 </ul>
                             </div>
@@ -171,9 +171,7 @@
                 $( "#my-name" ).after(html);
                 ClassicEditor
                     .create( document.querySelector( '#body1' ),{
-                        ckfinder: {
-                            uploadUrl: '{{route('image.upload').'?_token='.csrf_token()}}',
-                        }
+                       
                     })
                     .catch( error => {
                         console.error( error );

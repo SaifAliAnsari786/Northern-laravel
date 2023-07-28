@@ -32,13 +32,10 @@ use App\Http\Controllers\Admin\ServiceDescriptionController;
 
 Route::get('', [HomeController::class, 'home']);
 
-//  Frontend serivce
-Route::get('daily-living-support', [ServicesController::class,'daily_living_support']);
-Route::get('support-coordination', [ServicesController::class,'support_coordination']);
-Route::get('community-participation', [ServicesController::class,'community_participation']);
-Route::get('plan-management', [ServicesController::class,'plan_management']);
-Route::get('household-tasks', [ServicesController::class,'household_task_support']);
-Route::get('respite-care', [ServicesController::class,'respite_care']);
+Route::get('services/{slug}', [HomeController::class, 'getService'])->name('service');
+Route::get('about', [HomeController::class, 'aboutUs']);
+
+
 
 // contact
 Route::get('contact', [ContactController::class,'index']);

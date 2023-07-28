@@ -53,7 +53,7 @@
                             </div>
                             <div class="footerndis">
                                 <a href="https://www.ndis.gov.au" target="_blank">
-                                    <img src="images/ilovendis.png" alt="We Love NDIS">
+                                    <img src="{{  asset('frontend/images/ilovendis.png') }}" alt="We Love NDIS">
                                 </a>
                             </div>
                         </div>

@@ -19,7 +19,7 @@
             <div class="two-columns">
                 <div class="col">
                     <div class="image-wrapper">
-                        <img src="{{ asset('images/services/' . $service_image->service_image) }}" alt="{{ $service_image->service_image_alt }}">
+                        <img src="{{  asset('images/services/' .$service_image->service_image) }}" alt="{{ $service_image->service_image_alt }}">
                     </div>
                 </div>
                 <div class="col">
