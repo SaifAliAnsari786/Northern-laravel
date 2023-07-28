@@ -18,7 +18,7 @@
                                 <ul>
                                     <li>
                                         <a href="{{ url('super-admin/sliders') }}"><img
-                                                src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
+                                                src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon" /></a>
                                     </li>
                                 </ul>
                             </div>

@@ -4,7 +4,7 @@
         <title>Northern Disability Services | Best NDIS Registered Providers</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="{{ ('frontend/images/favicon.ico') }}">
+        <link rel="icon" href="{{  asset('frontend/images/favicon.ico') }}">
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -38,11 +38,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <link href="{{ ('frontend/css/header.css') }}" rel="stylesheet">
-        <link href="{{ ('frontend/css/style.css') }}" rel="stylesheet">
-        <link href="{{ ('frontend/css/footer.css') }}" rel="stylesheet">
-        <link href="{{ ('frontend/css/top.css') }}" rel="stylesheet">
-        <link href="{{ ('frontend/css/home.css') }}" rel="stylesheet">
+        <link href="{{ asset('frontend/css/header.css') }}" rel="stylesheet">
+        <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('frontend/css/footer.css') }}" rel="stylesheet">
+       
+        <link href="{{ asset('frontend/css/home.css') }}" rel="stylesheet">
 
     </head>
     <body>

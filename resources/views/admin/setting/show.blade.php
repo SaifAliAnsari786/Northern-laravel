@@ -16,7 +16,7 @@
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
-                                        <a href="{{url('super-admin/settings')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
+                                        <a href="{{url('super-admin/settings')}}"><img src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon"/></a>
                                     </li>
                                 </ul>
                             </div>

@@ -39,12 +39,27 @@ class HomeController extends Controller
             return view('login');
         }
     }
-    // public function gethome()
-    // {
-    //     if (Auth::check()) {
-    //         return view('admin.dashboard');
-    //     } else {
-    //         return view('auth.login');
-    //     }
-    // }
+
+    public function getService($slug) 
+    {
+        $setting = Service::where('slug', $slug);
+        if ($setting->count() > 0) {
+            $setting = $setting->first();
+            return view('service.service', compact('setting'));
+            
+        } else {
+            abort(404);
+        }
+    }
+
+    public function aboutUs()
+    {
+        $settings  = Setting::all();
+        $northern_disability_service = $settings->where('slug', 'northern-disability-services')->first();
+        $nds_description = $settings->where('slug', 'nds-about')->first();
+        return view('about.about',compact('northern_disability_service','nds_description'));
+    }
+
+
+   
 }
