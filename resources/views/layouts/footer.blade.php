@@ -19,8 +19,8 @@
                                 <li><a href="./">Home</a></li>
                                 <li><a href="about">About</a></li>
                                 <li><a href="service">Services</a></li>
-                                <li><a href="workingatNDS">Working at NDS</a></li>
-                                <li><a href="contact">Contact</a></li>
+                                <li><a href="{{ url('workingatNDS') }}">Working at NDS</a></li>
+                                <li><a href="{{ url('contact') }}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -30,12 +30,12 @@
                                 Our Services
                             </h2>
                             <ul class="dash">
-                                <li><a href="daily-living-support">Daily Living Support</a></li>
-                                <li><a href="support-coordination">Support Coordination</a></li>
-                                <li><a href="community-participation">Community Participation</a></li>
-                                <li><a href="plan-management">Plan Management</a></li>
-                                <li><a href="household-tasks">Household Task</a></li>
-                                <li><a href="respite-care">Respite Care</a></li>
+                                <li><a href="{{ url('services/daily-living-support') }}">Daily Living Support</a></li>
+                                <li><a href="{{ url('services/support-coordination') }}">Support Coordination</a></li>
+                                <li><a href="{{ url('services/community-participation') }}">Community Participation</a></li>
+                                <li><a href="{{ url('services/plan-management') }}">Plan Management</a></li>
+                                <li><a href="{{ url('services/household-tasks') }}">Household Task</a></li>
+                                <li><a href="{{ url('services/respite-care') }}">Respite Care</a></li>
                             </ul>
                         </div>
                     </div>

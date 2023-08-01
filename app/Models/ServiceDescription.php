@@ -9,15 +9,14 @@ class ServiceDescription extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'service_id',
         'image',
+        'image_alt',
         'title',
         'description',
+        'slug',
         'order_by',
-      
+
     ];
-    public function service(){
-        return $this->belongsTo(Service::class);
-    }
+
 
 }

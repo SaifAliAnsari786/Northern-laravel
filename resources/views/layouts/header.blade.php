@@ -14,7 +14,7 @@
                             <li><a href="{{ url('about') }}" class="opener">About</a>
                             </li>
                             <li><a href="#" class="opener">Services</a>
-                               
+
                                 <ul>
                                     
                                     <li><a href="{{ route('service', ['slug' => 'daily-living-support']) }}">Daily Living Support</a></li>
@@ -29,7 +29,7 @@
                             <li><a href="gallery" class="opener">Gallery</a>
                             </li>
                             <li>
-                                <a href="contact">Contact</a>
+                                <a href="{{ url ('contact') }}">Contact</a>
                             </li>
                             <li class="tp-enquiry"><a href="form" class="btn">Make an Enquiry</a></li>
                         </ul>

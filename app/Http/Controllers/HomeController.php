@@ -9,6 +9,7 @@ use App\Models\ServiceForm;
 
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use App\Models\ServiceDescription;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -26,7 +27,6 @@ class HomeController extends Controller
         $northern_disability_service_image = $settings->where('slug', 'northern-disability-services-image')->first();
         $ndis_pricing_image = $settings->where('slug', 'ndis-pricing-image')->first();
         $ndis_pricing = $settings->where('slug', 'ndis-pricing')->first();
-        
         return view('welcome', compact('authorization_top_image', 'authorization_right_image', 'authorization_description',
                                 'northern_disability_service', 'northern_disability_service_image','ndis_pricing_image','ndis_pricing','sliders', 'services'));
     }
@@ -42,20 +42,26 @@ class HomeController extends Controller
             return view('login');
         }
     }
-
-    public function getService($slug) 
+    public function getService($slug)
     {
-        $setting = Service::where('slug', $slug);
-        if ($setting->count() > 0) {
-            $setting = $setting->first();
-            return view('service.service', compact('setting'));
-            
+        // Find the Service record by slug
+    $setting = Service::where('slug', $slug)->first();
+    if ($setting) {
+        if ($setting->serviceDescriptions()->exists()) {
+            $serviceDescriptions = $setting->serviceDescriptions;
+            return view('service.service', compact('setting', 'serviceDescriptions'));
         } else {
-            abort(404);
+            return view('service.service', compact('setting'));
         }
+    } else {
+        abort(404);
     }
 
+<<<<<<< HEAD
    
+=======
+    }
+>>>>>>> 3d9b5d510ea6ce5c53321937a18bfac31e200918
     public function aboutUs()
     {
         $settings  = Setting::all();
@@ -73,6 +79,7 @@ class HomeController extends Controller
         return view('about.about',compact('northern_disability_service','nds_description','empowerment_image','empowerment_description',
                                     'integrity_image','integrity_description','inclusiveness_image','inclusiveness_description','country','country_logo','acknowledgement_country'));
     }
+<<<<<<< HEAD
 
     public function store(ServiceFormStoreRequest $request)
     {
@@ -85,4 +92,6 @@ class HomeController extends Controller
         }
     }
    
+=======
+>>>>>>> 3d9b5d510ea6ce5c53321937a18bfac31e200918
 }

@@ -26,7 +26,7 @@
                         <div class="support-one-section">
                             <h2>{{$household_tasks->title}}</h2>
                             <p>{!!  $household_tasks->service_image_description !!}</p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -35,51 +35,17 @@
         <section class="support-three-dls">
             <div class="container">
                 <div class="three-columns">
-                    <div class="col">
-                        <div class="support-three-images-dls">
-                            <img src="frontend/images/cleaning.svg">
+                    @foreach ($household_taskDatas as $household_taskData)
+                        <div class="col">
+                            <div class="support-three-images-dls">
+                                <img src="{{ url($household_taskData->image) }}">
+                            </div>
+                            <div class="support-three-content-dls">
+                                <p>{{ $household_taskData->title }}</p>
+                            </div>
                         </div>
-                        <div class="support-three-content-dls">
-                            <p>Cleaning</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="support-three-images-dls">
-                            <img src="frontend/images/laundry.svg">
-                        </div>
-                        <div class="support-three-content-dls">
-                            <p>Laundry</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="support-three-images-dls">
-                            <img src="images/shopping.svg">
-                        </div>
-                        <div class="support-three-content-dls">
-                            <p>Shopping</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="three-columns">
-                    <div class="col">
-                        <div class="support-three-images-dls">
-                            <img src="frontend/images/meal-preparations.svg">
-                        </div>
-                        <div class="support-three-content-dls">
-                            <p>Dishwashing</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="support-three-images-dls">
-                            <img src="frontend/images/yard-maintenance.svg">
-                        </div>
-                        <div class="support-three-content-dls">
-                            <p>Yard Maintenance</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </section>
     </main>
 @endsection

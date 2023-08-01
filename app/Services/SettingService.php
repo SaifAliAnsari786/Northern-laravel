@@ -192,6 +192,12 @@ class SettingService
             }
             return $directory = 'images/page/' . $year . '/' . $month . '/' . $day . '/';
         }
+        if (config('custom.image_folders')[$image_folder_type] == 'ServiceDescription') {
+            if (!is_dir(public_path() . '/images/ServiceDescription/' . $year . '/' . $month . '/' . $day)) {
+                mkdir(public_path() . '/images/ServiceDescription/' . $year . '/' . $month . '/' . $day, 0755, true);
+            }
+            return $directory = 'images/ServiceDescription/' . $year . '/' . $month . '/' . $day . '/';
+        }
 
     }
 

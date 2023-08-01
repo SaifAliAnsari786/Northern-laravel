@@ -1,15 +1,18 @@
 <?php
 
-use App\Http\Controllers\Admin\SeoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
 use App\Http\Controllers\LoginController;
+
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\SliderController;
-use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\WorkingAtNdsController;
 use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\ServiceDescriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +29,7 @@ use App\Http\Controllers\ServicesController;
 //     return view('forntend');
 // });
 
-Route::get('test', function () {
-    return view('homepage.test');
-});
+
 
 Route::get('', [HomeController::class, 'home']);
 
@@ -38,6 +39,14 @@ Route::get('about', [HomeController::class, 'aboutUs']);
 
 Route::post('serviceform', [HomeController::class, 'store']);
 
+
+// contact
+Route::get('contact', [ContactController::class,'index']);
+Route::post('contact', [ContactController::class,'store']);
+
+// working_at_nds
+Route::get('workingatNDS', [WorkingAtNdsController::class,'index']);
+Route::post('workingatNDS', [WorkingAtNdsController::class,'store']);
 
 
 // Authentication//
@@ -84,6 +93,17 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
 
     Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(' image.upload'); //upload image in CkEditor
     Route::post('post-upload-image', [ImageUploadController::class, 'storeImageQuill'])->name('image.store');
+
+
+    Route::get('service-description/{service_id}', [ServiceDescriptionController::class,'index']);
+    Route::get('service-description/create/{service_id}', [ServiceDescriptionController::class, 'create']);
+    Route::post('service-description/{service_id}', [ServiceDescriptionController::class, 'store']);
+    Route::get('service-description-show/{id}', [ServiceDescriptionController::class, 'show']);
+    Route::get('service-description-edit/{id}/edit', [ServiceDescriptionController::class, 'edit']);
+    Route::post('service-description-update/{id}', [ServiceDescriptionController::class, 'update']);
+    Route::get('service-description/delete/{id}', [ServiceDescriptionController::class, 'destroy']);
+    Route::post('service-description/change-order', [ServiceDescriptionController::class, 'changeOrder']);
+    Route::get('image-dom', [ServiceDescriptionController::class, 'getImageDom']);
 
 });
 

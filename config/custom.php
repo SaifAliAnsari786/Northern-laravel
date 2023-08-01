@@ -75,7 +75,8 @@ return [
         '8' => 'gallery',
         '9' => 'testimonial',
         '11' => 'page',
-        
+        '13' => 'ServiceDescription'
+
 
     ],
     'organization_types' => [

@@ -15,6 +15,30 @@
     <div class="loader loader-default" id="loader"></div>
     {{-- end loader --}}
 
+<<<<<<< HEAD
+            <div class="row">
+                <div class="col-sm-12 col-md-12 stretch-card">
+                    <div class="card-wrap form-block p-0">
+                        <div class="block-header p-4">
+                            <h3>Add New Service</h3>
+                            <p class="ms-4 mb-0">Fill the following fields to add new Service.</p>
+                            <div class="tbl-buttons">
+                                <ul>
+                                    <li>
+                                        <a href="{{ url('super-admin/service') }}"><img
+                                                src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        @include('success.success')
+                        @include('errors.error')
+                        <div class="row p-4 form-wrap">
+                            {!! Form::open(['url' => 'super-admin/service', 'method' => 'POST', 'files' => true]) !!}
+                            <div class="form-group batch-form">
+                                <div class="col-md-12">
+                                    {{-- <div class="image-upload_item form-grp mt-4">
+=======
     <div class="row">
         <div class="col-sm-12 col-md-12 stretch-card">
             <div class="card-wrap form-block p-0">
@@ -36,6 +60,7 @@
                     <div class="form-group batch-form">
                         <div class="col-md-12">
                             {{-- <div class="image-upload_item form-grp mt-4">
+>>>>>>> 78a2842f6d93e23ee67c93d82bba8678ccfebf54
                                         <div id="imageDomAll">
                                             <div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom1">
                                                 <div class="col-sm-6 col-md-4">
@@ -79,24 +104,28 @@
                                             </div>
                                         </div>
                                     </div> --}}
-                            <div class="row pt-2">
-                                <div class="col-md-4">
-                                    <label>Title<span style="color: red;">*</span></label>
-                                    <input class="form-control form-control-lg my-image" type="text" id="" name="title" placeholder="Title">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="Logo">Logo<span style="color: red;">*</span></label>
-                                    <input class="form-control form-control-lg my-image" type="file" id="" name="logo" placeholder="logo image">
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Logo Image Alt<span style="color: red;">*</span></label>
-                                    <input class="form-control form-control-lg my-image" type="text" id="" name="logo_image_alt" placeholder="logo image Alt">
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-12 col-md-6 pt-3 pt-md-0">
-                                    <label for="background_image_description">Description<span style="color: red;">*</span></label>
-                                    <textarea name="description" id="body1" name="description">
+                                    <div class="row pt-2">
+                                        <div class="col-md-4">
+                                            <label >Ttile<span style="color: red;">*</span></label>
+                                            <input class="form-control form-control-lg my-image" type="text"
+                                                id="" name="title" placeholder="Title" >
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="Logo">Logo<span style="color: red;">*</span></label>
+                                            <input class="form-control form-control-lg my-image" type="file"
+                                                id="" name="logo" placeholder="logo image" >
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Logo  Image Alt<span style="color: red;">*</span></label>
+                                            <input class="form-control form-control-lg my-image" type="text"
+                                                id="" name="logo_image_alt" placeholder="logo image Alt" >
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-6 pt-3 pt-md-0">
+                                            <label for="background_image_description">Description<span
+                                                    style="color: red;">*</span></label>
+                                            <textarea name="description" id="body1" name="description">
                                     </textarea>
                                 </div>
                             </div>
@@ -105,7 +134,7 @@
                                     <label for="background_title">Background Title </label>
                                     <input class="form-control form-control-lg my-image" type="text" id="" name="background_title" placeholder="Enter Background Title" >
                                 </div>
-                                
+
                                 <div class="col-md-4">
                                         <label for="background_image">Background Image <span class="text-danger">*</span></label>
                                         <input type="file" name="background_image" class="form-control" id="background_image" />
@@ -190,7 +219,7 @@
                                 <input class="form-control form-control-lg" type="text" id="meta_keyword_description" name="meta_keyword_description">
                             </div>
                         </div>
-                       
+
                         <div class="row mt-3">
                             <div class="col-sm-6">
                                 <label for="status" class="form-label">Status<span style="color: red;">*</span></label>
@@ -230,29 +259,29 @@
 <script>
     ClassicEditor
         .create(document.querySelector('#body1'), {
-            
+
         })
         .catch(error => {
             console.error(error);
         });
     ClassicEditor
         .create(document.querySelector('#body2'), {
-              
-             
+
+
         })
         .catch(error => {
             console.error(error);
         });
     ClassicEditor
         .create(document.querySelector('#body3'), {
-        
+
         })
         .catch(error => {
             console.error(error);
         });
     ClassicEditor
         .create(document.querySelector('#body4'), {
-            
+
         })
         .catch(error => {
             console.error(error);
@@ -288,10 +317,10 @@
             }
         }
 
-        
-        
 
-    
+
+
+
 
     function removeFeatureDom(id) {
         if ($('.my-feature-select').length > 1) {

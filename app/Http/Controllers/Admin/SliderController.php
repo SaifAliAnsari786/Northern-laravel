@@ -60,22 +60,10 @@ class SliderController extends Controller
     public function store(SliderRequest $request)
     {
         $validatedData = $request->validated();
-        // dd($request->all());
-        // if (\request('type') == 1) {
-            $this->siderService->storeData($validatedData);
-        // } else {
-        //     $this->siderService->storeVideoData($validatedData);
-        // }
+        $this->siderService->storeData($validatedData);
         Session::flash('success', 'Slider  has been created!');
         return redirect($this->redirect);
     }
-//    public function store(SliderRequest $request)
-//    {
-//        $validatedData = $request->validated();
-//        $this->siderService->storeData($validatedData);
-//        Session::flash('success', 'Slider  has been created!');
-//        return redirect( $this->redirect );
-//    }
 
     /**
      * Display the specified resource.
@@ -110,13 +98,9 @@ class SliderController extends Controller
     public function update(SliderUpdateRequest $request, $id)
     {
         $setting = Slider::findOrFail($id);
-        $validatedData = $request->validated();
-        // if (\request('type') == 1) {
+            $validatedData = $request->validated();
             $this->siderService->updateData($setting, $validatedData);
-        // } else {
-            // $this->siderService->updateVideoData($setting, $validatedData);
-        // }
-        Session::flash('success', 'Slider  has been updated!');
+            Session::flash('success', 'Slider  has been updated!');
         return redirect($this->redirect);
     }
 
@@ -155,10 +139,5 @@ class SliderController extends Controller
 
     }
 
-    public function getVideoDom()
-    {
-        $returnHTML = view($this->view . 'video_dom')->render();// or method that you prefere to return data + RENDER is the key here
-        return response()->json(array('success' => true, 'html' => $returnHTML));
 
-    }
 }

@@ -26,7 +26,7 @@
                     <div class="support-one-section">
                         <h2>{{$support_communities->title}}</h2>
                         <p>{!! $support_communities->service_image_description !!}</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -35,57 +35,18 @@
     <section class="support-three-dls">
         <div class="container">
             <div class="three-columns">
+                @foreach ($community_participationDatas as $community_participationData)
                 <div class="col">
                     <div class="support-three-images-dls">
-                        <img src="frontend/images/attending-appointments.svg">
+                        <img src="{{ url($community_participationData->image) }}">
                     </div>
                     <div class="support-three-content-dls">
-                        <p>Attending Appointments</p>
+                        <p>{{ $community_participationData->title }}</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/sports-and-leisure-activities.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Sports and Leisure activities</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/shopping.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Going Shopping</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            <div class="three-columns" style="margin-top:5px">
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/attending-events.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Attending events</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/skill-development.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Skill Development</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="support-three-images-dls">
-                        <img src="frontend/images/taking-public-transport.svg">
-                    </div>
-                    <div class="support-three-content-dls">
-                        <p>Taking Public Transport</p>
-                    </div>
-                </div>
-            </div>
+        </div>
     </section>
 </main>
 @endsection

@@ -41,7 +41,7 @@
         <link href="{{ asset('frontend/css/header.css') }}" rel="stylesheet">
         <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('frontend/css/footer.css') }}" rel="stylesheet">
-       
+
         <link href="{{ asset('frontend/css/home.css') }}" rel="stylesheet">
 
     </head>
@@ -61,5 +61,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=M0JiBHYn"></script>
+    @yield('script')
 </body>
 </html>
