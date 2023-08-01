@@ -42,6 +42,7 @@ class HomeController extends Controller
             return view('login');
         }
     }
+
     public function getService($slug)
     {
         // Find the Service record by slug
@@ -56,12 +57,9 @@ class HomeController extends Controller
     } else {
         abort(404);
     }
-
-<<<<<<< HEAD
-   
-=======
     }
->>>>>>> 3d9b5d510ea6ce5c53321937a18bfac31e200918
+
+
     public function aboutUs()
     {
         $settings  = Setting::all();
@@ -79,7 +77,6 @@ class HomeController extends Controller
         return view('about.about',compact('northern_disability_service','nds_description','empowerment_image','empowerment_description',
                                     'integrity_image','integrity_description','inclusiveness_image','inclusiveness_description','country','country_logo','acknowledgement_country'));
     }
-<<<<<<< HEAD
 
     public function store(ServiceFormStoreRequest $request)
     {
@@ -91,7 +88,5 @@ class HomeController extends Controller
             return redirect()->back();
         }
     }
-   
-=======
->>>>>>> 3d9b5d510ea6ce5c53321937a18bfac31e200918
 }
+
