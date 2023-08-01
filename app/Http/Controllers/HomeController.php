@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServiceFormStoreRequest;
 use App\Models\Slider;
 use App\Models\Service;
+use App\Models\ServiceForm;
+
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -52,14 +55,34 @@ class HomeController extends Controller
         }
     }
 
+   
     public function aboutUs()
     {
         $settings  = Setting::all();
         $northern_disability_service = $settings->where('slug', 'northern-disability-services')->first();
         $nds_description = $settings->where('slug', 'nds-about')->first();
-        return view('about.about',compact('northern_disability_service','nds_description'));
+        $empowerment_image = $settings->where('slug', 'empowerment')->first();
+        $empowerment_description = $settings->where('slug', 'empowerment-description')->first();
+        $integrity_image = $settings->where('slug', 'integrity')->first();
+        $integrity_description = $settings->where('slug', 'integrity-description')->first();
+        $inclusiveness_image = $settings->where('slug', 'inclusiveness')->first();
+        $inclusiveness_description = $settings->where('slug', 'inclusiveness-description')->first();
+        $country = $settings->where('slug', 'country')->first();
+        $country_logo = $settings->where('slug', 'country-logo')->first();
+        $acknowledgement_country = $settings->where('slug', 'acknowledgement-of-country')->first();
+        return view('about.about',compact('northern_disability_service','nds_description','empowerment_image','empowerment_description',
+                                    'integrity_image','integrity_description','inclusiveness_image','inclusiveness_description','country','country_logo','acknowledgement_country'));
     }
 
-
+    public function store(ServiceFormStoreRequest $request)
+    {
+        $data = $request->all();
+        
+        $serviceforms = ServiceForm::create($data);
+        
+        if ($serviceforms) {
+            return redirect()->back();
+        }
+    }
    
 }

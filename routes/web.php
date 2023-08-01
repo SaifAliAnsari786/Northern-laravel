@@ -33,8 +33,10 @@ Route::get('test', function () {
 Route::get('', [HomeController::class, 'home']);
 
 Route::get('services/{slug}', [HomeController::class, 'getService'])->name('service');
+
 Route::get('about', [HomeController::class, 'aboutUs']);
 
+Route::post('serviceform', [HomeController::class, 'store']);
 
 
 

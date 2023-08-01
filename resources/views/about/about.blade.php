@@ -21,7 +21,7 @@
             </div>
             <div class="para" style="max-width:100%;">
                 <p>{!! $nds_description->value !!}</p>
-                
+
             </div>
         </div>
     </div>
@@ -35,36 +35,37 @@
                 <div class="col npmb">
                     <div class="block">
                         <div class="block-icon">
-                            <img src="images/ourvalues-icon1.png" alt="Empowerment">
+                            <img src="{{  url($empowerment_image->value) }}" alt="{{ $empowerment_image->image_alt }}">
                         </div>
                         <div class="block-para">
-                            <h3>Empowerment</h3>
-                            <p>We ensure people have the necessary information to make informed choices and where an individual has difficulty in making decisions themselves we work closely with their family and carers to achieve the best outcome for them.</p>
+                            <h3>{{$empowerment_image->key}}</< /h3>
+                                <p>{!! $empowerment_description->value !!}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col npmb">
                     <div class="block">
                         <div class="block-icon">
-                            <img src="images/integrity.png" alt="integrity">
+                            <img src="{{  url($integrity_image->value) }}" alt="{{ $integrity_image->image_alt }}">
                         </div>
                         <div class="block-para">
-                            <h3>Integrity</h3>
-                            <p>We help people in need who seek our help. We are honest, trustworthy and transparent in our dealings with service users and stakeholders.</p>
+                            <h3>{{$integrity_image->key}}</< /h3>
+                                <p>{!! $integrity_description->value !!}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col npmb">
                     <div class="block">
                         <div class="block-icon">
-                            <img src="images/inclusiveness.png" alt="Inclusiveness">
+                            <img src="{{  url($inclusiveness_image->value) }}" alt="{{ $inclusiveness_image->image_alt }}">
                         </div>
                         <div class="block-para">
-                            <h3>Inclusiveness</h3>
-                            <p>We respect all people. We provide opportunities for meaningful participation to those who seek our help.</p>
+                            <h3>{{$inclusiveness_image->key}}</< /h3>
+                                <p>{!! $inclusiveness_description->value !!}</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -73,17 +74,17 @@
         <div class="container">
             <div class="flag-heading">
                 <div class="flag-image">
-                    <img src="images/torresIslandFlag.jpg">
+                    <img src="{{  url($country->value) }}">
                 </div>
                 <div class="flag-image">
-                    <img src="images/aboriginalFlag.jpg">
+                    <img src="{{  url($country_logo->value) }}">
                 </div>
             </div>
             <div class="flag-title">
-                <h1>Acknowledgement of Country</h1>
+                <h1>{{$acknowledgement_country->key}}</h1>
             </div>
             <div class="flag-content">
-                <p>Northern Disability Service acknowledges and recognises the Australian Aboriginal and Torres Strait Islander peoples as the first inhabitants of the nation and the traditional custodians of the lands where we live, learn and work. We pay our respects to their Elders past and present.</p>
+                <p>{!! $acknowledgement_country->value !!}</p>
             </div>
         </div>
 
@@ -98,7 +99,7 @@
                     </div>
                     <div class="col-two">
                         <div class="text-right">
-                            <img class="phone-image" src="images/phone-call.svg"><a href="tel:03-9457-7412">
+                            <img class="phone-image" src="{{ asset('frontend/images/phone-call.svg') }}"><a href="tel:03-9457-7412">
                                 <p>03-9457-7412</p>
                             </a>
                         </div>
@@ -108,6 +109,4 @@
         </section>
 </main>
 </section>
-
-
 @endsection

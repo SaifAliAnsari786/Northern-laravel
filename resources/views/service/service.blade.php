@@ -14,6 +14,7 @@
             </div>
         </div>
     </section>
+    @if($setting->description_image_position == 2)
     <section class="support-one">
         <div class="container">
             <div class="two-columns">
@@ -34,6 +35,28 @@
             </div>
         </div>
     </section>
+    @else
+    <section class="support-one">
+        <div class="container">
+            <div class="two-columns">
+                <div class="col">
+                    <div class="support-one-section">
+                        <h2>{{$setting->title}}</h2>
+                        <p>{!! $setting->service_image_description !!}</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-wrapper">
+                        <img src="{{  asset('images/services/' .$setting->service_image) }}" alt="{{ $setting->service_image_alt }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+
+
+
     <section class="support-three-dls">
         <div class="container">
             <div class="four-columns">
@@ -72,6 +95,7 @@
             </div>
         </div>
     </section>
+
     @if ($setting->form == 1)
     <section class="banner-form">
        
@@ -88,14 +112,15 @@
                     <div class="right-side">
                         <h3>Request a Callback</h3>
                         <p>We'll give you a call to discuss how we can support you.</p>
-                        <form method="post" action="">
+                        <form method="post" action="{{ url('serviceform') }}">
+                        @csrf
                             <div class="form-section-side">
                                 <div class="two-columns">
                                     <div class="col">
                                         <input type="text" placeholder="Your Name" name="name" id="name" required>
                                     </div>
                                     <div class="col">
-                                        <input type="text" placeholder="Your phone number" name="phone" id="phone" required>
+                                        <input type="text" placeholder="Your phone number" name="phone_no" id="phone" required>
                                     </div>
                                     <div class="col">
                                         <input type="text" placeholder="Your email" name="email" id="email" required>
@@ -108,18 +133,18 @@
                                     <div class="cols">
                                         <select name="state" id="state">
                                             <option>Select your state</option>
-                                            <option>QLD</option>
-                                            <option>NSW</option>
-                                            <option>SA</option>
-                                            <option>ACT</option>
-                                            <option>VIC</option>
+                                            <option value="qld">QLD</option>
+                                            <option value="nsw">NSW</option>
+                                            <option value="sa">SA</option>
+                                            <option value="act">ACT</option>
+                                            <option value="vic">VIC</option>
                                         </select>
                                     </div>
                                     <div class="cols">
-                                        <input type="text" name="fund" id="fund" placeholder="Do you have access to funded supports?">
+                                        <input type="text" name="fund" id="fund" placeholder="Do you have access to funded supports?"required>
                                     </div>
                                     <div class="cols">
-                                        <input type="text" name="service" id="service" placeholder="What services or supports are you interested in?">
+                                        <input type="text" name="service" id="service" placeholder="What services or supports are you interested in?"required>
                                     </div>
                                     <div class="cols">
                                         <textarea rows="2" name="message" id="message" placeholder="Is there anything else you would like to share with us?"></textarea>
@@ -131,7 +156,7 @@
                             </div>
                         </form>
                         @elseif ($setting->description_image_position == 2)
-                        -
+                        
                         @endif
                     </div>
                 </div>
