@@ -14,23 +14,7 @@
            </div>
         </div>
     </section>
-    <section class="support-one">
-        <div class="container">
-            <div class="two-columns">
-                <div class="col">
-                    <div class="support-one-section">
-                        <h2>{{$support_coordinations->title}}</h2>
-                        <p>{!! $support_coordinations->service_image_description !!}</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="image-wrapper">
-                        <img src="{{ asset('images/services/' . $support_coordinations->service_image) }}" alt="{{ $support_coordinations->service_image_alt }}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section class="support-three">
         <div class="container">
             <div class="support-three-heading">

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    <title>Sliders</title>
+    <title>Service Description</title>
 @endsection
 @section('main-panel')
     <div class="main-panel">

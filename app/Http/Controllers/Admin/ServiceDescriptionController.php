@@ -87,7 +87,7 @@ class ServiceDescriptionController extends Controller
         $this->serviceDescriptions->updateData($setting, $validatedData);
         Session::flash('success', 'Service description  has been updated!');
         // return redirect($this->redirect);
-        return redirect($this->redirect);
+        return redirect($this->redirect.'/'.$setting->service_id);
 
     }
 
@@ -102,7 +102,7 @@ class ServiceDescriptionController extends Controller
         $setting->delete();
         Session::flash('success', 'Service description has been deleted!');
         // return redirect($this->redirect.'/'.$service->id);
-        return redirect($this->redirect.'/'.$setting->id);
+        return redirect($this->redirect.'/'.$setting->service_id);
 
     }
 

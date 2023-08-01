@@ -25,8 +25,7 @@ class ServiceDescriptionRequest extends FormRequest
 
             'title' => 'sometimes',
             'description' => 'sometimes',
-            'image' => 'required|mimes:jpeg,png,svg,jpg,gif|max:2048',
-            'image' => 'required',
+            'image' => 'sometimes|mimes:jpeg,png,svg,jpg,gif|max:2048',
 
             'image_alt' => 'sometimes'
         ];

@@ -52,7 +52,7 @@
             </div>
         </div>
     </div>
-    <form action="{{ url('contact') }}" method="POST">
+    <form action="{{ url('contact') }}" name="form" id="form" method="POST">
         @csrf
         <div class="form-detail">
             <div class="container">
@@ -63,6 +63,7 @@
                                 </div>
                                 <div class="col">
                                     <input type="text" placeholder="Last Name" name="last_name" id="lname" required>
+
                                 </div>
                             </div>
                             <div class="two-columns">
@@ -91,4 +92,42 @@
         </div>
     </form>
 </main>
+@endsection
+@section('script')
+<script>
+    function validation(){
+    var form=document.getElementById("form");
+    var email=document.getElementById("email").value;
+    var text=document.getElementById("text");
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(email.match(pattern)){
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+    text.innerHTML="! Email Address is Valid.";
+    text.style.color="#28a745";
+    }else{
+        form.classList.remove("valid");
+        form.classList.add("invalid");
+        text.innerHTML="! Enter a valid email address";
+    text.style.color="#dc3545";
+    }
+}
+    function validation1(){
+    var form=document.getElementById("form");
+    var phone=document.getElementById("phone").value;
+    var text1=document.getElementById("text1");
+    var pattern =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if(phone.match(pattern)){
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+    text1.innerHTML="! Phone Number is Valid.";
+    text1.style.color="#28a745";
+    }else{
+        form.classList.remove("valid");
+        form.classList.add("invalid");
+        text1.innerHTML="! Enter valid Phone Number";
+    text1.style.color="#dc3545";
+    }
+}
+</script>
 @endsection

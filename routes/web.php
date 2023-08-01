@@ -9,6 +9,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\WorkingAtNdsController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\ServiceDescriptionController;
@@ -41,6 +42,9 @@ Route::get('about', [HomeController::class, 'aboutUs']);
 Route::get('contact', [ContactController::class,'index']);
 Route::post('contact', [ContactController::class,'store']);
 
+// working_at_nds
+Route::get('workingatNDS', [WorkingAtNdsController::class,'index']);
+Route::post('workingatNDS', [WorkingAtNdsController::class,'store']);
 
 
 // Authentication//

@@ -6,6 +6,7 @@ use App\Models\Slider;
 use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use App\Models\ServiceDescription;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -38,19 +39,22 @@ class HomeController extends Controller
             return view('login');
         }
     }
-
-    public function getService($slug) 
+    public function getService($slug)
     {
-        $setting = Service::where('slug', $slug);
-        if ($setting->count() > 0) {
-            $setting = $setting->first();
-            return view('service.service', compact('setting'));
-            
+        // Find the Service record by slug
+    $setting = Service::where('slug', $slug)->first();
+    if ($setting) {
+        if ($setting->serviceDescriptions()->exists()) {
+            $serviceDescriptions = $setting->serviceDescriptions;
+            return view('service.service', compact('setting', 'serviceDescriptions'));
         } else {
-            abort(404);
+            return view('service.service', compact('setting'));
         }
+    } else {
+        abort(404);
     }
 
+    }
     public function aboutUs()
     {
         $settings  = Setting::all();
@@ -58,7 +62,4 @@ class HomeController extends Controller
         $nds_description = $settings->where('slug', 'nds-about')->first();
         return view('about.about',compact('northern_disability_service','nds_description'));
     }
-
-
-   
 }

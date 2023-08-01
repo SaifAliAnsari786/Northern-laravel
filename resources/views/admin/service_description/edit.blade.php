@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    <title>Slider</title>
+    <title>Service Description</title>
 @endsection
 @section('main-panel')
     <div class="main-panel">
@@ -12,8 +12,8 @@
                 <div class="col-sm-12 col-md-12 stretch-card">
                     <div class="card-wrap form-block p-0">
                         <div class="block-header p-4">
-                            <h3>Add Slider</h3>
-                            <p class="ms-4">Fill the following fields to add a new slider</p>
+                            <h3>Add Service Description</h3>
+                            <p class="ms-4">Fill the following fields to add a new Service Description</p>
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
@@ -63,11 +63,8 @@
                                                                 <label>Description</span></label>
                                                             </div>
                                                             <div class="col-md-10">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control"
-                                                                        name="description"
-                                                                        value="{{ $setting->description }}">
-                                                                </div>
+                                                                <textarea name="description" id="body1" rows="4">{{$setting->description  }}
+                                                                </textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -146,34 +143,13 @@
     </div>
 @endsection
 @section('script')
-    <script>
-        function getDom() {
-            var type = $('#type').val();
-            if (type == 1) {
-                $.ajax({
-                    type: 'GET',
-                    url: Laravel.url + '/image-dom',
-                    success: function(data) {
-                        // end_loader();
-                        $(".captcha span").html(data.captcha);
-                    },
-                    error: function(error) {
-                        // errorDisplay(error["responseJSON"]["message"]);
-                    }
-                });
-            } else {
-                $.ajax({
-                    type: 'GET',
-                    url: Laravel.url + '/video-dom',
-                    success: function(data) {
-                        // end_loader();
-                        $(".captcha span").html(data.captcha);
-                    },
-                    error: function(error) {
-                        // errorDisplay(error["responseJSON"]["message"]);
-                    }
-                });
-            }
-        }
-    </script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#body1'))
+        .catch(error => {
+            console.error(error);
+        });
+
+
+</script>>
 @endsection
