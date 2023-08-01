@@ -25,13 +25,13 @@
                                     <li><a href="{{ route('service', ['slug' => 'respite-care']) }}">Respite Care</a></li>
                                 </ul>
                             </li>
-                            <li><a href="workingatNDS" class="opener">Working At NDS</a></li>
+                            <li><a href="{{ url ('workingatNDS') }}" class="opener">Working At NDS</a></li>
                             <li><a href="gallery" class="opener">Gallery</a>
                             </li>
                             <li>
                                 <a href="{{ url ('contact') }}">Contact</a>
                             </li>
-                            <li class="tp-enquiry"><a href="form" class="btn">Make an Enquiry</a></li>
+                            <li class="tp-enquiry"><a href="{{ url ('form') }}" class="btn">Make an Enquiry</a></li>
                         </ul>
                     </div>
                 </nav>

@@ -48,6 +48,9 @@ Route::post('contact', [ContactController::class,'store']);
 Route::get('workingatNDS', [WorkingAtNdsController::class,'index']);
 Route::post('workingatNDS', [WorkingAtNdsController::class,'store']);
 
+// enquiry now
+Route::get('form', [WorkingAtNdsController::class,'index']);
+Route::post('form', [WorkingAtNdsController::class,'store']);
 
 // Authentication//
 Route::get('gethome', [LoginController::class, 'gethome']);
