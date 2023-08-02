@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    name: {{ $setting['first_name'] }} {{ $setting['last_name'] }}
+    <h1>This mail from NDS</h1>
+    name: {{ $setting['name'] }}
     Email: {{ $setting['email'] }}
     Phone: {{ $setting['phone_no'] }}
 </body>

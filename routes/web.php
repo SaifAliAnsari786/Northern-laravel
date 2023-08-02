@@ -47,8 +47,14 @@ Route::get('contact', [ContactController::class,'index']);
 Route::post('contact', [ContactController::class,'store']);
 
 // working_at_nds
-Route::get('workingatNDS', [WorkingAtNdsController::class,'index']);
-Route::post('workingatNDS', [WorkingAtNdsController::class,'store']);
+Route::get('workingatNDS/{slug}', [WorkingAtNdsController::class,'index']);
+Route::post('workingatNDS/{slug}', [WorkingAtNdsController::class,'store']);
+
+// gallery
+Route::get('gallery', [HomeController::class,'gallery']);
+
+// service-footer
+Route::get('service', [HomeController::class,'servicefooter']);
 
 // enquiry now
 Route::get('form', [FormController::class,'index']);

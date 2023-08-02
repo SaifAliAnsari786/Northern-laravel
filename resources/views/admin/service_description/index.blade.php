@@ -35,7 +35,8 @@
                                         <h3>Slider's Table</h3>
                                     </div>
                                     <div class="add-button">
-                                        <a class="nav-link" href="{{ url('super-admin/service-description/create/'.$service->id) }}"><i
+                                        <a class="nav-link"
+                                            href="{{ url('super-admin/service-description/create/' . $service->id) }}"><i
                                                 class="fa-solid fa-book-open"></i>&nbsp;&nbsp Add Service Description</a>
                                     </div>
                                 </div>
@@ -57,22 +58,26 @@
                                                         <tbody id="student_list">
                                                             @foreach ($service->serviceDescriptions as $setting)
                                                                 <tr>
-                                                                    <td>{{$loop->iteration }}</td>
-                                                                    @if($setting->image)
+                                                                    <td>{{ $loop->iteration }}</td>
+                                                                    @if ($setting->image)
                                                                         <td>
-                                                                                <a href="{{ url($setting->image) }}"
-                                                                                    target="_blank">
-                                                                                    <img src="{{ url($setting->image) }}"
-                                                                                        alt="" style="width: 100px;">
-                                                                                </a>
+                                                                            <a href="{{ url($setting->image) }}"
+                                                                                target="_blank">
+                                                                                <img src="{{ url($setting->image) }}"
+                                                                                    alt="" style="width: 100px;">
+                                                                            </a>
 
                                                                         </td>
+                                                                    @else
+                                                                    <td>
+                                                                        No image
+                                                                    </td>
                                                                     @endif
                                                                     <td class="text-center">
                                                                         {{ $setting->title }}
                                                                     </td>
                                                                     <td class="text-center">
-                                                                        {{ $setting->description }}
+                                                                        {!! $setting->description !!}
                                                                     </td>
 
                                                                     <td class="action-icons">

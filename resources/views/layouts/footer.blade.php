@@ -17,8 +17,8 @@
                             </h2>
                             <ul class="dash">
                                 <li><a href="./">Home</a></li>
-                                <li><a href="about">About</a></li>
-                                <li><a href="service">Services</a></li>
+                                <li><a href="{{ url('about') }}">About</a></li>
+                                <li><a href="{{ url('service') }}">Services</a></li>
                                 <li><a href="{{ url('workingatNDS') }}">Working at NDS</a></li>
                                 <li><a href="{{ url('contact') }}">Contact</a></li>
                             </ul>

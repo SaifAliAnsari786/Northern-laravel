@@ -65,7 +65,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -87,6 +86,7 @@
                 <p>{!! $acknowledgement_country->value !!}</p>
             </div>
         </div>
+    </section>
 
         <section class="banner-two-section">
             <div class="container">
