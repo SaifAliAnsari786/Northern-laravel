@@ -83,7 +83,7 @@ class HomeController extends Controller
         $data = $request->all();
 
         $serviceforms = ServiceForm::create($data);
-        
+        Mail::to('kritimstha2015@gmail.com')->send(new ServiceMail($data));
         if ($serviceforms) {
             return redirect()->back();
         }

@@ -1,19 +1,19 @@
 @extends('layouts.app')
 @section('content')
 <main>
-    <section class="banner-section dailyliving-banner">
-        <div class="container">
-            <div class="banner-content">
-                <h1>{{$setting->title}}</h1>
-                <p>{!! $setting->background_image_description !!}</p>
-                <ul class="breadcrumb">
-                    <li><a href="index.php">Home</a></li>
-                    <li><i class="icofont-long-arrow-right"></i></li>
-                    <li>Services</li>
-                </ul>
+<section class="banner-section dailyliving-banner" style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="banner-content inner-banner">
+                    <h1>{{ $setting->title }}</h1>
+                    <p>{!! $setting->background_image_description !!}</p>
+                    <ul class="breadcrumb">
+                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><i class="icofont-long-arrow-right"></i></li>
+                        <li>Services</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>>
     @if($setting->description_image_position == 2)
     <section class="support-one">
             <div class="container">
