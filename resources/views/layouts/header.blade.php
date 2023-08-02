@@ -24,8 +24,8 @@
                                     <li><a href="{{ route('service', ['slug' => 'respite-care']) }}">Respite Care</a></li>
                                 </ul>
                             </li>
-                            <li><a href="workingatNDS" class="opener">Working At NDS</a></li>
-                            <li><a href="gallery" class="opener">Gallery</a>
+                            <li><a href="{{ url ('workingatNDS') }}" class="opener">Working At NDS</a></li>
+                            <li><a href="{{ url ('gallery') }}" class="opener">Gallery</a>
                             </li>
                             <li>
                                 <a href="{{ url ('contact') }}">Contact</a>
