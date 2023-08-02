@@ -42,6 +42,14 @@
             </div>
         </a>
     </li>
+    <li class="nav-item @if(Request::segment(2) == 'contacts') active @endif ">
+        <a class="nav-link" href="{{url('super-admin/contact')}}" aria-expanded="false" aria-controls="ui-basic">
+            <div class="sidebar-icon w-100" >
+                <i class="bi bi-file-earmark-text"></i>
+                <span class="menu-title w-100">Contact</span>
+            </div>
+        </a>
+    </li>
 
 
 </ul>

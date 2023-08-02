@@ -15,30 +15,7 @@
     <div class="loader loader-default" id="loader"></div>
     {{-- end loader --}}
 
-<<<<<<< HEAD
-            <div class="row">
-                <div class="col-sm-12 col-md-12 stretch-card">
-                    <div class="card-wrap form-block p-0">
-                        <div class="block-header p-4">
-                            <h3>Add New Service</h3>
-                            <p class="ms-4 mb-0">Fill the following fields to add new Service.</p>
-                            <div class="tbl-buttons">
-                                <ul>
-                                    <li>
-                                        <a href="{{ url('super-admin/service') }}"><img
-                                                src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        @include('success.success')
-                        @include('errors.error')
-                        <div class="row p-4 form-wrap">
-                            {!! Form::open(['url' => 'super-admin/service', 'method' => 'POST', 'files' => true]) !!}
-                            <div class="form-group batch-form">
-                                <div class="col-md-12">
-                                    {{-- <div class="image-upload_item form-grp mt-4">
-=======
+
     <div class="row">
         <div class="col-sm-12 col-md-12 stretch-card">
             <div class="card-wrap form-block p-0">
@@ -48,7 +25,7 @@
                     <div class="tbl-buttons">
                         <ul>
                             <li>
-                                <a href="{{ url('super-admin/service') }}"><img src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon" /></a>
+                                <a href="{{ url('super-admin/service') }}"><img src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +37,28 @@
                     <div class="form-group batch-form">
                         <div class="col-md-12">
                             {{-- <div class="image-upload_item form-grp mt-4">
->>>>>>> 78a2842f6d93e23ee67c93d82bba8678ccfebf54
+    <div class="row">
+        <div class="col-sm-12 col-md-12 stretch-card">
+            <div class="card-wrap form-block p-0">
+                <div class="block-header p-4">
+                    <h3>Add New Service</h3>
+                    <p class="ms-4 mb-0">Fill the following fields to add new Service.</p>
+                    <div class="tbl-buttons">
+                        <ul>
+                            <li>
+                                <a href="{{ url('super-admin/service') }}"><img src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon" /></a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    @include('success.success')
+                    @include('errors.error')
+                    <div class="row p-4 form-wrap">
+                        {!! Form::open(['url' => 'super-admin/service', 'method' => 'POST', 'files' => true]) !!}
+                        <div class="form-group batch-form">
+                            <div class="col-md-12">
+                                {{-- <div class="image-upload_item form-grp mt-4">
+
                                         <div id="imageDomAll">
                                             <div class="row gy-2 gx-4 py-2 control-group image_input_group" id="imageDom1">
                                                 <div class="col-sm-6 col-md-4">
@@ -104,154 +102,150 @@
                                             </div>
                                         </div>
                                     </div> --}}
-                                    <div class="row pt-2">
-                                        <div class="col-md-4">
-                                            <label >Ttile<span style="color: red;">*</span></label>
-                                            <input class="form-control form-control-lg my-image" type="text"
-                                                id="" name="title" placeholder="Title" >
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="Logo">Logo<span style="color: red;">*</span></label>
-                                            <input class="form-control form-control-lg my-image" type="file"
-                                                id="" name="logo" placeholder="logo image" >
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label>Logo  Image Alt<span style="color: red;">*</span></label>
-                                            <input class="form-control form-control-lg my-image" type="text"
-                                                id="" name="logo_image_alt" placeholder="logo image Alt" >
-                                        </div>
+                                <div class="row pt-2">
+                                    <div class="col-md-4">
+                                        <label>Ttile<span style="color: red;">*</span></label>
+                                        <input class="form-control form-control-lg my-image" type="text" id="" name="title" placeholder="Title">
                                     </div>
-                                    <div class="row mt-3">
-                                        <div class="col-12 col-md-6 pt-3 pt-md-0">
-                                            <label for="background_image_description">Description<span
-                                                    style="color: red;">*</span></label>
-                                            <textarea name="description" id="body1" name="description">
+                                    <div class="col-md-4">
+                                        <label for="Logo">Logo<span style="color: red;">*</span></label>
+                                        <input class="form-control form-control-lg my-image" type="file" id="" name="logo" placeholder="logo image">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Logo Image Alt<span style="color: red;">*</span></label>
+                                        <input class="form-control form-control-lg my-image" type="text" id="" name="logo_image_alt" placeholder="logo image Alt">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12 col-md-6 pt-3 pt-md-0">
+                                        <label for="background_image_description">Description<span style="color: red;">*</span></label>
+                                        <textarea name="description" id="body1" name="description">
                                     </textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row pt-2">
-                                <div class="col-md-4">
-                                    <label for="background_title">Background Title </label>
-                                    <input class="form-control form-control-lg my-image" type="text" id="" name="background_title" placeholder="Enter Background Title" >
-                                </div>
+                                <div class="row pt-2">
+                                    <div class="col-md-4">
+                                        <label for="background_title">Background Title </label>
+                                        <input class="form-control form-control-lg my-image" type="text" id="" name="background_title" placeholder="Enter Background Title">
+                                    </div>
 
-                                <div class="col-md-4">
+                                    <div class="col-md-4">
                                         <label for="background_image">Background Image <span class="text-danger">*</span></label>
                                         <input type="file" name="background_image" class="form-control" id="background_image" />
-                                </div>
+                                    </div>
 
-                                <div class="col-md-4">
+                                    <div class="col-md-4">
                                         <label for="background_image_alt">Background Image Alt </label>
                                         <input type="text" class="form-control" name="background_image_alt" placeholder="Enter Background Image Alt">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row mt-3">
-                                <div class="col-6 col-md-6 pt-3 pt-md-0">
-                                    <label for="background_image_description">Background Image description<span style="color: red;">*</span></label>
-                                    <textarea name="background_image_description" id="body2" name="background_image_description">
+                                <div class="row mt-3">
+                                    <div class="col-6 col-md-6 pt-3 pt-md-0">
+                                        <label for="background_image_description">Background Image description<span style="color: red;">*</span></label>
+                                        <textarea name="background_image_description" id="body2" name="background_image_description">
                                     </textarea>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label">Description Image Position</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="description_image_position" id="inlineRadio1" value="1">
-                                        <label class="form-check-label" for="inlineRadio1">Right</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="description_image_position" id="inlineRadio2" value="2">
-                                        <label class="form-check-label" for="inlineRadio2">Left</label>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Description Image Position</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="description_image_position" id="inlineRadio1" value="1">
+                                            <label class="form-check-label" for="inlineRadio1">Right</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="description_image_position" id="inlineRadio2" value="2">
+                                            <label class="form-check-label" for="inlineRadio2">Left</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row pt-2">
-                                <div class="col-md-6">
-                                    <label>Service Image<span style="color: red;">*</span></label>
-                                    <input class="form-control form-control-lg my-image" type="file" id="" name="service_image" placeholder="Service Image">
+                                <div class="row pt-2">
+                                    <div class="col-md-6">
+                                        <label>Service Image<span style="color: red;">*</span></label>
+                                        <input class="form-control form-control-lg my-image" type="file" id="" name="service_image" placeholder="Service Image">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="service_image_alt">Service Image Alt<span style="color: red;">*</span></label>
+                                        <input class="form-control form-control-lg my-image" type="text" id="" name="service_image_alt" placeholder="Service Image Alt">
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="service_image_alt">Service Image Alt<span style="color: red;">*</span></label>
-                                    <input class="form-control form-control-lg my-image" type="text" id="" name="service_image_alt" placeholder="Service Image Alt">
+                                <div class="row mt-3">
+                                    <div class="col-6 col-md-6 pt-3 pt-md-0">
+                                        <label for="service_image_description">Service Image description<span style="color: red;">*</span></label>
+                                        <textarea name="service_image_description" id="body3" name="service_image_description">
+                                        </textarea>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="seo_title" class="form-label">Form</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="form" id="inlineRadio1" value="1">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="form" id="inlineRadio2" value="2">
+                                            <label class="form-check-label" for="inlineRadio2">No</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <div class="col-6 col-md-6 pt-3 pt-md-0">
-                                    <label for="service_image_description">Service Image description<span style="color: red;">*</span></label>
-                                    <textarea name="service_image_description" id="body3" name="service_image_description">
-                                        </textarea>
+                                <div class="col-sm-12">
+                                    <label for="seo_title" class="form-label">Seo Title</label>
+                                    <input class="form-control form-control-lg" type="text" id="seo_title" name="seo_title">
                                 </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <label for="seo_description" class="form-label">Seo Description</label>
+                                    <input class="form-control form-control-lg" type="text" id="seo_description" name="seo_description">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <label for="seo_keyword" class="form-label">Meta Keyword</label>
+                                    <input class="form-control form-control-lg" type="text" id="meta_keyword" name="meta_keyword">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <label for="seo_keyword" class="form-label">Meta Keyword Description</label>
+                                    <input class="form-control form-control-lg" type="text" id="meta_keyword_description" name="meta_keyword_description">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
                                 <div class="col-sm-6">
-                                    <label for="seo_title" class="form-label">Form</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="form" id="inlineRadio1" value="1">
-                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="form" id="inlineRadio2" value="2">
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
-                                    </div>
+                                    <label for="status" class="form-label">Status<span style="color: red;">*</span></label>
+                                    <select id="status" name="status" class="form-select" aria-label="Select the status type" required>
+                                        <option value="" selected disabled>Please select status</option>
+                                        @foreach (config('custom.status') as $in2 => $val2)
+                                        <option value="{{ $in2 }}" @if (old('status')==$in2) selected @endif>
+                                            {{ $val2 }}
+                                        </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="seo_title" class="form-label">Seo Title</label>
-                                <input class="form-control form-control-lg" type="text" id="seo_title" name="seo_title">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="seo_description" class="form-label">Seo Description</label>
-                                <input class="form-control form-control-lg" type="text" id="seo_description" name="seo_description">
+                            <div class="row mt-4 submit-section">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary btn-save ">Save & Continue
+                                        <i class="fas fa-angle-double-right"></i></button>
+                                    <a href="{{ url('super-admin/service') }}">
+                                        <button type="button" class="btn btn-secondary btn-skip ms-3">Skip <i class="fa-solid fa-angles-right"></i></button>
+                                    </a>
+
+                                </div>
+
                             </div>
                         </div>
 
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="seo_keyword" class="form-label">Meta Keyword</label>
-                                <input class="form-control form-control-lg" type="text" id="meta_keyword" name="meta_keyword">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="seo_keyword" class="form-label">Meta Keyword Description</label>
-                                <input class="form-control form-control-lg" type="text" id="meta_keyword_description" name="meta_keyword_description">
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-sm-6">
-                                <label for="status" class="form-label">Status<span style="color: red;">*</span></label>
-                                <select id="status" name="status" class="form-select" aria-label="Select the status type" required>
-                                    <option value="" selected disabled>Please select status</option>
-                                    @foreach (config('custom.status') as $in2 => $val2)
-                                    <option value="{{ $in2 }}" @if (old('status')==$in2) selected @endif>
-                                        {{ $val2 }}
-                                    </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mt-4 submit-section">
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary btn-save ">Save & Continue
-                                    <i class="fas fa-angle-double-right"></i></button>
-                                <a href="{{ url('super-admin/service') }}">
-                                    <button type="button" class="btn btn-secondary btn-skip ms-3">Skip <i class="fa-solid fa-angles-right"></i></button>
-                                </a>
-
-                            </div>
-
-                        </div>
                     </div>
-
+                    {!! Form::close() !!}
                 </div>
-                {!! Form::close() !!}
             </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 @endsection
@@ -309,13 +303,13 @@
         }
     }
 
-        for (let i = 0; i < $('.my-feature').length; i++) {
-            if ($('.my-feature')[i].value == '') {
-                $('.my-feature')[i].focus();
-                check_feature = false;
-                break;
-            }
+    for (let i = 0; i < $('.my-feature').length; i++) {
+        if ($('.my-feature')[i].value == '') {
+            $('.my-feature')[i].focus();
+            check_feature = false;
+            break;
         }
+    }
 
 
 

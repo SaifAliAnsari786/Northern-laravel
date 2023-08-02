@@ -11,7 +11,8 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Models\ServiceDescription;
 use Illuminate\Support\Facades\Auth;
-
+use App\Mail\ServiceMail;
+use Illuminate\Support\Facades\Mail;
 class HomeController extends Controller
 {
 
@@ -83,7 +84,7 @@ class HomeController extends Controller
         $data = $request->all();
         
         $serviceforms = ServiceForm::create($data);
-        
+        Mail::to('kritimstha2015@gmail.com')->send(new ServiceMail($data));
         if ($serviceforms) {
             return redirect()->back();
         }

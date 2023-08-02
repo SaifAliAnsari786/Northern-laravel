@@ -100,7 +100,7 @@
                                                         <tr>
                                                             <th scope="col">S.N.</th>
                                                             <th scope="col">Title</th>
-                                                            <th scope="col">Description</th>
+                                                            
                                                             <th scope="col">Logo Image</th>
                                                             <th scope="col">Background Image</th>
                                                             <th scope="col">Service Image</th>
@@ -114,7 +114,7 @@
                                                         <tr id="my-table-tr-{{$service->id}}">
                                                             <td>{{ $loop->iteration }}</td>
                                                             <td>{{$service->title}}</td>
-                                                            <td>{!! Illuminate\Support\Str::limit($service->description, 50) !!}</td>
+                                                            
 
                                                             <td>
                                                                 <a href="{{asset('images/services/' . $service->logo)}}" target="_blank">

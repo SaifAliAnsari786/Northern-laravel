@@ -12,7 +12,7 @@
                         <div class="tbl-buttons">
                             <ul>
                                 <li>
-                                    <a href="{{url('super-admin/contacts')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
+                                    <a href="{{url('super-admin/contact')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
                                 </li>
                             </ul>
                         </div>
@@ -24,52 +24,33 @@
                                     <div class="col-md-6 mt-1">
                                         <label for="design_title">First Name</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$setting->first_name}}" readonly>
+                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$contact->first_name}}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mt-1">
                                         <label for="design_title">Last Name</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$setting->last_name}}" readonly>
+                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$contact->last_name}}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mt-1">
                                         <label for="design_title">Email</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$setting->email}}" readonly>
+                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$contact->email}}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mt-1">
                                         <label for="design_title">Phone</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$setting->phone}}" readonly>
+                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$contact->phone_no}}" readonly>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mt-1">
-                                        <label for="design_title">Region</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{config('custom.regions')[$setting->region]}}" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mt-1">
-                                        <label for="design_title">Suburb</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$setting->suburb}}" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mt-1">
-                                        <label for="design_title">Do you have land?</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{config('custom.land_status')[$setting->land_status]}}" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    
                             <div class="row mt-3">
                                 <div class="col-12 col-md-12 pt-3 pt-md-0">
                                     <label for="over_view_description">Message</label>
                                     <textarea name="over_view_description" id="body1"
-                                              rows="15">{!! $setting->message !!}
+                                              rows="15">{!! $contact->message !!}
                                     </textarea>
                                 </div>
                             </div>

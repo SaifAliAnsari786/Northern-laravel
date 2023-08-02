@@ -86,35 +86,41 @@
                                                         <thead>
                                                         <tr>
                                                             <th scope="col">S.N.</th>
-                                                            <th scope="col">Name</th>
+                                                            <th scope="col">First Name</th>
+                                                            <th scope="col">Last Name</th>
                                                             <th scope="col">Email</th>
                                                             <th scope="col">Phone</th>
+                                                            <th scope="col">Message</th>
                                                             <th scope="col">Action</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody id="student_list">
-                                                        @foreach($settings as $setting)
-                                                            <tr id="my-table-tr-{{$setting->id}}">
-                                                                <td>{{$settings->firstItem() + $loop->index}}</td>
-                                                                <td>{{$setting->first_name}} {{$setting->last_name}}</td>
-                                                                <td>{{$setting->email}}</td>
-                                                                <td>{{$setting->phone}}</td>
+                                                        @foreach($contacts as $contact)
+                                                            <tr id="my-table-tr-{{$contact->id}}">
+                                                                <td>{{ $loop->iteration }}</td>
+                                                                <td>{{$contact->first_name}}</td>
+                                                                <td>{{$contact->last_name}}</td>
+                                                                <td>{{$contact->email}}</td>
+                                                                <td>{{$contact->phone_no}}</td>
+                                                                <td>{!! Illuminate\Support\Str::limit($contact->message, 50) !!}</td>
                                                                 <td class="action-icons">
                                                                     <ul class="icon-button d-flex">
                                                                         <li>
                                                                             <a class="dropdown-item"
-                                                                               href="{{url('super-admin/contacts/'.$setting->id)}}"
+                                                                               href="{{url('super-admin/contact/'.$contact->id)}}"
                                                                                role="button"><i class="fa-solid fa-eye"
                                                                                                 data-bs-toggle="tooltip"
                                                                                                 data-bs-title="Show"></i></a>
                                                                         </li>
                                                                         <li>
-                                                                            <a class="dropdown-item" role="button"
-                                                                               onclick="myDelete({{$setting->id}})"><i
-                                                                                    class="fa-solid fa-trash"
-                                                                                    data-bs-toggle="tooltip"
-                                                                                    data-bs-title="Delete"></i></a>
-                                                                        </li>
+                                                                        <a class="dropdown-item"
+                                                                            href="{{ url('super-admin/contact/delete/' . $contact->id) }}"
+                                                                            role="button"><i
+                                                                            class="fa-solid fa-trash"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-title="Delete"></i>
+                                                                        </a>
+                                                                    </li>
                                                                     </ul>
                                                                 </td>
                                                             </tr>
@@ -123,7 +129,7 @@
                                                     </table>
                                                     <div class="row">
                                                         <div class="pagination-section">
-                                                            {{$settings->links()}}
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>

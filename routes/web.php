@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactController as AdminContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\WorkingAtNdsController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\ServiceDescriptionController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +51,9 @@ Route::get('workingatNDS', [WorkingAtNdsController::class,'index']);
 Route::post('workingatNDS', [WorkingAtNdsController::class,'store']);
 
 // enquiry now
-Route::get('form', [WorkingAtNdsController::class,'index']);
-Route::post('form', [WorkingAtNdsController::class,'store']);
+Route::get('form', [FormController::class,'index']);
+Route::post('form', [FormController::class,'store']);
+
 
 // Authentication//
 Route::get('gethome', [LoginController::class, 'gethome']);
@@ -96,6 +99,10 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
 
     Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(' image.upload'); //upload image in CkEditor
     Route::post('post-upload-image', [ImageUploadController::class, 'storeImageQuill'])->name('image.store');
+
+    Route::get('contact', [ContactController::class,'getcontact']);
+    Route::get('contact/{id}', [ContactController::class, 'show']);
+    Route::get('contact/delete/{id}', [ContactController::class, 'destroy']);
 
 
     Route::get('service-description/{service_id}', [ServiceDescriptionController::class,'index']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Setting;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use App\Services\SettingService;
 use Illuminate\Support\Facades\Session;
