@@ -35,9 +35,6 @@
                                 <div class="row">
                                     <div class="col-12 table-responsive">
                                         <div class="row">
-
-
-
                                             <div class="col-sm-12 col-md-12 mt-2" id="my-name">
                                                 <div class="form-group batch-form">
                                                     <div class="col-md-12">
@@ -85,10 +82,12 @@
                                                             </div>
                                                             <br>
                                                             <span style="margin-left: 100px;">
+                                                                @if($setting->image)
                                                                 <a href="{{ url($setting->image) }}" target="_blank">
                                                                     <img src="{{ url($setting->image) }}" alt=""
                                                                         style="width: 100px;">
                                                                 </a>
+                                                                @endif
                                                             </span>
                                                         </div>
                                                     </div>

@@ -593,7 +593,7 @@ th {
  font-size: 26px;
   font-weight: bold;
   padding: 30px 0px 45px 10px;
-  margin: 0; 
+  margin: 0;
   color: #212121;
 }
 .enquiry-input .form-control{
@@ -1085,7 +1085,7 @@ ul {
 .map-location{
   position: absolute;
   top: 0;
-  bottom: 0; 
+  bottom: 0;
   right: 300px;
   background: #e00814;
   color: #fff;
@@ -1438,7 +1438,7 @@ ul {
 
 
 
-.about-banner{
+/* .about-banner{
   background: url(../images/banner-slider1.jpg) no-repeat center;
 }
 .dailyliving-banner{
@@ -1470,7 +1470,7 @@ ul {
 }
 .service-banner{
   background: url(../images/services.jpg) no-repeat center;
-}
+} */
 .thankyou-sec{
   margin-bottom:90px;
 }
@@ -1712,11 +1712,11 @@ ul {
 
 /*icofont*/
 
-/*! 
-* @package IcoFont 
-* @version 1.0.1 
-* @author IcoFont https://icofont.com 
-* @copyright Copyright (c) 2015 - 2018 IcoFont 
+/*!
+* @package IcoFont
+* @version 1.0.1
+* @author IcoFont https://icofont.com
+* @copyright Copyright (c) 2015 - 2018 IcoFont
 * @license - https://icofont.com/license/
 */
 @font-face {
@@ -10394,7 +10394,7 @@ ul {
 .support-three-pm .three-columns .col .col-wrapper{
   width: fit-content;
   text-align: center;
-  
+
 }
 .support-three-pm .three-columns .col .col-wrapper h5{
   font-size: 30px;
@@ -10484,7 +10484,7 @@ ul {
   position: relative;
 }
 .process-image{
-  height: 118px; 
+  height: 118px;
   width: 118px;
   text-align:center;
   margin:0 auto;
@@ -10795,7 +10795,7 @@ ul {
 .flag-title{
   text-align: center;
   margin-top: 45px;
-  width: 100%; 
+  width: 100%;
 }
 
 .flag-title h1{
@@ -10937,7 +10937,7 @@ ul {
     left:25%;
   }
 }
- 
+
 @media(min-width:320px) and (max-width:560px){
 
   /* for common */
@@ -11074,7 +11074,7 @@ ul {
   }
   .ourvalues-heading h1{
     font-size: 32px!important;
-  } 
+  }
   .ourvalues-section .three-columns .col{
     width:100%;
     margin-bottom: 10px;
@@ -11108,7 +11108,7 @@ ul {
   }
   .banner-two-section {
     padding: 20px 0px 0px 0px;
-  }  
+  }
   .banner-two-section .banner-wrapper{
     flex-wrap: wrap;
     padding:20px!important;
@@ -11215,7 +11215,7 @@ ul {
     margin-bottom: 20px;
   }
   /* ////////// */
-  
+
   /* plan management */
 
   .support-three-pm{
@@ -11270,7 +11270,7 @@ ul {
   }
   .form-detail .submit-button{
     margin-top: 15px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
   }
   .form-control .agreement span{
     font-size: 14px;
@@ -11284,7 +11284,7 @@ ul {
   }
   .contactus-section .head h1{
     font-size: 32px!important;
-  } 
+  }
   /* ////////// */
 
   /* make an enquiry */
@@ -11311,7 +11311,7 @@ ul {
   }
 
   /* for index page */
- 
+
   .process-section{
     padding: 50px 0px;
   }
@@ -11485,9 +11485,9 @@ ul {
   .support-three .three-columns .col{
     margin-bottom: 0px;
   }
-  
+
   /* plan management */
- 
+
   .support-three-pm{
     padding: 50px 0px 30px 0px;
   }
@@ -11524,14 +11524,14 @@ ul {
   }
   .form-detail .submit-button{
     margin-top: 25px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
   }
   .form-control .agreement span{
     font-size: 14px;
   }
 
   /* make an enquiry */
- 
+
   .form-page-head p{
     padding: 0px 0px 5px;
   }
@@ -11540,18 +11540,18 @@ ul {
   }
 }
 
-  
- 
-
-
-  
-
-
-  
 
 
 
-  
+
+
+
+
+
+
+
+
+
 
 @media (min-width:768px) and (max-width:1024px){
 
@@ -11604,7 +11604,7 @@ ul {
 
   .form-detail .submit-button{
     margin-top: 25px;
-    margin-bottom: 70px; 
+    margin-bottom: 70px;
   }
   .ourvalues-section{
     padding: 50px 0px 15px 0px;
@@ -11648,7 +11648,7 @@ ul {
   .support-one-section p{
     margin-bottom: 0px;
   }
-  
+
   /* daily living support */
 
   .support-three-dls{
@@ -11795,5 +11795,5 @@ ul {
   .form-page{
     padding: 50px 0px 50px 0px;
   }
-   /* ////////// */ 
+   /* ////////// */
 }

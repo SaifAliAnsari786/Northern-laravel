@@ -2,16 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WorkingAtNds;
+use App\Mail\NdsEmail;
 // use Illuminate\Http\Request;
+use App\Models\Service;
+use App\Models\WorkingAtNds;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
 
 
 class WorkingAtNdsController extends Controller
 {
-    public function index()
+    // public function index()
+    // {
+    //     return view('working_at_nds.working_at_nds');
+    // }
+    public function index($slug)
     {
-        return view('working_at_nds.working_at_nds');
+    // Find the Service record by slug
+        $setting = Service::where('slug', $slug)->first();
+        if ($setting) {
+            if ($setting->serviceDescriptions()->exists()) {
+                $serviceDescriptions = $setting->serviceDescriptions;
+                return view('working_at_nds.working_at_nds', compact('setting', 'serviceDescriptions'));
+            } else {
+                return view('working_at_nds.working_at_nds', compact('setting'));
+            }
+        } else {
+            abort(404);
+        }
     }
 
     public function store()
@@ -28,7 +46,10 @@ class WorkingAtNdsController extends Controller
         $check = request()->input('check', []);
         $setting['check'] = implode(',', $check); // Convert the array to a comma-separated strin
         WorkingAtNds::create($setting);
+        Mail::to('saifaliansari477@gmail.com')->send(new NdsEmail($setting));
         return redirect('workingatNDS');
     }
+
+
 
 }

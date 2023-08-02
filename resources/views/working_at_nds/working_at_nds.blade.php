@@ -2,17 +2,17 @@
 @section('content')
 <main>
 
-    <section class="banner-section ndsworking-banner">
+    <section class="banner-section " style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
         <div class="container">
-           <div class="banner-content inner-banner">
-            <h1>Working at NDS</h1>
-            <p>Fill in your details below and we will respond to your enquiry within one business day.</p>
-            <ul class="breadcrumb">
-                <li><a href="./">Home</a></li>
-                <li><i class="icofont-long-arrow-right"></i></li>
-                <li>Working at NDS</li>
-            </ul>
-           </div>
+            <div class="banner-content inner-banner">
+                <h1>{{ $setting->title }}</h1>
+                <p>{!! $setting->background_image_description !!}</p>
+                <ul class="breadcrumb">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><i class="icofont-long-arrow-right"></i></li>
+                    <li>Services</li>
+                </ul>
+            </div>
         </div>
     </section>
 

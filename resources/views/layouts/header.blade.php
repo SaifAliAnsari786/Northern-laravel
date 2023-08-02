@@ -16,7 +16,6 @@
                             <li><a href="#" class="opener">Services</a>
 
                                 <ul>
-                                    
                                     <li><a href="{{ route('service', ['slug' => 'daily-living-support']) }}">Daily Living Support</a></li>
                                     <li><a href="{{ route('service', ['slug' => 'support-coordination']) }}">Support Coordination</a></li>
                                     <li><a href="{{ route('service', ['slug' => 'community-participation']) }}">Community Participation</a></li>
@@ -25,8 +24,8 @@
                                     <li><a href="{{ route('service', ['slug' => 'respite-care']) }}">Respite Care</a></li>
                                 </ul>
                             </li>
-                            <li><a href="workingatNDS" class="opener">Working At NDS</a></li>
-                            <li><a href="gallery" class="opener">Gallery</a>
+                            <li><a href="{{ url('workingatNDS',['slug'=>'respite-care']) }}" class="opener">Working At NDS</a></li>
+                            <li><a href="{{ url('gallery') }}" class="opener">Gallery</a>
                             </li>
                             <li>
                                 <a href="{{ url ('contact') }}">Contact</a>

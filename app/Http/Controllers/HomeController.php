@@ -59,7 +59,6 @@ class HomeController extends Controller
     }
     }
 
-
     public function aboutUs()
     {
         $settings  = Setting::all();
@@ -81,12 +80,29 @@ class HomeController extends Controller
     public function store(ServiceFormStoreRequest $request)
     {
         $data = $request->all();
-        
+
         $serviceforms = ServiceForm::create($data);
-        
+
         if ($serviceforms) {
             return redirect()->back();
         }
+    }
+
+    public function gallery()
+    {
+        $gallery = Service::all();
+        $respite_care = $gallery->where('slug', 'respite-care')->first();
+        $daily_living_support = $gallery->where('slug', 'daily-living-support')->first();
+        $support_coordination = $gallery->where('slug', 'support-coordination')->first();
+
+        return view('gallery.gallery',compact('gallery','respite_care','daily_living_support','support_coordination'));
+    }
+
+    public function servicefooter()
+    {
+        $services = Service::where('status', 1)->orderBy('id', 'ASC')->get();
+
+        return view('service_footer.index',compact('services'));
     }
 }
 

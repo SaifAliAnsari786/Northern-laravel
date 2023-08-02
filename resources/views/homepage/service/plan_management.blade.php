@@ -26,7 +26,7 @@
                         <div class="support-one-section">
                             <h2>{{$plan_management->title}}</h2>
                             <p>{!!  $plan_management->service_image_description !!}</p>
-                           
+
                             <!-- <p>We support individuals who have a disability or face mental health challenges and need tailored NDIS support coordination in managing a complex range of needs including:</p>
                             <ul class="support-list">
                                 <li>Individualised supports in the home and in the community</li>
@@ -38,36 +38,7 @@
                 </div>
             </div>
         </section>
-        <section class="support-three-pm">
-            <div class="container">
-                <div class="support-three-heading">
-                    <h2>Keeping You Informed Every Step of the Way</h2>
-                </div>
-                <div class="three-columns">
-                    <div class="col">
-                        <div class="col-wrapper">
-                            <h5>1</h5>
-                            <h3>Dashboard</h3>
-                            <p>Your handy tool to view the balance of budgets, check spending and track the progress of payments to your providers.</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-wrapper">
-                            <h5>2</h5>
-                            <h3>Monthly overviews</h3>
-                            <p>We send you a snapshot of your NDIS budgets every month so you can see how much you have left in each category.</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="col-wrapper">
-                            <h5>3</h5>
-                            <h3>Spending alerts</h3>
-                            <p>And if it looks as though you're spending too much or too little, we let you know, so you can stay within budget.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="banner-form">
             <div class="container">
                 <div class="two-columns">
