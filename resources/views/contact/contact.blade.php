@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <main>
-    <section class="banner-section contact-banner">
+    <section class="banner-section contact-banner"style="background-image:url('{{($contact_image->value)}}'); background-size: cover; background-position: center;">
         <div class="container">
            <div class="banner-content inner-banner">
-            <h1>Contact</h1>
-            <P>Contact us today to arrange free, no-obligation care consultation for you or your loved one.</P>
+            <h1>{{$contact_image->key}}</h1>
+            <P>{!! $contact_description->value !!}</P>
             <ul class="breadcrumb">
                 <li><a href="./">Home</a></li>
                 <li><i class="icofont-long-arrow-right"></i></li>

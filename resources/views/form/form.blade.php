@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<section class="banner-section contact-banner">
+<section class="banner-section contact-banner" style="background-image: url('{{($enquiry->value)}}'); background-size: cover; background-position: center;">
             <div class="container">
                <div class="banner-content inner-banner">
-                <h1>MAKE AN ENQUIRY NOW</h1>
-                <p>Our Door is always open for you, share your interest with us.</p>
+                <h1>{{$enquiry->key}}</h1>
+                <p>{!! $enquiry_description->value !!}</p>
                 <ul class="breadcrumb">
                     <li><a href="./">Home</a></li>
                     <li><i class="icofont-long-arrow-right"></i></li>

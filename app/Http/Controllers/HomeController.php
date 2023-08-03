@@ -74,8 +74,10 @@ class HomeController extends Controller
         $country = $settings->where('slug', 'country')->first();
         $country_logo = $settings->where('slug', 'country-logo')->first();
         $acknowledgement_country = $settings->where('slug', 'acknowledgement-of-country')->first();
+        $about_us = $settings->where('slug', 'about-us')->first();
+        
         return view('about.about',compact('northern_disability_service','nds_description','empowerment_image','empowerment_description',
-                                    'integrity_image','integrity_description','inclusiveness_image','inclusiveness_description','country','country_logo','acknowledgement_country'));
+                                    'integrity_image','integrity_description','inclusiveness_image','inclusiveness_description','country','country_logo','acknowledgement_country','about_us'));
     }
 
     public function store(ServiceFormStoreRequest $request)
@@ -91,19 +93,22 @@ class HomeController extends Controller
 
     public function gallery()
     {
+        $settings  = Setting::all();
         $gallery = Service::all();
         $respite_care = $gallery->where('slug', 'respite-care')->first();
         $daily_living_support = $gallery->where('slug', 'daily-living-support')->first();
         $support_coordination = $gallery->where('slug', 'support-coordination')->first();
-
-        return view('gallery.gallery',compact('gallery','respite_care','daily_living_support','support_coordination'));
+        $gallery = $settings->where('slug', 'gallery')->first();
+        return view('gallery.gallery',compact('gallery','respite_care','daily_living_support','support_coordination','gallery'));
     }
 
     public function servicefooter()
     {
         $services = Service::where('status', 1)->orderBy('id', 'ASC')->get();
-
-        return view('service_footer.index',compact('services'));
+        $settings  = Setting::all();
+        $footer_service = $settings->where('slug', 'footer-service')->first();
+        $footer_description = $settings->where('slug', 'footer-service-description')->first();
+        return view('service_footer.index',compact('services','footer_service','footer_description'));
     }
 }
 

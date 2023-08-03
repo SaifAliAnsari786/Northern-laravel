@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Form;
 use Illuminate\Http\Request;
 use App\Mail\FormEMail;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Mail;
 
 class FormController extends Controller
 {
     public function index()
     {
-        return view('form.form');
+        $settings  = Setting::all();
+        $enquiry = $settings->where('slug', 'enquiry-form')->first();
+        $enquiry_description = $settings->where('slug', 'enquiry')->first();
+        return view('form.form',compact('enquiry','enquiry_description'));
     }
 
     public function store()

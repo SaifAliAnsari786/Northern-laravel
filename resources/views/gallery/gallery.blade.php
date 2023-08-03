@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <main>
-        <section class="banner-section household-banner">
+        <section class="banner-section household-banner" style="background-image:url('{{($gallery->value)}}'); background-size: cover; background-position: center;">
             <div class="container">
                 <div class="banner-content inner-banner">
-                    <h1>Gallery</h1>
+                    <h1>{{$gallery->key}}</h1>
                     <ul class="breadcrumb">
                         <li><a href="./">Home</a></li>
                         <li><i class="icofont-long-arrow-right"></i></li>

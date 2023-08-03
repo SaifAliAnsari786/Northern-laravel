@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <main>
-    <section class="banner-section service-banner">
+    <section class="banner-section service-banner" style="background-image: url('{{($footer_service->value)}}'); background-size: cover; background-position: center;">
         <div class="container">
            <div class="banner-content inner-banner">
-            <h1>Services</h1>
-            <p>Our Experienced and professional team of Support Professionals can assist with your personal care needs.</p>
+            <h1>{{$footer_service->key}}</h1>
+            <p>{!! $footer_description->value !!}</p>
             <ul class="breadcrumb">
                 <li><a href="./index.php">Home</a></li>
                 <li><i class="icofont-long-arrow-right"></i></li>
