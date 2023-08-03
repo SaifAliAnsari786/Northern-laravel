@@ -1438,9 +1438,14 @@ ul {
 
 
 
-/* .about-banner{
+.testi-banner{
+    background: url(../images/banner-slider1.jpg) no-repeat center;
+  }
+/*
+ .about-banner{
   background: url(../images/banner-slider1.jpg) no-repeat center;
 }
+
 .dailyliving-banner{
   background: url(../images/daily-living-bg.jpg) no-repeat center;
 }
@@ -1462,15 +1467,14 @@ ul {
 .respite-banner{
   background: url(../images/respite-care-bg.jpg) no-repeat center;
 }
-.testi-banner{
-  background: url(../images/banner-slider1.jpg) no-repeat center;
-}
+
 .contact-banner{
   background: url(../images/contact-bg.jpg) no-repeat center;
 }
 .service-banner{
   background: url(../images/services.jpg) no-repeat center;
 } */
+
 .thankyou-sec{
   margin-bottom:90px;
 }

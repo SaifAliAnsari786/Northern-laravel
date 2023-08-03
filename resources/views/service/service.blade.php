@@ -1,39 +1,44 @@
 @extends('layouts.app')
 @section('content')
 <main>
-<section class="banner-section dailyliving-banner" style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
-            <div class="container">
-                <div class="banner-content inner-banner">
-                    <h1>{{ $setting->title }}</h1>
-                    <p>{!! $setting->background_image_description !!}</p>
-                    <ul class="breadcrumb">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li><i class="icofont-long-arrow-right"></i></li>
-                        <li>Services</li>
-                    </ul>
-                </div>
+    <section class="banner-section dailyliving-banner" style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="banner-content inner-banner">
+                <h1>{{ $setting->title }}</h1>
+                <p>{!! $setting->background_image_description !!}</p>
+                <ul class="breadcrumb">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><i class="icofont-long-arrow-right"></i></li>
+                    <li>Services</li>
+                </ul>
             </div>
-        </section>>
+        </div>
+
+    </section>>
     @if($setting->description_image_position == 2)
     <section class="support-one">
-            <div class="container">
-                <div class="two-columns">
-                    <div class="col">
-                        <div class="image-wrapper">
-                            <img src="{{  asset('images/services/' .$setting->service_image) }}" alt="{{ $setting->service_image_alt }}">
-                        </div>
+    </section>
+
+    <section class="support-one">
+
+        <div class="container">
+            <div class="two-columns">
+                <div class="col">
+                    <div class="image-wrapper">
+                        <img src="{{  asset('images/services/' .$setting->service_image) }}" alt="{{ $setting->service_image_alt }}">
                     </div>
-                    <div class="col">
-                        <div class="support-one-section">
-                            <h2>{{ $setting->title }}</h2>
-                            <p>{!! $setting->service_image_description !!} </p>
-                            
-                           
-                        </div>
+                </div>
+                <div class="col">
+                    <div class="support-one-section">
+                        <h2>{{ $setting->title }}</h2>
+                        <p>{!! $setting->service_image_description !!} </p>
+
+
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     @else
     <section class="support-one">
         <div class="container">
@@ -59,9 +64,9 @@
 
 
 
-   
 
-    
+
+
 
     @if(Request::segment(2) == 'daily-living-support')
     <section class="support-three-dls">

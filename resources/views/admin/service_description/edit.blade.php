@@ -17,8 +17,8 @@
                             <div class="tbl-buttons">
                                 <ul>
                                     <li>
-                                        <a href="{{ url('super-admin/sliders') }}"><img
-                                                src="{{ url('images/cancel-icon.png') }}" alt="cancel-icon" /></a>
+                                        <a href="{{url('super-admin/service')}}"><img src="{{url('frontend/cancel-icon.png')}}" alt="cancel-icon" /></a>
+
                                     </li>
                                 </ul>
                             </div>
@@ -117,7 +117,7 @@
                                         <div class="button-section d-flex justify-content-end mt-2 mb-4">
                                             <div class="row">
                                                 <div class="button-section d-flex justify-content-end mt-2 mb-4">
-                                                    <a href="{{ url('super-admin/service-description') }}">
+                                                    <a href="{{ url('super-admin/service-description/'. $setting->service_id) }}">
                                                         <button type="button">
                                                             Skip
                                                             <i class="fa-solid fa-angles-right"></i>
