@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('service_forms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('phone_no');
+            $table->string('phone_no');
             $table->string('email');
             $table->integer('postcode');
             $table->enum('state', ['qld','nsw','sa','act','vic']);

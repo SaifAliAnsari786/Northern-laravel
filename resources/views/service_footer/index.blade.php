@@ -7,7 +7,7 @@
             <h1>{{$footer_service->key}}</h1>
             <p>{!! $footer_description->value !!}</p>
             <ul class="breadcrumb">
-                <li><a href="./index.php">Home</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
                 <li><i class="icofont-long-arrow-right"></i></li>
                 <li>Services</li>
             </ul>

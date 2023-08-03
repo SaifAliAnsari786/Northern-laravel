@@ -13,15 +13,11 @@
                     </ul>
                 </div>
             </div>
-<<<<<<<<< Temporary merge branch 1
-        </section>>
-    @if($setting->description_image_position == 2)
-    <section class="support-one">
-=========
-        </section>
 
+        </section>
+    @if($setting->description_image_position == 2)
         <section class="support-one">
->>>>>>>>> Temporary merge branch 2
+
             <div class="container">
                 <div class="two-columns">
                     <div class="col">
@@ -59,15 +55,6 @@
         </div>
     </section>
     @endif
-
-
-
-
-
-
-
-
-
 
     @if(Request::segment(2) == 'daily-living-support')
     <section class="support-three-dls">

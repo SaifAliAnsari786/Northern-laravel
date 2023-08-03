@@ -24,13 +24,10 @@
                                     <li><a href="{{ route('service', ['slug' => 'respite-care']) }}">Respite Care</a></li>
                                 </ul>
                             </li>
-<<<<<<<<< Temporary merge branch 1
+
                             <li><a href="{{ url ('workingatNDS') }}" class="opener">Working At NDS</a></li>
                             <li><a href="{{ url ('gallery') }}" class="opener">Gallery</a>
-=========
-                            <li><a href="{{ url('workingatNDS') }}" class="opener">Working At NDS</a></li>
-                            <li><a href="{{ url('gallery') }}" class="opener">Gallery</a>
->>>>>>>>> Temporary merge branch 2
+
                             </li>
                             <li>
                                 <a href="{{ url ('contact') }}">Contact</a>
