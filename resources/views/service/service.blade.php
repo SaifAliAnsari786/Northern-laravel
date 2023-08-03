@@ -1,7 +1,25 @@
 @extends('layouts.app')
 @section('content')
     <main>
-        <section class="banner-section dailyliving-banner" style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
+        @if (Request::segment(2) == 'daily-living-support')
+            <section class="banner-section dailyliving-banner"
+                style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="banner-content inner-banner">
+                        <h1>{{ $setting->title }}</h1>
+                        <p>{!! $setting->background_image_description !!}</p>
+                        <ul class="breadcrumb">
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><i class="icofont-long-arrow-right"></i></li>
+                            <li>Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        @endif
+        @if (Request::segment(2) == 'support-coordination')
+            <section class="banner-section support-banner"
+                style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;>
             <div class="container">
                 <div class="banner-content inner-banner">
                     <h1>{{ $setting->title }}</h1>
@@ -12,28 +30,113 @@
                         <li>Services</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="support-one">
+                </div>
+            </section>
+        @endif
+        @if (Request::segment(2) == 'community-participation')
+            <section class="banner-section community-banner"
+                style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;>
             <div class="container">
-                <div class="two-columns">
-                    <div class="col">
-                        <div class="image-wrapper">
-                            <img src="{{ asset('images/services/' . $setting->service_image) }}"
-                                alt="{{ $setting->service_image_alt }}">
-                        </div>
+                <div class="banner-content inner-banner">
+                    <h1>{{ $setting->title }}</h1>
+                    <p>{!! $setting->background_image_description !!}</p>
+                    <ul class="breadcrumb">
+                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><i class="icofont-long-arrow-right"></i></li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+                </div>
+            </section>
+        @endif
+        @if (Request::segment(2) == 'plan-management')
+            <section
+                class="banner-section plan-banner"style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="banner-content inner-banner">
+                        <h1>{{ $setting->background_title }}</h1>
+                        <p>{!! $setting->background_image_description !!}</p>
+                        <ul class="breadcrumb">
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><i class="icofont-long-arrow-right"></i></li>
+                            <li>Services</li>
+                        </ul>
                     </div>
-                    <div class="col">
-                        <div class="support-one-section">
-                            <h2>{{ $setting->title }}</h2>
-                            <p> {!! $setting->service_image_description !!}</p>
+                </div>
+            </section>
+        @endif
+        @if (Request::segment(2) == 'household-tasks')
+            <section class="banner-section household-banner"
+                style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;>
+            <div class="container">
+                <div class="banner-content inner-banner">
+                    <h1>{{ $setting->background_title }}</h1>
+                    <p>{!! $setting->background_image_description !!}</p>
+                    <ul class="breadcrumb">
+                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><i class="icofont-long-arrow-right"></i></li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+                </div>
+            </section>
+        @endif
+        @if (Request::segment(2) == 'respite-care')
+            <section class="banner-section respite-banner"
+                style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;>
+            <div class="container">
+                <div class="banner-content inner-banner">
+                    <h1>{{ $setting->background_title }}</h1>
+                    <P>{!! $setting->background_image_description !!}</P>
+                    <ul class="breadcrumb">
+                        <li><a href="{{ url('/') }}">Home</a></li>
+                        <li><i class="icofont-long-arrow-right"></i></li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+                </div>
+            </section>
+        @endif
 
+        @if ($setting->description_image_position == 2)
+            <section class="support-one">
+                <div class="container">
+                    <div class="two-columns">
+                        <div class="col">
+                            <div class="image-wrapper">
+                                <img src="{{ asset('images/services/' . $setting->service_image) }}"
+                                    alt="{{ $setting->service_image_alt }}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="support-one-section">
+                                <h2>{{ $setting->title }}</h2>
+                                <p>{!! $setting->service_image_description !!} </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        @else
+            <section class="support-one">
+                <div class="container">
+                    <div class="two-columns">
+                        <div class="col">
+                            <div class="support-one-section">
+                                <h2>{{ $setting->title }}</h2>
+                                <p>{!! $setting->service_image_description !!}</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="image-wrapper">
+                                <img src="{{ asset('images/services/' . $setting->service_image) }}"
+                                    alt="{{ $setting->service_image_alt }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
 
         @if (Request::segment(2) == 'daily-living-support')
             <section class="support-three-dls">
@@ -75,7 +178,6 @@
                 </div>
             </section>
         @endif
-
         @if (Request::segment(2) == 'community-participation')
             <section class="support-three-dls">
                 <div class="container">
@@ -94,7 +196,6 @@
                 </div>
             </section>
         @endif
-
         @if (Request::segment(2) == 'household-tasks')
             <section class="support-three-dls">
                 <div class="container">
@@ -112,27 +213,25 @@
                     </div>
             </section>
         @endif
-
         @if (Request::segment(2) == 'plan-management')
-        <section class="support-three-pm">
-            <div class="container">
-                <div class="support-three-heading">
-                    <h2>Keeping You Informed Every Step of the Way</h2>
-                </div>
-                <div class="three-columns">
-                    @foreach ($serviceDescriptions as $serviceDescription )
-                    <div class="col">
-                        <div class="col-wrapper">
-                            <h5>{{ $serviceDescription->title }}</h5>
-                            <p>{!! $serviceDescription->description !!}</p>
-                        </div>
+            <section class="support-three-pm">
+                <div class="container">
+                    <div class="support-three-heading">
+                        <h2>Keeping You Informed Every Step of the Way</h2>
                     </div>
-                    @endforeach
+                    <div class="three-columns">
+                        @foreach ($serviceDescriptions as $serviceDescription)
+                            <div class="col">
+                                <div class="col-wrapper">
+                                    <h5>{{ $serviceDescription->title }}</h5>
+                                    <p>{!! $serviceDescription->description !!}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         @endif
-
         @if ($setting->form == 1)
             <section class="banner-form">
                 <div class="container">
@@ -148,43 +247,46 @@
                             <div class="right-side">
                                 <h3>Request a Callback</h3>
                                 <p>We'll give you a call to discuss how we can support you.</p>
-                                <form method="post" action="">
+                                <form method="post" action="{{ url('serviceform') }}">
+                                    @csrf
                                     <div class="form-section-side">
                                         <div class="two-columns">
                                             <div class="col">
-                                                <input type="text" placeholder="Your Name" name="name" id="name"
-                                                    required>
+                                                <input type="text" placeholder="Your Name" name="name"
+                                                    id="name" required>
                                             </div>
                                             <div class="col">
-                                                <input type="text" placeholder="Your phone number" name="phone"
+                                                <input type="text" placeholder="Your phone number" name="phone_no"
                                                     id="phone" required>
                                             </div>
                                             <div class="col">
-                                                <input type="text" placeholder="Your email" name="email" id="email"
-                                                    required>
+                                                <input type="text" placeholder="Your email" name="email"
+                                                    id="email" required>
                                             </div>
                                             <div class="col">
-                                                <input type="text" placeholder="Postcode" name="postcode" id="postcode">
+                                                <input type="text" placeholder="Postcode" name="postcode"
+                                                    id="postcode">
                                             </div>
                                         </div>
                                         <div class="one-columns">
                                             <div class="cols">
                                                 <select name="state" id="state">
                                                     <option>Select your state</option>
-                                                    <option>QLD</option>
-                                                    <option>NSW</option>
-                                                    <option>SA</option>
-                                                    <option>ACT</option>
-                                                    <option>VIC</option>
+                                                    <option value="qld">QLD</option>
+                                                    <option value="nsw">NSW</option>
+                                                    <option value="sa">SA</option>
+                                                    <option value="act">ACT</option>
+                                                    <option value="vic">VIC</option>
                                                 </select>
                                             </div>
                                             <div class="cols">
                                                 <input type="text" name="fund" id="fund"
-                                                    placeholder="Do you have access to funded supports?">
+                                                    placeholder="Do you have access to funded supports?" required>
                                             </div>
                                             <div class="cols">
                                                 <input type="text" name="service" id="service"
-                                                    placeholder="What services or supports are you interested in?">
+                                                    placeholder="What services or supports are you interested in?"
+                                                    required>
                                             </div>
                                             <div class="cols">
                                                 <textarea rows="2" name="message" id="message"
@@ -196,12 +298,13 @@
                                         </div>
                                     </div>
                                 </form>
-                                    @elseif ($setting->description_image_position == 2)
-                            </div>
-                        </div>
-                    </div>
-                <div>
-            </section>
+                            @elseif ($setting->description_image_position == 2)
         @endif
+        </section>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
     </main>
 @endsection

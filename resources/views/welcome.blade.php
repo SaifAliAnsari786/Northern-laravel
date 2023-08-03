@@ -57,7 +57,7 @@
                 </div>
                 <div>
                     <div class="banner-content testimonial">
-                        <p class="quote">You have been a great help to me. I’m grateful for the amazing employees you have
+                        <p class="quote">You have been a great help to me. I'm grateful for the amazing employees you have
                             provided. Thank you.</p>
                         <h4>Thomas Wells</h4>
                     </div>

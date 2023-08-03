@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
 <main>
-    <section class="banner-section about-banner">
+    <section class="banner-section about-banner" style="background-image: url('{{($about_us->value)}}'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="banner-content">
-                <h1>About Us</h1>
+                <h1>{{$about_us->key}}</h1>
                 <ul class="breadcrumb">
                     <li><a href="./">Home</a></li>
                     <li><i class="icofont-long-arrow-right"></i></li>

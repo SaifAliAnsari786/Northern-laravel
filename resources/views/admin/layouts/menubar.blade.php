@@ -10,14 +10,14 @@
 
     <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-            <img src="{{url('images/navigation-bar.png')}}" alt="" />
+            <img src="{{asset('frontend/navigation-bar.png')}}" alt="" />
         </button>
         <div class="navbar-right d-flex">
             <ul class="navbar-nav d-flex align-items-center">
                 <li class="nav-profile d-flex dropdown-export-menu mx-3">
                     <a class="" href="#">
                         <div class="nav-profile-img">
-                            <img src="{{url('frontend/images/Ruby-logo-white.png')}}" alt="logo" />
+                            <img src="{{asset('frontend/images/Ruby-logo-white.png')}}" alt="logo" />
                         </div>
                         <div class="nav-profile-text">
                             <p class="mb-1">{{Auth::user()->name}}</p>

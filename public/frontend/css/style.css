@@ -1468,12 +1468,13 @@ ul {
   background: url(../images/respite-care-bg.jpg) no-repeat center;
 }
 
-.contact-banner{
-  background: url(../images/contact-bg.jpg) no-repeat center;
-}
+
 .service-banner{
   background: url(../images/services.jpg) no-repeat center;
 } */
+/* .contact-banner{
+    background: url(../images/contact-bg.jpg) no-repeat center;
+  } */
 
 .thankyou-sec{
   margin-bottom:90px;
@@ -1491,7 +1492,7 @@ ul {
 }
 .banner-content p{
   line-height: 28px;
-  margin-bottom: 50px;
+  /* margin-bottom: 0px; */
 }
 .banner-content h1 {
   font-size: 46px;

@@ -20,20 +20,6 @@ class WorkingAtNdsController extends Controller
         $working_nds_description = $settings->where('slug', 'working-nds-description')->first();
         return view('working_at_nds.working_at_nds',compact('working_nds_image','working_nds_description'));
     }
-    // public function index($slug)
-    // {
-    //     $setting = Service::where('slug', $slug)->first();
-    //     if ($setting) {
-    //         if ($setting->serviceDescriptions()->exists()) {
-    //             $serviceDescriptions = $setting->serviceDescriptions;
-    //             return view('working_at_nds.working_at_nds', compact('setting', 'serviceDescriptions'));
-    //         } else {
-    //             return view('working_at_nds.working_at_nds', compact('setting'));
-    //         }
-    //     } else {
-    //         abort(404);
-    //     }
-    // }
 
     public function store()
     {
