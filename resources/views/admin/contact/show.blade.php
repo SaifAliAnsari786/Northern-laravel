@@ -10,12 +10,18 @@
                     <div class="block-header p-4">
                         <h3>Show Contact</h3>
                         <div class="tbl-buttons">
-                            <ul>
-                                <li>
-                                    <a href="{{url('super-admin/contact')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
-                                </li>
-                            </ul>
-                        </div>
+
+                        <ul>
+
+                            <li>
+
+                                <a href="{{url('super-admin/contact')}}"><img src="{{url('frontend/cancel-icon.png')}}"alt="cancel-icon" /></a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
                     </div>
                     <div class="row p-4 form-wrap">
                         <div class="form-group batch-form">

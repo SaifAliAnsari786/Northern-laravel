@@ -110,6 +110,13 @@ Route::group(['prefix' => 'super-admin','middleware' => ['auth']], function () {
     Route::get('contact/{id}', [ContactController::class, 'show']);
     Route::get('contact/delete/{id}', [ContactController::class, 'destroy']);
 
+    Route::get('workingatNDS', [WorkingAtNdsController::class,'getworkingatNDS']);
+    Route::get('workingatNDS/{id}', [WorkingAtNdsController::class, 'show']);
+    Route::get('workingatNDS/delete/{id}', [WorkingAtNdsController::class, 'destroy']);
+
+    Route::get('form', [FormController::class,'getform']);
+    Route::get('form/{id}', [FormController::class, 'show']);
+    Route::get('form/delete/{id}', [FormController::class, 'destroy']);
 
     Route::get('service-description/{service_id}', [ServiceDescriptionController::class,'index']);
     Route::get('service-description/create/{service_id}', [ServiceDescriptionController::class, 'create']);

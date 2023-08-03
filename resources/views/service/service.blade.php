@@ -14,13 +14,9 @@
             </div>
         </div>
 
-    </section>>
+    </section>
     @if($setting->description_image_position == 2)
     <section class="support-one">
-    </section>
-
-    <section class="support-one">
-
         <div class="container">
             <div class="two-columns">
                 <div class="col">
@@ -58,13 +54,6 @@
         </div>
     </section>
     @endif
-
-
-
-
-
-
-
 
 
 
@@ -232,6 +221,6 @@
     </div>
     </div>
     </div>
-    </section>
+
 </main>
 @endsection
