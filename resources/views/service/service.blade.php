@@ -29,8 +29,6 @@
                         <div class="support-one-section">
                             <h2>{{ $setting->title }}</h2>
                             <p>{!! $setting->service_image_description !!} </p>
-
-
                         </div>
                     </div>
                 </div>
@@ -115,6 +113,7 @@
         </div>
     </section>
     @endif
+
     @if(Request::segment(2) == 'household-tasks')
     <section class="support-three-dls">
         <div class="container">
