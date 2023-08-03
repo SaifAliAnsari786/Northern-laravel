@@ -9,7 +9,7 @@ use App\Models\Setting;
 use App\Models\WorkingAtNds;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
-
+use Illuminate\Support\Facades\Session;
 
 class WorkingAtNdsController extends Controller
 {
@@ -40,5 +40,27 @@ class WorkingAtNdsController extends Controller
     }
 
 
+    public function getworkingatNDS()
+    {
+        $workingndss = WorkingAtNds::all();
+        return view('admin.working_nds_form.index',compact('workingndss'));
+    }
+
+    public function show($id)
+    {
+        $workingnds = WorkingAtNds::findOrFail($id);
+        return view('admin.working_nds_form.show', compact('workingnds'));
+
+    }
+
+    public function destroy($id)
+    {
+        $workingnds = WorkingAtNds::findOrFail($id);
+       
+        $workingnds->delete();
+        Session::flash('success', 'Form has been deleted!');
+        return redirect()->back();
+    
+    }
 
 }

@@ -12,7 +12,7 @@
                         <div class="tbl-buttons">
                             <ul>
                                 <li>
-                                    <a href="{{url('super-admin/contact')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
+                                    <a href="{{url('super-admin/contacts')}}"><img src="{{url('images/cancel-icon.png')}}" alt="cancel-icon"/></a>
                                 </li>
                             </ul>
                         </div>
@@ -45,7 +45,7 @@
                                             <input type="text" class="form-control form-control-lg"   name="name" id="design_title" value="{{$contact->phone_no}}" readonly>
                                         </div>
                                     </div>
-                                    
+
                             <div class="row mt-3">
                                 <div class="col-12 col-md-12 pt-3 pt-md-0">
                                     <label for="over_view_description">Message</label>

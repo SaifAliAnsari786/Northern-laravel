@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Mail\FormEMail;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class FormController extends Controller
 {
@@ -45,5 +46,28 @@ class FormController extends Controller
         Form::create($form);
         Mail::to('kritimstha2015@gmail.com')->send(new FormEMail($form));
         return redirect('form');
+    }
+
+    public function getform()
+    {
+        $forms = Form::all();
+        return view('admin.enquiry_form.index',compact('forms'));
+    }
+
+    public function show($id)
+    {
+        $forms = Form::findOrFail($id);
+        return view('admin.enquiry_form.show', compact('forms'));
+
+    }
+
+    public function destroy($id)
+    {
+        $forms = Form::findOrFail($id);
+       
+        $forms->delete();
+        Session::flash('success', 'Form has been deleted!');
+        return redirect()->back();
+    
     }
 }
