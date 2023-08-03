@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\NdsEmail;
 // use Illuminate\Http\Request;
 use App\Models\Service;
+use App\Models\Setting;
 use App\Models\WorkingAtNds;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
@@ -12,25 +13,27 @@ use Illuminate\Support\Facades\Request;
 
 class WorkingAtNdsController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('working_at_nds.working_at_nds');
-    // }
-    public function index($slug)
+    public function index()
     {
-    // Find the Service record by slug
-        $setting = Service::where('slug', $slug)->first();
-        if ($setting) {
-            if ($setting->serviceDescriptions()->exists()) {
-                $serviceDescriptions = $setting->serviceDescriptions;
-                return view('working_at_nds.working_at_nds', compact('setting', 'serviceDescriptions'));
-            } else {
-                return view('working_at_nds.working_at_nds', compact('setting'));
-            }
-        } else {
-            abort(404);
-        }
+        $settings  = Setting::all();
+        $working_nds_image = $settings->where('slug', 'working-nds')->first();
+        $working_nds_description = $settings->where('slug', 'working-nds-description')->first();
+        return view('working_at_nds.working_at_nds',compact('working_nds_image','working_nds_description'));
     }
+    // public function index($slug)
+    // {
+    //     $setting = Service::where('slug', $slug)->first();
+    //     if ($setting) {
+    //         if ($setting->serviceDescriptions()->exists()) {
+    //             $serviceDescriptions = $setting->serviceDescriptions;
+    //             return view('working_at_nds.working_at_nds', compact('setting', 'serviceDescriptions'));
+    //         } else {
+    //             return view('working_at_nds.working_at_nds', compact('setting'));
+    //         }
+    //     } else {
+    //         abort(404);
+    //     }
+    // }
 
     public function store()
     {

@@ -21,7 +21,7 @@
                             </div>
                             <ul class="admin-breadcrumb">
                                 <li><a href="{{ url('super-admin') }}" class="card-heading-link">Home</a></li>
-                                <li>Slider</li>
+                                <li>Service Description</li>
                             </ul>
                         </div>
                         <div>
@@ -32,7 +32,7 @@
                             <div class="card-wrap form-block p-0">
                                 <div class="block-header bg-header d-flex justify-content-between p-4">
                                     <div class="d-flex flex-column">
-                                        <h3>Slider's Table</h3>
+                                        <h3>Service Description's Table</h3>
                                     </div>
                                     <div class="add-button">
                                         <a class="nav-link"
@@ -69,9 +69,9 @@
 
                                                                         </td>
                                                                     @else
-                                                                    <td>
-                                                                        No image
-                                                                    </td>
+                                                                        <td>
+                                                                            No image
+                                                                        </td>
                                                                     @endif
                                                                     <td class="text-center">
                                                                         {{ $setting->title }}

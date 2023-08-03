@@ -1,12 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <main>
-
-    <section class="banner-section " style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
+    <section class="banner-section " style="background-image: url('{{url($working_nds_image->value)}}'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="banner-content inner-banner">
-                <h1>{{ $setting->title }}</h1>
-                <p>{!! $setting->background_image_description !!}</p>
+                <h1>{{ $working_nds_image->key }}</h1>
+                <p>{!! $working_nds_description->value !!}</p>
                 <ul class="breadcrumb">
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><i class="icofont-long-arrow-right"></i></li>
@@ -107,10 +106,8 @@
                         </div>
                     </div>
                 </div>
-
             </form>
         </div>
     </section>
 </main>
-
 @endsection
