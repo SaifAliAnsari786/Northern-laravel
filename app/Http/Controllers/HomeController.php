@@ -75,20 +75,27 @@ class HomeController extends Controller
         $country_logo = $settings->where('slug', 'country-logo')->first();
         $acknowledgement_country = $settings->where('slug', 'acknowledgement-of-country')->first();
         $about_us = $settings->where('slug', 'about-us')->first();
-        
+
         return view('about.about',compact('northern_disability_service','nds_description','empowerment_image','empowerment_description',
                                     'integrity_image','integrity_description','inclusiveness_image','inclusiveness_description','country','country_logo','acknowledgement_country','about_us'));
     }
 
     public function store(ServiceFormStoreRequest $request)
     {
-        $data = $request->all();
+        $validatedData = $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone_no' => 'required|numeric',
+            'postcode' => 'required',
+            'message' => 'required',
+            'state' => 'required',
+            'fund' => 'required',
+            'service' => 'required',
+        ]);
 
-        $serviceforms = ServiceForm::create($data);
+        $data = ServiceForm::create($validatedData);
         Mail::to('kritimstha2015@gmail.com')->send(new ServiceMail($data));
-        if ($serviceforms) {
             return redirect()->back();
-        }
     }
 
     public function gallery()

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <main>
+    @include('errors.error')
     <section class="banner-section contact-banner"style="background-image:url('{{($contact_image->value)}}'); background-size: cover; background-position: center;">
         <div class="container">
            <div class="banner-content inner-banner">
@@ -56,7 +57,7 @@
         @csrf
         <div class="form-detail">
             <div class="container">
-                    <div class="form-control">
+                    <div class="form-control mt-2">
                             <div class="two-columns">
                                 <div class="col">
                                     <input type="text" placeholder=" First Name" name="first_name" id="fname" required>
@@ -111,7 +112,7 @@
         text.innerHTML="! Enter a valid email address";
     text.style.color="#dc3545";
     }
-}
+        }
     function validation1(){
     var form=document.getElementById("form");
     var phone=document.getElementById("phone").value;

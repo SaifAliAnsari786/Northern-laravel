@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <main>
+    @include('errors.error')
     <section class="banner-section " style="background-image: url('{{url($working_nds_image->value)}}'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="banner-content inner-banner">

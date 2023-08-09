@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <main>
+@include('errors.error')
 <section class="banner-section dailyliving-banner" style="background-image: url('{{ asset('images/services/' . $setting->background_image) }}'); background-size: cover; background-position: center;">
             <div class="container">
                 <div class="banner-content inner-banner">
@@ -13,11 +14,9 @@
                     </ul>
                 </div>
             </div>
-
         </section>
     @if($setting->description_image_position == 2)
         <section class="support-one">
-
             <div class="container">
                 <div class="two-columns">
                     <div class="col">
