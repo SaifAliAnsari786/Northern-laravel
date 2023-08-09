@@ -19,14 +19,19 @@ class ContactController extends Controller
         return view('contact.contact',compact('contact_image','contact_description'));
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $setting = request()->all();
-        $contact = Contact::create($setting);
-        Mail::to('saifaliansari477@gmail.com')->send(new ContactEmail($setting));
-        if ($contact) {
+        $validatedData = $this->validate(request(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'phone_no' => 'required|numeric',
+            'message' => 'required'
+
+        ]);
+        $setting = Contact::create($validatedData);
+         Mail::to('saifaliansari477@gmail.com')->send(new ContactEmail($setting));
             return redirect('contact');
-        }
     }
 
     public function getcontact()
@@ -45,10 +50,10 @@ class ContactController extends Controller
     public function destroy($id)
     {
         $contact = Contact::findOrFail($id);
-       
+
         $contact->delete();
         Session::flash('success', 'Service has been deleted!');
         return redirect()->back();
-    
+
     }
 }

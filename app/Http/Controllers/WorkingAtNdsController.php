@@ -23,18 +23,26 @@ class WorkingAtNdsController extends Controller
 
     public function store()
     {
-        $setting = request()->all();
+        $validatedData = $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone_no' => 'required|numeric',
+            'check' => 'required',
+            'message' => 'required',
+            'image' => 'required|mimes:png,jpg,pdf',
+
+        ]);
         if (request()->hasFile('image')) {
             $extension = request('image')->getClientOriginalExtension();
             $fileName = time() . rand(1000, 9999) . '.' . $extension;
             $path = 'images/workingAtNds/';
             request('image')->move($path, $fileName);
-            $setting['image'] = $path.$fileName;
+            $validatedData['image'] = $path.$fileName;
         }
         // Checkboxes (Replace 'option1', 'option2', 'option3' with your actual checkbox values)
         $check = request()->input('check', []);
-        $setting['check'] = implode(',', $check); // Convert the array to a comma-separated strin
-        WorkingAtNds::create($setting);
+        $validatedData['check'] = implode(',', $check); // Convert the array to a comma-separated strin
+        $setting =  WorkingAtNds::create($validatedData);
         Mail::to('saifaliansari477@gmail.com')->send(new NdsEmail($setting));
         return redirect('workingatNDS');
     }
@@ -56,11 +64,11 @@ class WorkingAtNdsController extends Controller
     public function destroy($id)
     {
         $workingnds = WorkingAtNds::findOrFail($id);
-       
+
         $workingnds->delete();
         Session::flash('success', 'Form has been deleted!');
         return redirect()->back();
-    
+
     }
 
 }

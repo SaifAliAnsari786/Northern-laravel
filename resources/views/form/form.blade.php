@@ -15,13 +15,15 @@
     </div>
 </section>
 <section class="form-page">
+
 <div class="container">
     <div class="form-page-head">
         <h5>Contact Details</h5>
         <p>Fill in your details below and we will respond to your enquiry within one business day.</p>
     </div>
+    @include('errors.error')
     <form action="{{ url('form') }}" method="post" name="form" id="form" enctype="multipart/form-data">
-    @csrf
+         @csrf
         <div class="two-columns">
             <div class="col">
                 <div class="enquiry-input">
