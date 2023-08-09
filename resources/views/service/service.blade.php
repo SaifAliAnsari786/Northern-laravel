@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="banner-content inner-banner">
                     <h1>{{ $setting->title }}</h1>
-                    <p>{!! $setting->background_image_description !!}</p>
+                    <div class="style-list-reset">{!! $setting->background_image_description !!}</p>
                     <ul class="breadcrumb">
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><i class="icofont-long-arrow-right"></i></li>

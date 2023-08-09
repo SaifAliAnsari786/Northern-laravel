@@ -66,7 +66,14 @@ video {
 main{
   margin-top:87px;
 }
+ul {
 
+    list-style-type: none;
+    font-size: 17px;
+    line-height: 37px;
+    color: #171717;
+
+  }
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
@@ -661,7 +668,17 @@ th {
   list-style: disc;
   padding: 0px 0px 40px 30px;
 }
-
+section.support-one .support-one-section ul{
+    margin: 10px!important;
+    list-style-type: disc!important;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
 
 .image-wrapper{
   width: 100%;
@@ -966,11 +983,7 @@ input[type="submit"] {
 .apply-btn {
   margin-left: 234px;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+
 .five-columns {
   display: flex;
 }
